@@ -1,0 +1,585 @@
+feudal_governments = {
+
+	imperial_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			muslim_government
+			bogomilist_government
+			feudal_government
+			imperial_government
+			muslim_imperial_government
+			imperial_bogomilist_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		free_revoke_on_tiers = {
+			duke
+			king
+		}
+		frame_suffix = "_imperial"
+		title_prefix = "imperial_"
+		potential = {
+			NAND = {
+				controls_religion = yes
+				NOT = { religion_group = muslim }
+				is_pagan_religion = no
+				NOT = { religion = paulician }
+			}
+			NOT = { religion = bogomilist }
+			NOT = { religion_group = muslim }
+			is_patrician = no
+			OR = {
+				in_revolt = yes
+				primary_title = { has_title_flag = has_imperial_administration }
+				top_liege = { government = imperial_government }
+			}
+		}
+		
+		color = { 176 52 253 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+	}
+
+	hivemind_government = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			TEMPLE
+			TRIBAL
+			FORT
+		}
+		free_revoke_on_governments_religion = {
+			# Can revoke ANYONE
+			military_monarchy
+			military_republic
+			military_directorate
+			military_command
+			merchant_republic_government
+			pirate_kingdom
+		}
+		potential = {
+			trait = hiver_implant
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "hive_"
+		color = { 32 32 32 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	military_republic = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			military_directorate
+			corporate_republic
+			administrative_republic
+			merchant_republic_government
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		potential = {
+			is_patrician = no
+			NOT = { trait = hiver_implant }
+			NOT = { religion_group = outlaw_group }
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_republic
+				government = military_republic
+				has_game_started = yes
+			}
+		}
+		title_prefix = "military_republic_"
+		color = { 128 0 64 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	military_monarchy = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+		}
+		accepts_liege_governments = {
+			military_republic
+			military_directorate
+			corporate_monarchy
+			administrative_monarchy
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		potential = {
+			is_patrician = no
+			NOT = { trait = hiver_implant }
+			NOT = { religion_group = outlaw_group }
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_monarchy
+				government = military_monarchy
+				has_game_started = yes
+			}
+		}
+		title_prefix = "monarchy_"
+		color = { 192 0 0 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	military_directorate = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			military_directorate
+			military_command
+			corporate_monarchy
+			corporate_republic
+			corporate_directorate
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+			merchant_republic_government
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		potential = {
+			is_patrician = no
+			NOT = { trait = hiver_implant }
+			NOT = { religion_group = outlaw_group }
+			primary_title = { is_tribal_type_title = no }
+		}
+		title_prefix = "military_"
+		color = { 128 64 0 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	military_command = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			military_republic
+			military_directorate
+			corporate_monarchy
+			corporate_republic
+			corporate_directorate
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+			merchant_republic_government
+			colonial_government
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			military_command
+			military_directorate
+		}
+		potential = {
+			NOT = { trait = hiver_implant }
+			primary_title = { is_tribal_type_title = yes }
+		}
+		title_prefix = "military_"
+		color = { 64 32 0 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	pirate_kingdom = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			FORT
+		}
+		builds_with_prestige = {
+			FORT
+		}
+		accepts_liege_governments = {
+			pirate_republic
+		}
+		potential = {
+			is_patrician = no
+			NOT = { trait = hiver_implant }
+			primary_title = { is_tribal_type_title = no }
+			religion_group = outlaw_group
+		}
+		title_prefix = "pirate_kingdom_"
+		color = { 64 32 32 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		allow_looting = yes
+		ignores_de_jure_laws = yes
+		
+		can_build_city = no
+		can_build_temple = no
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	
+	administrative_republic = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			FORT
+		}
+		accepts_liege_governments_religion = {
+			military_republic
+			corporate_republic
+			merchant_republic_government
+			administrative_monarchy
+			administrative_directorate
+		}
+		free_revoke_on_governments_religion = {
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			NOT = { trait = hiver_implant }
+			is_patrician = no
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_republic
+				has_game_started = yes
+				government = administrative_republic
+			}
+		}
+		color = { 0 128 64 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	administrative_monarchy = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			FORT
+		}
+		accepts_liege_governments_religion = {
+			military_monarchy
+			corporate_monarchy
+			administrative_republic
+			administrative_directorate
+		}
+		free_revoke_on_governments_religion = {
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			NOT = { trait = hiver_implant }
+			is_patrician = no
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_monarchy
+				has_game_started = yes
+				government = administrative_monarchy
+			}
+		}
+		color = { 64 128 0 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	administrative_directorate = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			military_republic
+			military_directorate
+			military_command
+			corporate_monarchy
+			corporate_republic
+			merchant_republic_government
+			corporate_directorate
+			administrative_monarchy
+			administrative_republic
+		}
+		free_revoke_on_governments_religion = {
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			NOT = { trait = hiver_implant }
+			is_patrician = no
+			primary_title = { is_tribal_type_title = no }
+		}
+		color = { 0 192 0 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	
+	corporate_republic = {
+		preferred_holdings = { CITY }
+		allowed_holdings = {
+			CITY
+			FORT
+		}
+		accepts_liege_governments = {
+			military_republic
+			corporate_monarchy
+			merchant_republic_government
+			corporate_directorate
+			administrative_republic
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		frame_suffix = "_republic"
+		potential = {
+			NOT = { is_government_potential = merchant_republic_government }
+			NOT = { religion_group = outlaw_group }
+			NOT = { trait = hiver_implant }
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_republic
+				has_game_started = yes
+				government = corporate_republic
+			}
+		}
+		
+		color = { 0 0 192 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	
+	corporate_monarchy = {
+		preferred_holdings = { CITY }
+		allowed_holdings = {
+			CITY
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			corporate_republic
+			merchant_republic_government
+			corporate_directorate
+			administrative_monarchy
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		frame_suffix = "_republic"
+		title_prefix = "monarchy_"
+		potential = {
+			OR = {
+				is_patrician = no
+				government = corporate_monarchy
+			}
+			NOT = { religion_group = outlaw_group }
+			NOT = { trait = hiver_implant }
+			primary_title = { is_tribal_type_title = no }
+			OR = {
+				trait = is_monarchy
+				has_game_started = yes
+				government = corporate_monarchy
+			}
+		}
+		
+		color = { 64 0 128 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+	
+	corporate_directorate = {
+		preferred_holdings = { CITY }
+		allowed_holdings = {
+			CITY
+			FORT
+		}
+		accepts_liege_governments = {
+			military_monarchy
+			military_republic
+			military_directorate
+			military_command
+			corporate_monarchy
+			corporate_republic
+			merchant_republic_government
+			administrative_monarchy
+			administrative_republic
+			administrative_directorate
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+		}
+		frame_suffix = "_republic"
+		
+		potential = {
+			OR = {
+				is_patrician = no
+				AND = {
+					government = corporate_directorate
+					has_game_started = yes
+				}
+			}
+			NOT = { religion_group = outlaw_group }
+			NOT = { trait = hiver_implant }
+			primary_title = { is_tribal_type_title = no }
+		}
+		
+		color = { 0 64 128 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+}

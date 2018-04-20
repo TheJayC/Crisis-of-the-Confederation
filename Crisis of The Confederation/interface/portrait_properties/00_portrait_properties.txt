@@ -1,0 +1,3166 @@
+# The choice is made based on a weighted random, but the first factor that evaluates to >= 100 will be automatically chosen
+# Two passes are done when choosing properties; first from lowest to highest, then from highest to lowest. Be aware of this if you reference other properties, as the old properties will still be active in the first pass
+# hide_layers is interpreted from bottom to top. Hidden layers won't hide other layers, but if a lower layer hides a higher layer, the higher layer won't be rechecked, so it might still be hiding other layers despite being hidden itself
+
+# p0 background
+0 = {
+	0 = { # castle 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+		}
+	}
+
+	1 = { #conference room 1
+		factor = 1
+		modifier = {
+			factor = 5
+			is_ruler = yes
+		}
+	}
+
+	2 = { # dungeon
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+
+	3 = { # conference room 2
+		factor = 1
+	}
+
+	4 = { # bed
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = incapable }
+			NOT = { trait = infirm }
+		}
+		modifier = {
+			factor = 0.01
+			trait = infirm
+		}
+	}
+	
+	5 = { # tavern
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = drunkard
+					trait = hedonist
+					trait = lustful
+				}
+			}
+		}
+	}
+	
+	6 = { # Starship Bridge (non-combat)
+		factor = 1
+		modifier = {
+			factor = 0
+			war = yes
+		}
+		modifier = {
+			factor = 0
+			trait = fighter_pilot
+		}
+		modifier = {
+			factor = 5
+			religion = space_pirate
+		}
+		modifier = {
+			factor = 5
+			has_job_title = job_marshal
+		}
+		modifier = {
+			factor = 100
+			in_command = yes
+		}
+	}
+	7 = { # Starship Bridge (combat)
+		factor = 1
+		modifier = {
+			factor = 0
+			war = no
+		}
+		modifier = {
+			factor = 0
+			trait = fighter_pilot
+		}
+		modifier = {
+			factor = 5
+			religion = space_pirate
+		}
+		modifier = {
+			factor = 5
+			has_job_title = job_marshal
+		}
+		modifier = {
+			factor = 100
+			in_command = yes
+		}
+	}
+	8 = { # Fighter Cockpit (non-combat)
+		factor = 1
+		modifier = {
+			factor = 0
+			war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fighter_pilot }
+		}
+		modifier = {
+			factor = 5
+			religion = space_pirate
+		}
+		modifier = {
+			factor = 5
+			has_job_title = job_marshal
+		}
+		modifier = {
+			factor = 100
+			in_command = yes
+		}
+	}
+	9 = { # Fighter Cockpit (Combat)
+		factor = 1
+		modifier = {
+			factor = 0
+			war = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fighter_pilot }
+		}
+		modifier = {
+			factor = 5
+			religion = space_pirate
+		}
+		modifier = {
+			factor = 5
+			has_job_title = job_marshal
+		}
+		modifier = {
+			factor = 100
+			in_command = yes
+		}
+	}
+	10 = { # Desert
+		factor = 1
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_materials_1 }
+				NOT = { has_building = ct_materials_1 }
+				NOT = { has_building = tp_materials_1 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_materials_1 }
+					NOT = { has_building = ct_materials_1 }
+					NOT = { has_building = tp_materials_1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_environment_1 }
+				NOT = { has_building = ct_environment_1 }
+				NOT = { has_building = tp_environment_1 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_environment_1 }
+					NOT = { has_building = ct_environment_1 }
+					NOT = { has_building = tp_environment_1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				OR = {
+					has_building = ca_primary_q_3
+					has_building = ct_primary_q_3
+					has_building = tp_primary_q_3
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					OR = {
+						has_building = ca_primary_q_3
+						has_building = ct_primary_q_3
+						has_building = tp_primary_q_3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_environment_3 }
+				NOT = { has_building = ct_environment_3 }
+				NOT = { has_building = tp_environment_3 }
+			}
+		}
+		modifier = {
+			factor = 3
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_environment_3 }
+					NOT = { has_building = ct_environment_3 }
+					NOT = { has_building = tp_environment_3 }
+				}
+			}
+		}
+	}
+	11 = { # Plains
+		factor = 1
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_materials_1 }
+				NOT = { has_building = ct_materials_1 }
+				NOT = { has_building = tp_materials_1 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_materials_1 }
+					NOT = { has_building = ct_materials_1 }
+					NOT = { has_building = tp_materials_1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_environment_1 }
+				NOT = { has_building = ct_environment_1 }
+				NOT = { has_building = tp_environment_1 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_environment_1 }
+					NOT = { has_building = ct_environment_1 }
+					NOT = { has_building = tp_environment_1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				OR = {
+					has_building = ca_primary_q_3
+					has_building = ct_primary_q_3
+					has_building = tp_primary_q_3
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					OR = {
+						has_building = ca_primary_q_3
+						has_building = ct_primary_q_3
+						has_building = tp_primary_q_3
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			is_ruler = yes
+			capital_holding = {
+				has_building = ca_environment_2
+				has_building = ct_environment_2
+				has_building = tp_environment_2
+			}
+		}
+		modifier = {
+			factor = 3
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					has_building = ca_environment_2
+					has_building = ct_environment_2
+					has_building = tp_environment_2
+				}
+			}
+		}
+	}
+	12 = { # Ocean w ships
+		factor = 0
+		#modifier = {
+			#factor = 0
+			#NOT = { location = { terrain = ocean } }
+		#}
+	}
+	13 = { # Muslim interior
+		factor = 0
+	}
+	14 = { # Harem
+		factor = 0
+	}
+	15 = { # Muslim interior 2
+		factor = 0
+	}
+
+	16 = { # Mongol camp 1
+		factor = 0
+	}
+
+	17 = { # Mongol camp 2
+		factor = 0
+	}
+
+	18 = { # Papal palace
+		factor = 0
+	}
+
+	19 = { # Muslim mosque
+		factor = 0
+	}
+
+	20 = { # Jungle
+		factor = 3
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_materials_1 }
+				NOT = { has_building = ct_materials_1 }
+				NOT = { has_building = tp_materials_1 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_materials_1 }
+					NOT = { has_building = ct_materials_1 }
+					NOT = { has_building = tp_materials_1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				NOT = { has_building = ca_environment_3 }
+				NOT = { has_building = ct_environment_3 }
+				NOT = { has_building = tp_environment_3 }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					NOT = { has_building = ca_environment_3 }
+					NOT = { has_building = ct_environment_3 }
+					NOT = { has_building = tp_environment_3 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			capital_holding = {
+				OR = {
+					has_building = ca_primary_q_3
+					has_building = ct_primary_q_3
+					has_building = tp_primary_q_3
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			liege = {
+				capital_holding = {
+					OR = {
+						has_building = ca_primary_q_3
+						has_building = ct_primary_q_3
+						has_building = tp_primary_q_3
+					}
+				}
+			}
+		}
+	}
+}
+
+# p1 hair  --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
+1 = {
+	0 = { # Completely bald
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_female = yes
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	1 = { # Black Adder
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	2 = { # Page
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	3 = { # Synth
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	4 = { # Long Straight
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	5 = { # Long Curly
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	6 = {  # Tonsure
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			is_ruler = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_spiritual }
+		}
+
+		modifier = {
+			factor = 50
+			is_female = no
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	7 = {  # Short
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	8 = { # Short Curly
+		factor = 1
+	}
+	
+	9 = {  # Short Uncouth
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	10 = {  # Long Uncouth
+		factor = 1
+		
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	11 = { # Balding
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+	}
+	
+	12 = { # Marine
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = westafricangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	13 = { # Mohawk
+		factor = 1
+	}
+	
+	14 = { # Mohawk
+		factor = 1
+	}
+	
+	15 = { # Mohawk
+		factor = 1
+	}
+}
+
+# p2 base
+2 = {
+}
+
+# p3 clothes
+3 = {
+	
+	0 = { # Formal Clothes A
+		factor = 1
+		modifier = { # Feudal
+			factor = 0
+			NOT = { any_demesne_title = { always = yes } }
+			NOT = { any_heir_title = { always = yes } }
+			NOT = { has_minor_title = title_expected_successor }
+			NOT = { has_minor_title = title_regent }
+			NOT = { has_minor_title = title_prime_minister }
+			is_councillor = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = terran_imperial }
+			NOT = { religion = neo_feudal }
+			NOT = { religion = machine_cultist }
+			NOT = { religion_group = religious_group }
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = COUNT }
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = DUKE }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = COUNT } }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = DUKE } }
+		}
+	}
+	
+	1 = { # Formal Clothes B
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { any_demesne_title = { always = yes } }
+			NOT = { any_heir_title = { always = yes } }
+			NOT = { has_minor_title = title_expected_successor }
+			NOT = { has_minor_title = title_regent }
+			NOT = { has_minor_title = title_prime_minister }
+			is_councillor = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = COUNT }
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = DUKE }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = COUNT } }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = DUKE } }
+		}
+	}
+	
+	2 = { # Formal Clothes C
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { any_demesne_title = { always = yes } }
+			NOT = { any_heir_title = { always = yes } }
+			NOT = { has_minor_title = title_expected_successor }
+			NOT = { has_minor_title = title_regent }
+			NOT = { has_minor_title = title_prime_minister }
+			is_councillor = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+			}
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = COUNT }
+		}
+		modifier = {
+			factor = 2
+			any_demesne_title = { higher_tier_than = DUKE }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = COUNT } }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_councillor = yes
+				has_minor_title = title_expected_successor
+				has_minor_title = title_regent
+				has_minor_title = title_prime_minister
+			}
+			liege = { any_demesne_title = { higher_tier_than = DUKE } }
+		}
+	}
+	
+	3 = { # Casual Clothes A
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 20 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 24 }
+		}
+	}
+	
+	4 = { # Casual Clothes B
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 20 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 24 }
+		}
+	}
+	
+	5 = { # Casual Clothes C
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 20 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { age = 24 }
+		}
+	}
+	
+	6 = { # Science Clothes A
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = incompetent_scientist }
+			NOT = { trait = dutiful_academic }
+			NOT = { trait = expert_scientist }
+			NOT = { trait = mastermind_scholar }
+			NOT = { trait = intellectual }
+			NOT = {
+				AND = {
+					religion_group = transhumanist_group
+					is_administrative_trigger = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			trait = intellectual
+		}
+		modifier = {
+			factor = 2
+			has_job_title = job_scientist
+		}
+	}
+	7 = { # Science Clothes B
+		factor = 0 # Currently unused
+	}
+	
+	# Martial
+	8 = { # Spacesuit
+		factor = 0 # Currently unused
+	}
+	9 = { # Body Armor
+		factor = 0 # Currently unused
+	}
+	
+	10 = { # Dress Uniform
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			is_military_trigger = no
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+				religion = machine_cultist
+				religion = space_pirate
+				religion_group = religious_group
+			}
+			NOT = { government = military_command }
+		}
+	}
+	
+	# Ragged prison clothes
+	11 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p4 beard
+4 = {
+	0 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 30
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 15
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+	1 = {
+		factor = 1
+	}
+	2 = {
+		factor = 1
+	}
+	3 = {
+		factor = 1
+	}
+	4 = {
+		factor = 1
+	}
+	5 = {
+		factor = 1
+	}
+	6 = {
+		factor = 1
+	}
+	7 = {
+		factor = 1
+	}
+	8 = {
+		factor = 1
+	}
+	9 = {
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+	10 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 20
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 60
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+}
+
+# p5 headgear
+5 = {
+	# Crown A
+	0 = {
+		factor = 32
+		modifier = {
+			factor = 0
+			is_hereditary_trigger = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+	}
+	
+	# Crown B
+	1 = {
+		factor = 32
+		modifier = {
+			factor = 0
+			is_hereditary_trigger = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+	}
+
+	# Casual Headgear A (eventually, right now another crown)
+	2 = {
+		factor = 32
+		modifier = {
+			factor = 0
+			is_hereditary_trigger = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+	}
+
+	# Casual Headgear B (eventually, right now another crown)
+	3 = {
+		factor = 32
+		modifier = {
+			factor = 0
+			is_hereditary_trigger = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { spouse = { is_landed = yes } }
+		}
+	}
+
+	# Hair Accessory A
+	4 = {
+		factor = 0
+	}
+
+	# Hair Accessory B
+	5 = {
+		factor = 0
+	}
+	
+	# Technical Headgear
+	6 = {
+		factor = 1
+		modifier = {
+			factor = 4
+			OR = {
+				trait = incompetent_scientist
+				trait = dutiful_academic
+				trait = expert_scientist
+				trait = mastermind_scholar
+			}
+		}
+		modifier = {
+			factor = 4
+			in_command = yes
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 0.5
+			any_demesne_title = { higher_tier_than = baron }
+		}
+		modifier = {
+			factor = 0.5
+			any_demesne_title = { higher_tier_than = count }
+		}
+		modifier = {
+			factor = 0.5
+			any_demesne_title = { higher_tier_than = duke }
+		}
+		modifier = {
+			factor = 0.5
+			any_demesne_title = { higher_tier_than = king }
+		}
+	}
+
+	# Eyepatch
+	7 = {
+		factor = 0
+		modifier = {
+			factor = 0
+			NOT = { has_character_flag = flag_scar_missing_eye }
+		}
+	}
+	
+	# Spacesuit Helmet
+	8 = {
+		factor = 2
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fighter_pilot }
+		}
+	}
+
+	# Body Armor Helmet
+	9 = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { trait = marine_colonel }
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+	}
+
+	# Military Dress Uniform Cap
+	10 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			is_military_trigger = no
+			NOT = { trait = misguided_warrior }
+			NOT = { trait = tough_soldier }
+			NOT = { trait = skilled_tactician }
+			NOT = { trait = brilliant_strategy }
+		}
+		modifier = {
+			factor = 0
+			is_merchant_republic = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = terran_imperial
+				religion = neo_feudal
+				religion = space_pirate
+				religion = machine_cultist
+				religion_group = religious_group
+			}
+			NOT = { government = military_command }
+		}
+		modifier = {
+			factor = 0
+			trait = carefree
+		}
+	}
+
+	# Blank
+	11 = {
+		factor = 20
+		modifier = {
+			factor = 100
+			is_patrician = yes
+		}
+	}
+}
+
+# p6 imprisoned
+6 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+	}
+
+	1 = { # prisoner
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p7 scars
+7 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = maimed
+				trait = wounded
+				trait = scarred
+				#trait = disfigured
+				#trait = one_eyed
+			}
+		}
+   	}
+
+	1 = { # scar 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	2 = { # scar 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	3 = { # scar 3
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	4 = { # scar 4
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+}
+
+# p8 red dots
+8 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_measles
+				trait = has_small_pox
+			}
+		}
+ 	}
+
+	1 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_measles
+					trait = has_small_pox
+				}
+			}
+		}
+  	}
+}
+
+# p9 boils
+9 = {
+
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_bubonic_plague
+			}
+		}
+ 	}
+
+	1 = { # boils
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_bubonic_plague
+				}
+			}
+		}
+ 	}
+ 	
+}
+
+# p10 blinded
+10 = {
+	0 = { # No visible cybernetics
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = cybernetic_limb
+				trait = hiver_implant
+				trait = full_cybernetic_conversion
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	1 = { # Arm
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	2 = { # Hiver
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	3 = { # ODIN
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = cybernetic_limb
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	4 = { # IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = cybernetic_limb
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	5 = { # THOTH/PCI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = cybernetic_limb
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	
+	6 = { # Arm + Hiver
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	7 = { # Arm + ODIN
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	8 = { # Arm + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	9 = { # Arm + THOTH/PCI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	10 = { # Hiver + ODIN
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	11 = { # Hiver + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	12 = { # ODIN + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = hiver_implant
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	13 = { # ODIN + PCI/THOTH
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = hiver_implant
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	14 = { # IAEI + PCI/THOTH
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = hiver_implant
+				trait = cybernetic_limb
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	15 = { # Arm + Hiver + ODIN
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	16 = { # Arm + Hiver + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	17 = { # Arm + ODIN + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = pci_mk_i
+				trait = pci_mk_ii
+				trait = pci_mk_iii
+				trait = pci_mk_iv
+				trait = pci_mk_v
+				trait = thoth_mk_i
+				trait = thoth_mk_ii
+				trait = thoth_mk_iii
+				trait = thoth_mk_iv
+				trait = thoth_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	18 = { # Arm + ODIN + PCI/THOTH
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = iaei_mk_i
+				trait = iaei_mk_ii
+				trait = iaei_mk_iii
+				trait = iaei_mk_iv
+				trait = iaei_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	19 = { # Arm + IAEI + PCI/THOTH
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = odin_mk_i
+				trait = odin_mk_ii
+				trait = odin_mk_iii
+				trait = odin_mk_iv
+				trait = odin_mk_v
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	20 = { # Hiver + ODIN + IAEI
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			trait = cybernetic_limb
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	21 = { # ODIN + IAEI + PCI/THOTH
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = cybernetic_limb
+				trait = hiver_implant
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+	
+	22 = { # Everything but PCI/THOTH (also used for full cybernetic conversion for now)
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+			NOT = { trait = full_cybernetic_conversion }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = hiver_implant }
+			NOT = { trait = full_cybernetic_conversion }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+			NOT = { trait = full_cybernetic_conversion }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+			NOT = { trait = full_cybernetic_conversion }
+		}
+	}
+	
+	23 = { # Everything but Hiver
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = cybernetic_limb }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = odin_mk_i }
+			NOT = { trait = odin_mk_ii }
+			NOT = { trait = odin_mk_iii }
+			NOT = { trait = odin_mk_iv }
+			NOT = { trait = odin_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = iaei_mk_i }
+			NOT = { trait = iaei_mk_ii }
+			NOT = { trait = iaei_mk_iii }
+			NOT = { trait = iaei_mk_iv }
+			NOT = { trait = iaei_mk_v }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = pci_mk_i }
+			NOT = { trait = pci_mk_ii }
+			NOT = { trait = pci_mk_iii }
+			NOT = { trait = pci_mk_iv }
+			NOT = { trait = pci_mk_v }
+			NOT = { trait = thoth_mk_i }
+			NOT = { trait = thoth_mk_ii }
+			NOT = { trait = thoth_mk_iii }
+			NOT = { trait = thoth_mk_iv }
+			NOT = { trait = thoth_mk_v }
+		}
+		modifier = {
+			factor = 0
+			trait = hiver_implant
+		}
+		modifier = {
+			factor = 0
+			trait = full_cybernetic_conversion
+		}
+	}
+}
+
+# p11 player
+11 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			AND = {
+				ai = no
+				multiplayer = yes
+			}
+		}
+	}
+
+	1 = { # player
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				ai = yes
+				multiplayer = no
+			}
+		}
+	}
+}
+
+# p12 mask for the disfigured
+12 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = { 
+				trait = disfigured 
+				has_character_modifier = attending_masquerade
+				has_character_modifier = forced_mask
+			}
+		}
+	}
+
+	1 = { # mask 1 bone
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					OR = { 
+						trait = disfigured 
+						has_character_modifier = attending_masquerade
+						has_character_modifier = forced_mask
+					}
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+
+	2 = { # mask 2 silver
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				culture = manden
+				culture = maghreb_arabic
+			}
+		}
+	}
+
+	3 = { # mask 3 iron
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = yes
+					higher_tier_than = DUKE
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { higher_tier_than = DUKE }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	4 = { # mask 4 bone - blue stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	5 = { # mask 5 bone - orange stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	6 = { # mask 6 bone - red dots
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				culture = manden
+				culture_group = east_african
+			}
+		}
+	}
+	
+	7 = { # mask 7 bone - black stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				culture = manden
+				culture_group = east_african
+			}
+		}
+	}
+	
+	8 = { # mask 8 bone - red stripes/eyes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	9 = { # mask 9 bone - black eyes/lightning
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	10 = { # mask 10 - decorated silver
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				culture = manden
+				culture = maghreb_arabic
+			}
+		}
+	}
+	
+	11 = { # mask 11 - decorated gold
+		factor = 2
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+			}
+			NOT = { has_character_modifier = golden_mask }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				trait = greedy
+				trait = proud
+				trait = ambitious
+				trait = envious
+				culture = manden
+				culture = maghreb_arabic
+			}
+			NOT = { has_character_modifier = golden_mask }
+		}
+		modifier = {
+			factor = 5
+			has_landed_title = k_papal_state
+		}
+		modifier = {
+			factor = 1000
+			has_character_modifier = golden_mask
+		}
+	}
+	
+	12 = { # mask 12 - full mask 1 leather
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	13 = { # mask 13 - full mask 2 bone
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+}
+
+# p13 eyepatch for one_eyed
+13 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = one_eyed
+			NOT = { has_character_modifier = glass_eye }
+		}
+	}
+
+	1 = { # eyepatch 1
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	2 = { # eyepatch 2 - red leather
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	3 = { # eyepatch 3 - painted eye
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					OR = {
+						trait = paranoid
+						trait = possessed
+					}
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = paranoid
+				trait = possessed
+			}
+		}
+	}
+	
+	4 = { # eyepatch 4 - red
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	5 = { # eyepatch 5 - white rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 3
+			AND = {
+				religion = catholic
+				is_theocracy = yes
+			}
+		}
+	}
+	
+	6 = { # eyepatch 6 - blue rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+	
+	7 = { # eyepatch 7 - green rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			religion_group = muslim
+		}
+	}
+	
+	8 = { # eyepatch 8 - red rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	9 = { # eyepatch 9 - bloodied rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					OR = {
+						trait = wroth
+						trait = cruel
+						has_minor_title = title_commander
+					}
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = wroth
+				trait = cruel
+				has_minor_title = title_commander
+			}
+		}
+		modifier = {
+			factor = 2
+			martial = 12
+		}
+	}
+	
+	10 = { # eyepatch 10 - tartan rag
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					culture_group = celtic
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	11 = { # eyepatch 11 - scarred eye 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = one_eyed }
+		}
+		modifier = {
+			factor = 0
+			trait = shy
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+				trait = stubborn
+			}
+		}
+	}
+	
+	12 = { # eyepatch 12 - scarred eye 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = one_eyed }
+		}
+		modifier = {
+			factor = 0
+			trait = shy
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+				trait = stubborn
+			}
+		}
+	}
+}

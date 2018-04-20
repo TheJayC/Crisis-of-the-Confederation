@@ -1,0 +1,204 @@
+bm_OTHER_RIM = {
+	name = "BM_OTHER_RIM"
+	desc = "BM_OTHER_RIM_DESC"
+	date = 3008.1.1
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_3
+	
+	selectable_character = {	
+		id = 11020020 # Arthur Pendragon
+		age = 16
+		name = ERA_CHAR_NAME_11020020
+		title = k_avalon
+		title_name = k_avalon
+		
+		character = {
+			dna = bkgcelmiaad
+			properties = ac00ic
+			religion = neo_feudal
+			culture = avalonian
+			government = military_monarchy
+			dynasty = 20020
+		}
+	}
+	selectable_character = {
+		id = 11110155 # Gabriela Juanovna
+		age = 24
+		name = ERA_CHAR_NAME_11110155
+		title = k_orion_reach
+		title_name = k_orion_reach
+		
+		character = {
+			dna = bkaibjgegci
+			properties = 0h00b
+			culture = russo_orion
+			religion = colonial_separatist
+			government = corporate_republic
+			dynasty = 10155
+			female=yes
+		}
+	}
+	selectable_character = {
+		id = 1105933 # Raja Sharma
+		age = 40
+		name = ERA_CHAR_NAME_1105933 
+		title = k_tarka
+		title_name = k_tarka
+		
+		character = {
+			dna = svbrmsvlkae
+			properties = fl0j00000000
+			religion = cyberneticist
+			culture = indo_tarkan
+			government = corporate_directorate
+			dynasty = 5933
+		}
+	}
+	selectable_character = {	
+		id = 1109208 # Navya Vasquez
+		age = 47
+		name = ERA_CHAR_NAME_1109208
+		title = k_helix
+		title_name = k_helix
+		
+		character = {
+			dna = kxchxibnlxg
+			properties = dd00ya000000
+			culture = japanese_centauri
+			religion = pilgrim
+			government = administrative_directorate
+			dynasty = 9208
+			female = yes
+		}
+	}
+	selectable_character = {	
+		id = 1107945 # Ryusei Sato
+		age = 72
+		name = ERA_CHAR_NAME_1107945
+		title = k_jion
+		title_name = k_jion
+		
+		character = {
+			dna = ravamnuijhx
+			properties = db0cja000000
+			culture = japanese_tengoku
+			religion = astrist
+			government = military_directorate
+			dynasty = 7945
+		}
+	}
+	selectable_character = {
+		id = 11013407 #Mern
+		age = 63
+		name = ERA_CHAR_NAME_11013407
+		title = d_saula
+		title_name = d_saula
+		
+		character = {
+			dna = nqqqftrfhgl
+			properties = faqjwa000000
+			religion = neo_socialist
+			culture = sino_strugatskite
+			government = military_directorate
+			dynasty=13407 
+			}
+		}
+	}
+
+bm_FATE_OF_ENGLAND = {
+	name = "BM_FATE_OF_ENGLAND"
+	desc = "BM_CRISIS_OF_THE_CONFEDERATION_DESC"
+	date = 2998.1.1
+	
+	era = yes							
+	picture = GFX_pick_era_image_3
+	
+	selectable_character = {
+		id = 11013974 # Morgan Afolayan
+		age = 44
+		name = ERA_CHAR_NAME_11013974
+		title = e_terran_confederation
+		
+		character = {
+			female = yes
+			religion = terran_republican
+			culture = west_afro_angani
+			dynasty=13974
+			dna = "lvisntqdsvx"
+			properties = "cb0bhk00000000"
+		}
+	}
+	selectable_character = {
+		id = 11012833 # Wei Luo
+		age = 56
+		name = ERA_CHAR_NAME_11012833
+		title = k_terran_navy
+		
+		character = {
+			religion = terran_republican
+			culture = sino_terran
+			dynasty=12833
+			dna = "xifgimfkhvz"
+			properties = "jg0jdj00000000"
+		}
+	}
+	selectable_character = {
+		id = 11010155 # Juan Lebedev
+		age = 49
+		name = ERA_CHAR_NAME_11010155
+		title = k_orion_reach
+		
+		character = {
+			culture = russo_orion
+			religion = colonial_separatist
+			dynasty=10155
+			dna = "uaapqfsfumb"
+			properties = "ai0agk0000a000"
+		}
+	}
+	selectable_character = {
+		id = 1104683 # Navya Vasquez
+		age = 55
+		name = ERA_CHAR_NAME_1104683
+		title = d_orion_reach_fleet
+		
+		character = {
+			female = yes
+			culture = hispanic_orion
+			religion = colonial_separatist
+			dynasty=4683
+			dna = "ikbgpuwkybr"
+			properties = "cnojij00000000"
+		}
+	}
+	selectable_character = {
+		id = 1108425 # Shiro Hasegawa
+		age = 20
+		name = ERA_CHAR_NAME_1108425
+		title = c_rasen
+		
+		character = {
+			culture = anglo_tengoku # All Char clones are required to be blonde by science fiction law
+			dna = "dhccbdiegcb"
+			properties = "ae0jhj00000000"
+			religion = astrist
+			dynasty = 8425 # Hasegawa
+		}
+	}
+	selectable_character = {
+		id = 1108489 # Kaoru Maeda
+		age = 21
+		name = ERA_CHAR_NAME_1108489
+		title = d_core_witchhead
+		
+		character = {
+			female = yes
+			culture = japanese_tengoku
+			religion = space_pirate
+			dynasty=8489
+			dna = "ptiurpnzipk"
+			properties = "hjfeek00000000"
+		}
+	}
+}

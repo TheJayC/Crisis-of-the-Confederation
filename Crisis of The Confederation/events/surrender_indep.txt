@@ -1,0 +1,45 @@
+namespace = SURR
+
+character_event = {
+	id = SURR.2
+	desc = EVTDESCSURR.2
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_intrigue
+
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTASURR.2
+		trigger = { 
+			always = yes
+		}
+		FROMFROM = { set_defacto_liege = FROM }
+		FROMFROM = {
+			character_event = { id = 282 }
+		}
+		FROMFROM = {
+			opinion = {
+				modifier = spared_by_surrender
+				who = FROM
+				years = 5
+			}
+		}
+	}
+
+	option = { 
+		name = EVTOPTBSURR.2
+		trigger = { 
+			ROOT = { ai = no }
+		}
+		FROMFROM = {
+			opinion = {
+				modifier = deny_surrender
+				who = FROM
+				years = 2
+			}
+		}
+
+	}
+
+}

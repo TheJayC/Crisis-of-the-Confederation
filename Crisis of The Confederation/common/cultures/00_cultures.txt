@@ -1,0 +1,1004 @@
+terran_group = {			
+	graphical_culture = angloconfederategfx		
+			
+	terran = {		
+		graphical_culture = westerngfx	
+		color = { 0.5 0.5 0.95 }	
+		male_names = {	
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
+		}	
+		female_names = {	
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+		}	
+			
+		dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_terran_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}			
+xingjie_group = {			
+	graphical_culture = sinoxingjiegfx		
+	second_graphical_culture = mideastxingjiegfx		
+			
+	xingjie = {		
+		graphical_culture = bodpagfx	
+		color = { 0.95 0.5 0.5 }	
+			
+		male_names = {	
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
+		} female_names = {	
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_xingjie_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}			
+celestean_group = {			
+	graphical_culture = hispaniccelesteangfx		
+	second_graphical_culture = anglocelesteangfx		
+			
+	celestean = {		
+		graphical_culture = celesteangfx	
+		color = { 1.0 1.0 0 }	
+			
+		male_names = {	
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+		} female_names = {	
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_celestean_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}			
+sexto_solar_group = {			
+	graphical_culture = americelesteangfx		
+	second_graphical_culture = mideastcelesteangfx		
+			
+	sexto_solar = {		
+		graphical_culture = sextogfx	
+		color = { 1.0 0.75 0 }	
+			
+		male_names = {	
+			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli Cuetzpalli Cuixtli Cuitlahuac 
+			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl 
+			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli 
+			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe Xochipilli Yaotl Zipactonal Zolin
+		} female_names = {	
+			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
+			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli
+			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
+			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_sexto_solar_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			knights_offensive = 0.1
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+        			
+        			
+			pikemen_defensive = 0.50
+			
+			intrigue = 3
+			learning = 2
+			diplomacy = -2
+		}	
+	}		
+}			
+samawati_group = {			
+	graphical_culture = mideastsamawatigfx		
+			
+	samawati = {		
+		graphical_culture = southerngfx	
+		color = { 0 1.0 0 }	
+			
+		male_names = {	
+			Amir Ammar Adam_Adam Ahmed_Ahmad Ali_Ali Abdulrahman_Abdulrahman Abdullah_Abdullah Aziz Bilal
+			Hamdan Hamid Hamza Hussein_Hussayn Hasan Halim Kathem Khaled Ibrahim_Abraham Karim
+			Mahmud Majid Muhammad_Muhammed Mustafa Murad Omar Rashid
+			Said Selim Tarek Taha Yasin Yousouf_Joseph
+		} female_names = {	
+			Ashraqat Aya Aicha Amina
+			Dalal Doha Eisha Fajr Fatima Farida Fatin
+			Gamila Gamalat Gazel Hala Habiba Hosniya Hasnaa Hoda Layan Leen Lian Khadija Karima Jana
+			Malika Maha Marwa Maryam_Maria Malak Mona Naima Nesreen Nadia Noor
+			Rachida Reem Salma Saida Sahar Shaimaa Shahd Suha Sarah_Sarah
+			Yara
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_samawati_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.05
+			light_infantry_offensive = 0.25
+			heavy_infantry_offensive = 0.10
+			
+			
+			intrigue = 1
+			martial = 3
+		}	
+	}		
+}			
+angani_group = {			
+	graphical_culture = afroanganigfx		
+	second_graphical_culture = mideastanganigfx		
+			
+	angani = {		
+		graphical_culture =  africangfx 
+		color = { 0.9 0.9 0.9 }	
+			
+		male_names = {	
+			Amani Anasa Azize Baraka Darweshi Elimu Enzi
+			Fanana Faraji Hamisi Husani Issa Jahleel Jina Juma Jumaane
+			Khalfani Kitwana Kondo Kwanza Mbwana Mhina Mosi Musa
+			Rhamadhani Salehe Sefu Shani Simba Taji Tambo
+		} female_names = {	
+			Afiya Akina Amana Angalia Arusi Ashura Asya
+			Bahati Busara Chiku Dafina Dalila Fanaka Faraja Fatuma Fikira
+			Hadiya Halima Halisi Haoniya Hasina Hawa Imani Imara Inira Jaha Jina
+			Kakena Kalere Kamaria Karama Kesi Khadija Kibibi Kijakazi Kinaya Kinjia Kito
+			Malika Malkia Marjani Marini Masika Maulidi Mwamini Mwasaa
+			Najma Nbushe Neema Panya Pasua Penda Rashida Raziya Rehema Rukiya
+			Saada Salama Sanura Sauda Shani Sikudhani Siti Tabia Waseme
+			Zakiya Zawadi Zuwena
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_angani_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}			
+frontiersman_group = {			
+	graphical_culture = anglofrontiergfx		
+			
+	frontiersman = {		
+		graphical_culture =  ugricgfx 
+		color = { 0 0 1.0 }	
+		male_names = {	
+			Alexander_Alexander Andrew_Andrew Adam_Adam Allen_Allen Arthur_Arthur
+			Benjamin_Benjamin Christopher_Christopher Albert_Albert Alfred Carter
+			Charles_Charles Daniel_Daniel David_David Duncan Edward_Edward Edgar Ethan
+			Gabriel_Gabriel Gregory_Gregory George_George Harry Henry_Henry Jack Jacob_Jacob
+			James_James John_John Joseph_Joseph Joshua_Joshua Liam Luke_Lucas Lucas_Lucas Logan
+			Malcolm Matthew_Matthew Michael_Michael Nathan_Nathan Noah Patrick Philip_Philip Peter_Peter
+			Oliver Owen Robert_Robert Richard_Richard Samuel_Samuel Thomas_Thomas Stephen_Stephen
+			William_William Wilfred Victor Vincent Zachary
+		} female_names = {	
+			Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy
+			Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen
+			Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine
+			Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany
+			Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_frontiersman_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}			
+centauri_group = {			
+	graphical_culture = russocentaurigfx		
+	second_graphical_culture = anglocentaurigfx		
+			
+	centauri = {		
+		graphical_culture = centaurigfx	
+		color = { 0.1 0.1 0.1 }	
+			
+		male_names = {	
+			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
+			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
+			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
+			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
+			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
+			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
+			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
+			Yulian Yuri Yakov
+		} female_names = {	
+			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
+			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
+			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
+			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
+			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
+			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
+			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_centauri_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}						
+}
+imperial_group = {			
+	graphical_culture = angloimperialgfx		
+	second_graphical_culture = angloimperialgfx		
+			
+	imperial = {		
+		graphical_culture = spanishgfx	
+		color = { 0.95 1.1 0.65 }	
+			
+		male_names = {	
+			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
+			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
+			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
+			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
+			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
+			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
+			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
+			Yulian Yuri Yakov
+		} female_names = {	
+			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
+			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
+			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
+			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
+			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
+			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
+			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_imperial_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+            knights_offensive = 0.1			
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+			
+			diplomacy = 1
+			learning = 2
+			intrigue = 2
+			stewardship = -1
+            			
+            levy_size = 0.15			
+		}	
+	}		
+}						
+tengoku_group = {			
+	graphical_culture = sinojiongfx		
+	second_graphical_culture = mideastjiongfx		
+			
+	tengoku = {		
+		graphical_cultures = { asiangfx }
+		color = { 0 0.25 0 }	
+			
+		male_names = {	
+			Hiroshi Akira Kazuo Takashi Toshio Yoshio Hideo Masao Kiyoshi
+			Takeshi Minoru Shigeru Tadashi Kenji Koichi Takeo Ichiro Makoto
+			Yasuo Yukio Yutaka Osamu Saburo Koji Susumu Toru Shigeo Isao
+			Tatsuo Shiro Noboru Hajime Mitsuo Jiro Tsutomu Shoji Nobuo Takao
+			Tetsuo Shinichi Fumio Kenichi Akio Seiichi Tadao Kunio Eiichi
+			Ryotaro Ryusei
+			
+		} female_names = {	
+			Keiko Yoko Kazuko Hiroko Kaoru Yoshiko Michiko Masako
+			Akiko Reiko Kyoko Noriko Toshiko Atsuko Ayako Chieko
+			Chizuko Eiko Emiko Eri Fumi Fumiko Hana Hanako Haru
+			Haruko Hitomi Junko Kaoru Kazue Kimiko Mari Mariko
+			Mayumi Mika Miyuki Rie Sachiko Satomi
+			Seiko Sumiko Tomoko Yasuko Yoshie
+			Yumi Yumiko Yuriko
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_tengoku_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.05
+			light_infantry_offensive = 0.25
+			heavy_infantry_offensive = 0.10
+			
+			
+			intrigue = 1
+			martial = 3
+		}	
+	}		
+}			
+
+bianjiangese_group = {			
+	graphical_culture = sinoxingjiegfx		
+	second_graphical_culture = mideastxingjiegfx		
+			
+	bianjiangese = {		
+		graphical_cultures = { mongolgfx asiangfx }	
+		color = { 0.5 0 0.5 }	
+			
+		male_names = {	
+			An Bo Bin Cheng
+			De Dong Feng Gang Guo Hui Hao
+			Jian Jie Jun Kang Liang Lei Ning
+			Peng Tao Wei Yong Yi Wen
+		} female_names = {	
+			Ai Bi Cai Dan Fang
+			Hong Hui Juan Jing Jie
+			Lan Li Lian Na Ni
+			Qian Qiong Shan Shu Ting
+			Xia Xian Xiaoyan Xiaomei Xinyi Yan Yun Ying Zhen
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_bianjiangese_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			knights_offensive = 0.1
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+        			
+        			
+			pikemen_defensive = 0.50
+			
+			intrigue = 3
+			learning = 2
+			diplomacy = -2
+		}	
+	}		
+}			
+
+orion_group = {			
+	graphical_culture = hispaniccelesteangfx		
+	second_graphical_culture = anglocelesteangfx		
+			
+	orion = {		
+		graphical_culture = celticgfx	
+		color = { 0.75 0.75 0.75 }	
+			
+		male_names = {	
+			Angel Adrian Agustin Alejandro_Alexander Alexander_Alexander Andres_Andrew Benjamin_Benjamin
+			Bruno Carlos Christopher_Christopher Daniel_Daniel David_David Diego Dylan
+			Emilio Emiliano_Emiliano Emmanuel Felipe_Philip Gabriel_Gabriel
+			Ignacio Juan_John Juan-Pablo Juan-Jose Juan-Diego Joaquin Jeronimo Lucas Leonardo
+			Maximiliano_Max Martin Matias_Matthew Mateo_Matthew Miguel_Michael Miguel-Angel Nicolas
+			Rodrigo Pablo Samuel_Samuel Santiago Sebastian Tomas_Thomas Thiago
+		} female_names = {	
+			Sofia_Sophia Isabella Camila Valentina Valeria Mariana Luciana
+			Daniela_Danielle Gabriela Victoria_Victoria Martina Lucia Ximena Sara_Sarah
+			Samantha Maria-Jose Emma Catalina Julieta Mia Antonella Renata Emilia_Emily
+			Natalia Zoe Nicole Paula Amanda Maria-Fernanda Antonia Alejandra Juana Andrea
+			Manuela Ana-Sofia Guadalupe Agustina Elena Maria_Maria Beatriz_Beatrice
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_orion_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			knights_offensive = 0.1
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+        			
+        			
+			pikemen_defensive = 0.50
+			
+			intrigue = 3
+			learning = 2
+			diplomacy = -2
+		}	
+	}		
+}			
+
+mukta_group = {			
+	graphical_culture = indomuktagfx		
+	second_graphical_culture = mideastmuktagfx		
+			
+	mukta = {		
+		graphical_culture = muktagfx	
+		color = { 0.95 0.5 0.1 }	
+		male_names = {	
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
+		} female_names = {	
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_mukta_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			knights_offensive = 0.1
+			knights_defensive = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_defensive = 0.1
+			
+        			
+        			
+			pikemen_defensive = 0.50
+			
+			intrigue = 3
+			learning = 2
+			diplomacy = -2
+		}	
+	}		
+}			
+
+tarkan_group = {			
+	graphical_culture = indomuktagfx		
+	second_graphical_culture = mideastmuktagfx		
+			
+	tarkan = {		
+		graphical_culture = southindiangfx	
+		color = { 0.5 0.5 0.5 }	
+		male_names = {	
+			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
+			Abhinav Arnav Atharv Anoop Krishna Aaryan Arjun Akhil Ayush
+			Bhushan Deepak Devansh Dhruv
+			Gaurav Gokul Hari Harish Hemanth Inder Ishan Jeevan Jatin
+			Karthik Kapil Kumar Kali
+			Mohit Manish Manoj Naveen Nikhil Nithin
+			Raj_Raja Raja_Raja Ramesh Ravi Rajesh Raunak Rakesh Rahul Rohit Omkar
+			Sagnik Salman Sandeep Sahil Shashank Sai Saini Shiva Shaurya Siddharth Palash Pranav Tejas Pradeep Prashant
+			Varun Vivaan Vignesh Vihaan Vishal Vishnu Vivek Vijay Yash Zeal
+			Andhi Tufani # Cameo appearance for a friend's RPG character
+		} female_names = {	
+			Ananya Aadhya Anika Aradhya Avni Aditi Anjali Anmeha Apoorva Aishwarya
+			Bhagirathy Diya Harini Miti Navya Nishi Kavya Khushi Kavya Kavitha Kirti
+			Riya Rhea Ridhi Rishika Shreya Sana Saanvi Sneha Shruti Pari Pihu Priyanka Prachi
+			Vaishnavi
+			Nilana Samaya # Same
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_tarkan_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.05
+			light_infantry_offensive = 0.25
+			heavy_infantry_offensive = 0.10
+			
+			
+			intrigue = 1
+			martial = 3
+		}	
+	}		
+}			
+avalonian_group = {			
+	graphical_culture = germangfx		
+			
+	avalonian = {		
+		graphical_culture = avaloniangfx	
+		color = { 0.25 0 0 }	
+		male_names = {	
+Aban Abrioris Adragain Aglovale Agravain Aqiff Arthur Bagdemagus Baudwin Bedivere Bors Brastius Bredbeddle Breunor Caradoc Colgrevance Constantine Dagonet Degore Daniel Dinadan Dornar Ector Elyan Gaheris Galahad Galehaut Galeshin Gareth Gawain Geraint Gingalain Griflet Kay Lamorak Lancelot Leodegrance Lionel Lucan Mador Maleagant Mordred Morien Palamedes Pelleas Pellinore Percival Pinel Sagramore Safir Segwarides Tor Tristan Ulfius Uriens Uther Yvain Agolant Albracca Angelica Astolfo Atlantes Aude Aymon Baligant Blancandrin Bradamante Bramimonde Brandimarte Brunello Charlot Ferragut Fierabras Garin Huon Bordeaux Marfisa Marsile Maugris Melissa Ogier Pinabel Rodomonte Ruggiero Sacripante Turpin William Roland Ganelon Naimon Oliver Renaud Einhard Owain Urien
+		} female_names = {	
+Guinevere Igraine Anna Morgawse Morgan Blasine Elaine Niniane Viviane Ganieda Gwendoloena Gwendoleu Isolde Brangwain Elaine Laudine Lunete Enide Enid Abigail_Abigail Alice Catherine_Catherine Chloe Barbara Dorothy Emma Emily_Emily Isabella_Elisabeth Elisabeth_Elisabeth Eliza_Elisabeth Elizabeth_Elizabeth Ellen Grace Hannah Jennifer_Jennifer Jessica Lily Lucy Linda Katherine_Catherine Mary_Maria Margaret_Margaret Melissa Morgan Patricia_Patricia Ruby Stephany Sarah_Sarah Sophia Susan_Susan Zoe Simone
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_avalonian_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.05
+			light_infantry_offensive = 0.25
+			heavy_infantry_offensive = 0.10
+			
+			
+			intrigue = 1
+			martial = 3
+		}	
+	}		
+}			
+strugatskite_group = {			
+	graphical_culture = russocentaurigfx		
+	second_graphical_culture = anglocentaurigfx		
+			
+	strugatskite = {		
+		graphical_culture = easternslavicgfx	
+		color = { 1.0 0 0 }	
+			
+		male_names = {	
+			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
+			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
+			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
+			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
+			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
+			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
+			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
+			Yulian Yuri Yakov
+		} female_names = {	
+			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
+			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
+			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
+			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
+			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
+			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
+			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_strugatskite_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.10
+			heavy_infantry_offensive = 0.05
+			light_infantry_offensive = 0.05
+			
+        			
+        			
+			archers_defensive = 0.20
+			heavy_infantry_defensive = 0.10
+			light_infantry_defensive = 0.15
+			
+			martial = 3
+			intrigue = 1
+			stewardship = -1
+			diplomacy = -1
+		}	
+	}		
+}			
+
+edemite_group = {			
+	graphical_culture = russocentaurigfx		
+	second_graphical_culture = anglocentaurigfx		
+			
+	edemite = {		
+		graphical_culture = edemitegfx	
+		color = { 0 0.5 0 }	
+			
+		male_names = {	
+			Abram Alexei_Alexis Anatoly Andrei_Andrew Arkady Artyom
+			Bogdan Boris Valentin Valery Vasily Viktor Vladimir_Vladimir
+			Gavriil_Gabriel Gennady Georgy_George Grigory_Gregory
+			David_David Daniil_Daniel Dmitry Ivan_John Igor Iosif_Joseph
+			Immanuil_Emmanuel Kirill_Cyril Konstantin Lev Leonid Maxim
+			Matvei Mikhail_Michael Nikita Nikolai_Nicolas Oleg Pavel
+			Pyotr_Peter Roman Sergei Stepan_Stephen Timofei Eduard_Edward Erik_Eric
+			Yulian Yuri Yakov
+		} female_names = {	
+			Alexandra Alina Alyona Anastasiya_Anastasia Anna_Anna
+			Vera Valeriya Vasilisa Veronika Valentina Viktoriya_Victoria
+			Galina Dina Dominika Ekateirna_Catherine Elizaveta_Elisabeth Eva
+			Zhanna Zoya Inessa Izabella_Isabel Izolda Klara Klavdiya
+			Kristina Larisa Lidiya Lilya Ludmila Margarita Maya
+			Mariya_Maria Natalya Nina Nika Olga Olesya Raisa Rozalina
+			Svetlana Sofia_Sophia Tamara Tatyana Ulyana Florentina
+			
+		} dukes_called_kings = yes	
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.	
+		pat_grf_name_chance = 40	
+		mat_grf_name_chance = 40	
+		father_name_chance = 0	
+			
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.	
+		pat_grm_name_chance = 40	
+		mat_grm_name_chance = 40	
+		mother_name_chance = 0	
+			
+		modifier = anglo_edemite_culture_modifier	
+		character_modifier = {	
+		galleys_perc = 0.2	
+		land_morale = 0.05#	
+		local_tax_modifier = 0.05 #half	
+		global_tax_modifier = 0.025 #half	
+		global_tradevalue_mult = 0.15	
+		local_revolt_risk = -0.005 #half	
+		archers_offensive = 0.1##half	
+		archers_defensive = 0.05##half	
+			
+			archers_offensive = 0.10
+			heavy_infantry_offensive = 0.10
+			light_infantry_offensive = 0.10
+			
+        			
+        			
+			archers_defensive = 0.20
+			heavy_infantry_defensive = 0.10
+			light_infantry_defensive = 0.15
+			
+			martial = 2
+			learning = 1
+			stewardship = 1
+			diplomacy = -1
+            			
+            general_opinion = -5			
+		}	
+	}		
+}			
+
+

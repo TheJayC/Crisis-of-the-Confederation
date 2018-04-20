@@ -1,0 +1,202 @@
+namespace = romeplus
+
+# on_death for Byzantine succession
+character_event = {
+	id = romeplus.1004
+	desc = EVTDESCromeplus1
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		higher_tier_than = DUKE
+		independent = yes
+		OR = {
+			government = military_monarchy
+			government = military_directorate
+			government = administrative_monarchy
+			government = administrative_directorate
+			government = corporate_monarchy
+			government = corporate_directorate
+		}
+	}
+	
+	immediate = {
+		# Must be done in immediate, because for players the current_heir is already messed up
+		# by the time the option is run.
+		symbasileus = {
+			clear_event_target = original_father
+            father_even_if_dead = {
+				save_event_target_as = original_father
+			}
+            save_event_target_as = new_emperor
+            set_father = ROOT
+            
+            any_sibling = {
+				add_trait = inheritance_blocker
+				character_event = { id = romeplus.1007 days = 1 }
+            }
+            
+            recalc_succession = yes
+            
+    		# Adjust player inheritance to prevent game over
+    		ROOT = {
+				if = {
+					limit = {
+						ai = no
+						#is_feudal = yes
+						current_heir = {
+							NOT = {
+								dynasty = ROOT
+							}
+						}
+					}
+					# Save old dynasty
+					current_heir = {
+						create_character = {
+							name = Biff
+							culture = ROOT
+							religion = ROOT
+							dynasty = THIS
+							random_traits = no
+							female = no
+							age = 20
+							health = 10
+							attributes = {
+								stewardship = 1
+								intrigue = 1
+							}
+						}
+						new_character = {
+							save_event_target_as = original_dynasty
+						}
+						# Make new char part of the old dynasty for now, so inheritance goes through without game over
+						dynasty = ROOT
+						save_event_target_as = edited_dynasty
+						character_event = { id = romeplus.1006 days = 1 }
+					}
+					recalc_succession = yes
+				}
+			}
+            
+            character_event = { id = romeplus.1005 days = 1 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTromeplus1
+	}
+}
+
+# Restore real father after inheritance has gone through
+character_event = {
+	id = romeplus.1005
+	desc = EVTDESCromeplus1
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = EVTOPTromeplus1
+		
+		event_target:new_emperor = {
+			set_father = event_target:original_father
+		}
+	}
+}
+
+# Dynasty choice for new player character
+character_event = {
+	id = romeplus.1006
+	desc = EVTDESCromeplus1006
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	hide_new = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	# Keep newly inherited one (player used this one until now)
+	option = {
+		name = EVTOPTromeplus1006b
+		ai_chance = { factor = 0 }
+		hidden_tooltip = {
+			event_target:original_dynasty = {
+				dynasty = mother_bastard
+				death = { death_reason = death_accident }
+			}
+			any_child = {
+				limit = {
+					dynasty = ROOT
+					NOT = {
+						trait = bastard
+					}
+					lower_real_tier_than = ROOT
+				}
+				dynasty = PREV
+			}
+			remove_trait = symbasileus
+		}
+	}
+
+	# Restore old dynasty
+	option = {
+		name = EVTOPTromeplus1006a
+		ai_chance = { factor = 100 }
+		hidden_tooltip = {
+			event_target:original_dynasty = {
+				ROOT = {
+					dynasty = PREV
+				}
+				
+				dynasty = mother_bastard
+				death = { death_reason = death_accident }
+			}
+			any_child = {
+				limit = {
+					dynasty = ROOT
+					NOT = {
+						trait = bastard
+					}
+					lower_real_tier_than = ROOT
+				}
+				dynasty = PREV
+			}
+			remove_trait = symbasileus
+		}
+	}
+
+}
+
+# Remove temporary trait
+character_event = {
+	id = romeplus.1007
+	desc = EVTDESCromeplus1
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	immediate = {
+		remove_trait = inheritance_blocker
+	}
+	
+	option = {
+		name = EVTOPTromeplus1
+	}
+}

@@ -1,0 +1,53 @@
+#character		
+on_startup = {		
+	events = {	
+		parliaments.001
+	}	
+}		
+
+on_bi_yearly_pulse = {					
+	events = {				
+		parliaments.001		
+	}	
+}
+	
+#on siege pulse		
+on_siege_pulse = {		
+	random_events = {	
+	}	
+	events = { 	
+		coup.140
+	} # Defense commander defects	
+}		
+	
+# Fires for a newly elected Doge. FROM is the previous (dying or abdicating) doge.		
+on_become_doge = {		
+	events = {	
+		parliaments.001
+	}	
+}		
+	
+# ROOT is the creating character, FROM is the title		
+on_create_title = {		
+	events = {	
+		parliaments.001
+	}	
+}		
+# ROOT is the character, FROM is the title, FROMFROM is the old holder		
+on_new_holder = {		
+	events = {	
+		parliaments.001
+	}	
+}		
+# ROOT is the character, FROM is the title, FROMFROM is the old holder		
+on_new_holder_inheritance = {		
+	events = {	
+		parliaments.001
+	}	
+}		
+# ROOT is the character, FROM is the title, FROMFROM is the old holder		
+on_new_holder_usurpation = {		
+	events = {	
+		parliaments.001
+	}	
+}

@@ -1,0 +1,181 @@
+namespace = Stuff
+
+# Event that runs on character death
+character_event = {
+	id = Stuff.100
+	desc = EVTDESC_Stuff.100
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes                # Checked for pope on death on_event
+
+	option = {
+		name = EVTOPTAStuff.100
+	}
+}
+character_event = {
+	id = Stuff.101
+	desc = EVTDESC_Stuff.101
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes                # Checked for pope on death on_event
+
+	option = {
+		name = EVTOPTAStuff.101
+	}
+}
+
+
+# Alexander war succeeds
+narrative_event = {
+	id = Stuff.106
+	title = EVTNAME_Stuff.106
+	desc = EVTDESC_Stuff.106
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	show_from_from = yes
+	show_root = no
+	immediate = {
+		
+	}
+	option = {
+		trigger = {
+			NOT = { character = FROM }
+		}
+		name = EVTOPTA_Stuff.106
+	}
+	option = {
+		trigger = {
+			character = FROM
+		}
+		name = EVTOPTB_Stuff.106
+	}
+}
+#alex
+character_event = {
+	id = Stuff.107
+	desc = EVTDESC_Stuff.107
+	picture = "GFX_evt_battle"
+	border = "GFX_event_normal_frame_war"
+	
+	trigger = {
+		ROOT = {
+			wealth = 0
+			location = { religion = ROOT }
+			has_character_flag = alexandering
+			#in_command = yes
+			any_war = {
+				using_cb = alexander_war
+				attacker = {
+						character = ROOT
+					#	war_score = -50
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 60
+		#Happens slower if losing war.
+		modifier = {
+			factor = 1.5
+			any_war = {
+				using_cb = alexander_war
+				attacker = {
+					character = ROOT
+					NOT = { war_score = -10 }
+				}	
+			}
+		}
+		#Happens a little quicker if ruler in command.
+		modifier = {
+			factor = 0.9 #happens 10% faster
+			ROOT = { in_command = yes }
+		}
+		#Happens a little quicker for good characters.
+		modifier = {
+			factor = 0.9 #happens 10% faster
+			piety = 100
+		}
+		#Happens a little quicker if warscore at least 10.
+		modifier = {
+			factor = 0.75 #happens 25% faster
+			any_war = {
+				using_cb = alexander_war
+				attacker = {
+						character = ROOT
+						war_score = 10
+				}
+			}
+		}
+		#Happens a little quicker for exceptionally large realms.
+		modifier = {
+			factor = 0.75 #happens 25% faster
+			any_war = {
+				using_cb = alexander_war
+				attacker = {
+						character = ROOT
+				}
+				defender = {
+					realm_size = 300
+				}
+			}
+		}
+		#Happens a little quicker for attacking different religion group.
+		modifier = {
+			factor = 0.95
+			any_war = {
+				using_cb = alexander_war
+				attacker = {
+						character = ROOT
+				}
+				defender = {
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTAStuff.107
+		prestige = 5
+		location = {
+			ROOT = {
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = no
+					religion = PREV
+					culture = PREV
+					female = no
+					age = 25
+				}
+				new_character = {
+					spawn_unit = {
+						province = PREVPREV
+						owner = ROOT
+						match_character = FROM
+						match_mult = 0.15
+						attrition = 1.0
+						maintenance_multiplier = 1.0
+					}
+				}
+			}
+		}
+	}
+}
+#Trigger Alexander
+character_event = {
+	id = Stuff.108
+	desc = EVTDESC_Stuff.108
+	picture = "GFX_evt_battle"
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+
+	option = { #I will be Great!
+		name = EVTOPTAStuff.108
+		prestige = 500
+	}
+}

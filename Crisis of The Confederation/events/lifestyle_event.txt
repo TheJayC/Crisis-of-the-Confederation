@@ -1,0 +1,2313 @@
+namespace = lifestyle
+# Gaining Lifestyle Traits
+# Athlete
+character_event = {
+	id = lifestyle.100
+	desc = "EVTDESCLIFESTYLE100"
+	picture = GFX_evt_athletics
+	
+	min_age = 12
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		in_command = no
+		NOT = { lifestyle_traits = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_adopt_lifestyle
+		}
+		modifier = {
+			factor = 0.1
+			any_dynasty_member = {
+				trait = athlete
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_dynasty_member = {
+				trait = athlete
+				NOT = { reverse_opinion = { who = ROOT value = -24 } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_friend = { trait = athlete }
+		}
+		modifier = {
+			factor = 0.1
+			any_rival = { trait = athlete }
+		}
+		modifier = {
+			factor = 0.5
+			trait = strong
+		}
+		modifier = {
+			factor = 0.5
+			trait = agile
+		}
+		modifier = {
+			factor = 2
+			trait = weak
+		}
+		modifier = {
+			factor = 2
+			trait = clumsy
+		}
+		modifier = {
+			factor = 0.5
+			trait = extraverted
+		}
+		modifier = {
+			factor = 2
+			trait = introverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 4
+			trait = dwarf
+		}
+		modifier = {
+			factor = 4
+			trait = hunchback
+		}
+		modifier = {
+			factor = 4
+			trait = clubfooted
+		}
+		modifier = {
+			factor = 4
+			trait = wounded
+		}
+		modifier = {
+			factor = 4
+			trait = maimed
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE100"
+		add_trait = athlete
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE100"
+		ai_chance = { factor = 0 }
+	}
+}
+# Artist
+character_event = {
+	id = lifestyle.200
+	desc = "EVTDESCLIFESTYLE200"
+	picture = GFX_evt_art
+	
+	min_age = 12
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		in_command = no
+		NOT = { lifestyle_traits = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_adopt_lifestyle
+		}
+		modifier = {
+			factor = 0.1
+			any_dynasty_member = {
+				trait = artist
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_dynasty_member = {
+				trait = artist
+				NOT = { reverse_opinion = { who = ROOT value = -24 } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_friend = { trait = artist }
+		}
+		modifier = {
+			factor = 0.1
+			any_rival = { trait = artist }
+		}
+		modifier = {
+			factor = 0.5
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE200"
+		add_trait = artist
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE200"
+		ai_chance = { factor = 0 }
+	}
+}
+# Gardener
+character_event = {
+	id = lifestyle.300
+	desc = "EVTDESCLIFESTYLE300"
+	picture = GFX_evt_gardener
+	
+	min_age = 12
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		in_command = no
+		NOT = { lifestyle_traits = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_adopt_lifestyle
+		}
+		modifier = {
+			factor = 0.1
+			any_dynasty_member = {
+				trait = gardener
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_dynasty_member = {
+				trait = gardener
+				NOT = { reverse_opinion = { who = ROOT value = -24 } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_friend = { trait = gardener }
+		}
+		modifier = {
+			factor = 0.1
+			any_rival = { trait = gardener }
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE300"
+		add_trait = gardener
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE300"
+		ai_chance = { factor = 0 }
+	}
+}
+# Intellectual
+character_event = {
+	id = lifestyle.400
+	desc = "EVTDESCLIFESTYLE400"
+	picture = GFX_evt_scholar
+	
+	min_age = 12
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		in_command = no
+		NOT = { lifestyle_traits = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_adopt_lifestyle
+		}
+		modifier = {
+			factor = 0.1
+			any_dynasty_member = {
+				trait = intellectual
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_dynasty_member = {
+				trait = intellectual
+				NOT = { reverse_opinion = { who = ROOT value = -24 } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_friend = { trait = intellectual }
+		}
+		modifier = {
+			factor = 0.1
+			any_rival = { trait = intellectual }
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = skeptical
+		}
+		modifier = {
+			factor = 2
+			trait = spiritual
+		}
+		modifier = {
+			factor = 0.5
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = close_minded
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE400"
+		add_trait = intellectual
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE400"
+		ai_chance = { factor = 0 }
+	}
+}
+# Mystic
+character_event = {
+	id = lifestyle.500
+	desc = "EVTDESCLIFESTYLE500"
+	picture = GFX_evt_mystic
+	
+	min_age = 12
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		in_command = no
+		NOT = { lifestyle_traits = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		modifier = {
+			factor = 0.1
+			has_ambition = obj_adopt_lifestyle
+		}
+		modifier = {
+			factor = 0.1
+			any_dynasty_member = {
+				trait = mystic
+				reverse_opinion = { who = ROOT value = 25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			any_dynasty_member = {
+				trait = mystic
+				NOT = { reverse_opinion = { who = ROOT value = -24 } }
+			}
+		}
+		modifier = {
+			factor = 0.1
+			any_friend = { trait = mystic }
+		}
+		modifier = {
+			factor = 0.1
+			any_rival = { trait = mystic }
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE500"
+		add_trait = mystic
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE500"
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Events for when you have a lifestyle
+# Athlete
+# You played a key role in winning a big spaceball game
+character_event = {
+	id = lifestyle.1000
+	desc = "EVTDESCLIFESTYLE1000"
+	picture = GFX_evt_athletics
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+		NOT = { trait = wounded }
+		NOT = { trait = maimed }
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.5
+			trait = strong
+		}
+		modifier = {
+			factor = 0.5
+			trait = agile
+		}
+		modifier = {
+			factor = 2
+			trait = weak
+		}
+		modifier = {
+			factor = 2
+			trait = clumsy
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				trait = cybernetic_limb
+				trait = full_cybernetic_conversion
+			}
+		}
+		modifier = {
+			factor = 4
+			trait = ill
+		}
+		modifier = {
+			factor = 4
+			trait = depressed
+		}
+		modifier = {
+			factor = 4
+			trait = dwarf
+		}
+		modifier = {
+			factor = 4
+			trait = hunchback
+		}
+		modifier = {
+			factor = 4
+			trait = clubfooted
+		}
+		
+		# Has more important things to do than place spaceball
+		modifier = {
+			factor = 4
+			is_councillor = yes
+		}
+		modifier = {
+			factor = 4
+			demesne_size = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1000"
+		wealth = 100
+		prestige = 100
+	}
+}
+# You played a key role in losing a big spaceball game
+character_event = {
+	id = lifestyle.1100
+	desc = "EVTDESCLIFESTYLE1100"
+	picture = GFX_evt_athletics
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		in_command = no
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+		NOT = { trait = wounded }
+		NOT = { trait = maimed }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 2
+			trait = strong
+		}
+		modifier = {
+			factor = 2
+			trait = agile
+		}
+		modifier = {
+			factor = 0.5
+			trait = weak
+		}
+		modifier = {
+			factor = 0.5
+			trait = clumsy
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				trait = cybernetic_limb
+				trait = full_cybernetic_conversion
+			}
+		}
+		modifier = {
+			factor = 0.25
+			trait = ill
+		}
+		modifier = {
+			factor = 0.25
+			trait = depressed
+		}
+		modifier = {
+			factor = 0.25
+			trait = dwarf
+		}
+		modifier = {
+			factor = 0.25
+			trait = hunchback
+		}
+		modifier = {
+			factor = 0.25
+			trait = clubfooted
+		}
+		
+		# Has more important things to do than place spaceball
+		modifier = {
+			factor = 4
+			is_councillor = yes
+		}
+		modifier = {
+			factor = 4
+			demesne_size = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1100"
+		prestige = -100
+	}
+}
+# You pulled a muscle at spaceball practice
+character_event = {
+	id = lifestyle.1200
+	desc = "EVTDESCLIFESTYLE1200"
+	picture = GFX_evt_wounded
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		NOT = { trait = wounded }
+		NOT = { trait = maimed }
+		NOT = { trait = full_cybernetic_conversion }
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 5
+			has_character_flag = flag_banned_from_spaceball
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1200"
+		add_trait = wounded
+	}
+}
+# You're sick and the big game is in just two weeks!
+character_event = {
+	id = lifestyle.1300
+	desc = "EVTDESCLIFESTYLE1300"
+	picture = GFX_evt_ill
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		trait = ill
+		NOT = { trait = maimed }
+		NOT = { trait = full_cybernetic_conversion }
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		# I'll play anyway
+		name = "EVTOPTALIFESTYLE1300"
+		character_event = { id = lifestyle.1301 tooltip = "EVTTOOLTIPLIFESTYLE1301" days = 14 }
+		hidden_tooltip = { character_event = { id = lifestyle.1302 days = 14 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+		}
+	}
+	
+	option = {
+		# I'll have to drop out
+		name = "EVTOPTBLIFESTYLE1300"
+		prestige = -100
+	}
+}
+# You played a game while sick and may have worsened your condition. But your team won!
+character_event = {
+	id = lifestyle.1301
+	desc = "EVTDESCLIFESTYLE1301"
+	picture = GFX_evt_athletics
+	is_triggered_only = yes
+	
+	trigger = { trait = ill }
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1301"
+		health = -1
+		wealth = 100
+		prestige = 100
+	}
+}
+# You recovered before the big game and your team won!
+character_event = {
+	id = lifestyle.1302
+	desc = "EVTDESCLIFESTYLE1302"
+	picture = GFX_evt_athletics
+	is_triggered_only = yes
+	
+	trigger = { NOT = { trait = ill } }
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1302"
+		wealth = 100
+		prestige = 100
+	}
+}
+
+# You have been banned from playing spaceball on account of your cybernetic enhancements
+character_event = {
+	id = lifestyle.1400
+	desc = "EVTDESCLIFESTYLE1400"
+	picture = GFX_evt_athletics
+	
+	min_age = 25
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+		OR = {
+			trait = cybernetic_limb
+			trait = full_cybernetic_conversion
+		}
+		in_command = no
+		NOT = {
+			location = {
+				OR = {
+					religion = cyberneticist
+					religion = machine_cultist
+					religion = hiver
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.25
+			trait = full_cybernetic_conversion
+		}
+		modifier = {
+			factor = 0.25
+			location = { religion_group = religious_group }
+		}
+		modifier = {
+			factor = 100
+			location = {
+				owner = { character = ROOT }
+				NOT = { revolt_risk = 0.25 }
+			}
+		}
+		modifier = {
+			factor = 10
+			has_character_flag = flag_ban_from_spaceball_appealed
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1400"
+		set_character_flag = flag_banned_from_spaceball
+		random = {
+			chance = 25
+			add_trait = stressed
+		}
+	}
+}
+
+# You were banned from spaceball due to your violent tactics
+character_event = {
+	id = lifestyle.1500
+	desc = "EVTDESCLIFESTYLE1500"
+	picture = GFX_evt_athletics
+	
+	min_age = 25
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+		trait = cold
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.25
+			intrigue = 1
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 2
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 3
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 4
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 5
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 6
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 7
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 8
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 9
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 10
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 11
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 12
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 13
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 14
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 15
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 16
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 17
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 18
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 19
+		}
+		modifier = {
+			factor = 1.25
+			intrigue = 20
+		}
+		modifier = {
+			factor = 10
+			has_character_flag = flag_ban_from_spaceball_appealed
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1500"
+		set_character_flag = flag_banned_from_spaceball
+		random = {
+			chance = 25
+			add_trait = stressed
+		}
+	}
+}
+
+# You suffered a career-ending spaceball injury
+character_event = {
+	id = lifestyle.1600
+	desc = "EVTDESCLIFESTYLE1600"
+	picture = GFX_evt_wounded
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		NOT = { trait = wounded }
+		NOT = { trait = maimed }
+		NOT = { trait = full_cybernetic_conversion }
+		NOT = { has_character_flag = flag_banned_from_spaceball }
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.8
+			trait = weak
+		}
+		modifier = {
+			factor = 0.8
+			trait = clumsy
+		}
+		modifier = {
+			factor = 1.25
+			trait = strong
+		}
+		modifier = {
+			factor = 1.25
+			trait = agile
+		}
+		modifier = {
+			factor = 0.8
+			trait = craven
+		}
+		modifier = {
+			factor = 1.25
+			trait = brave
+		}
+		modifier = {
+			factor = 0.8
+			trait = close_minded
+		}
+		modifier = {
+			factor = 1.25
+			trait = open_minded
+		}
+		modifier = {
+			factor = 0.8
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			trait = carefree
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE1600"
+		add_trait = maimed
+		random = {
+			chance = 25
+			add_trait = stressed
+		}
+	}
+}
+
+# You have suffered a devastating injury. Your spaceball career is over.
+character_event = {
+	id = lifestyle.1700
+	desc = "EVTDESCLIFESTYLE1700"
+	picture = GFX_evt_wounded
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		trait = maimed
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	# Dwell on the old glory days
+	option = {
+		name = "EVTOPTALIFESTYLE1700"
+		add_trait = depressed
+		ai_chance = { factor = 0 } # Never take this one if a better option is available.
+	}
+	
+	# Give up on athletics, adopt a new hobby
+	option = {
+		trigger = {
+			NOT = { trait = neurotic }
+			NOT = { trait = stressed }
+			NOT = { trait = close_minded }
+			NOT = { trait = proud }
+		}
+		name = "EVTOPTBLIFESTYLE1700"
+		remove_trait = athlete
+	}
+	
+	# Buy a cybernetic replacement
+	option = {
+		trigger = {
+			wealth = 500
+			OR = {
+				NOT = { religion_group = religious_group }
+				trait = pragmatic
+				piety = 100
+			}
+			NOT = {
+				AND = {
+					religion_group = religious_group
+					trait = radical
+				}
+			}
+		}
+		name = "EVTOPTCLIFESTYLE1700"
+		wealth = -500
+		if = {
+			limit = {
+				is_landed = yes
+				religion_group = religious_group
+			}
+			piety = -100
+			religion_authority = { modifier = ruler_cybernetics_bad years = 10 }
+		}
+		if = {
+			limit = {
+				is_landed = yes
+				religion_group = transhumanist_group
+				NOT = { religion = bio_directionist }
+			}
+			piety = 100
+			religion_authority = { modifier = ruler_cybernetics_good years = 10 }
+		}
+		remove_trait = maimed
+		add_trait = cybernetic_limb
+	}
+}
+
+# You've been banned from competitive spaceball
+character_event = {
+	id = lifestyle.1800
+	desc = "EVTDESCLIFESTYLE1800"
+	picture = GFX_evt_athletics
+	
+	min_age = 16
+	capable_only = yes
+	
+	trigger = {
+		trait = athlete
+		has_character_flag = flag_banned_from_spaceball
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	# Dwell on the old glory days
+	option = {
+		name = "EVTOPTALIFESTYLE1800"
+		add_trait = depressed
+		ai_chance = { factor = 0 } # Never take this one if a better option is available.
+	}
+	
+	# Give up on athletics, adopt a new hobby
+	option = {
+		trigger = {
+			NOT = { trait = neurotic }
+			NOT = { trait = stressed }
+			NOT = { trait = close_minded }
+			NOT = { trait = proud }
+		}
+		name = "EVTOPTBLIFESTYLE1800"
+		remove_trait = athlete
+	}
+	
+	# # Appeal the decision
+	# option = {
+		# trigger = {
+			# NOT = { trait = stressed }
+			# NOT = { trait = craven }
+			# NOT = { trait = introverted }
+			# NOT = {
+				# AND = {
+					# OR = {
+						# trait = cybernetic_limb
+						# trait = full_cybernetic_conversion
+					# }
+					# religion_group = religious_group
+				# }
+			# }
+		# }
+		# name = "EVTOPTCLIFESTYLE1800"
+		# hidden_tooltip = { e_rebels = { holder_scope= { character_event = { id = lifestyle.1801 days = 60 random = 30 } } } }
+	# }
+}
+# # Somebody tries to appeal their spaceball ban
+# character_event = {
+	# id = lifestyle.1801
+	# hide_window = yes
+	
+	# option = {
+		# # Comply with the appeal
+		# FROM = { character_event = { id = lifestyle.1802 } }
+		# ai_chance = {
+			# factor = 10
+			# modifier = {
+				# factor = 0.2
+				# FROM = {
+					# OR = {
+						# trait = cybernetic_limb
+						# trait = full_cybernetic_conversion
+					# }
+					# location = { religion_group = religious_group }
+				# }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 1 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 2 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 3 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 4 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 5 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 6 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 7 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 8 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 9 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 10 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 11 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 12 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 13 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 14 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 15 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 16 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 17 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 18 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 19 }
+			# }
+			# modifier = {
+				# factor = 1.25
+				# FROM = { diplomacy = 20 }
+			# }
+		# }
+	# }
+	# option = {
+		# # Reject the appeal
+		# FROM = { character_event = { id = lifestyle.1803 } }
+	# }
+# }
+
+# # You are now permitted to play professional spaceball again
+# character_event = {
+	# id = lifestyle.1802
+	# desc = "EVTDESCLIFESTYLE1802"
+	# picture = GFX_evt_athletics
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = "EVTOPTALIFESTYLE1802"
+		# clr_character_flag = flag_banned_from_spaceball
+		# set_character_flag = flag_ban_from_spaceball_appealed
+	# }
+# }
+
+# # Your appeal was rejected
+# character_event = {
+	# id = lifestyle.1803
+	# desc = "EVTDESCLIFESTYLE1803"
+	# picture = GFX_evt_athletics
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = "EVTOPTALIFESTYLE1803"
+		# add_trait = stressed
+	# }
+# }
+# Artist
+# Your publisher is asking you to produce worthless-but-popular dreck
+character_event = {
+	id = lifestyle.2000
+	desc = "EVTDESCLIFESTYLE2000"
+	picture = GFX_evt_art
+	
+	min_age = 25
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		trait = artist
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 100
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 200
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 300
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 400
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 500
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 600
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 700
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 800
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 900
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 1000
+		}
+	}
+	
+	option = {
+		# Money, money, money
+		name = "EVTOPTALIFESTYLE2000"
+		piety = -100
+		random_list = {
+			90 = { character_event = { id = lifestyle.2001 tooltip = "EVTTOOLTIPLIFESTYLE2001" days = 120 random = 30 } }
+			10 = { character_event = { id = lifestyle.2002 tooltip = "EVTTOOLTIPLIFESTYLE2002" days = 120 random = 30 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 4
+				trait = pragmatic
+			}
+			modifier = {
+				factor = 0.25
+				trait = radical
+			}
+			modifier = {
+				factor = 2
+				trait = neurotic
+			}
+			modifier = {
+				factor = 0.5
+				trait = confident
+			}
+		}
+	}
+	
+	option = {
+		# I won't compromise my creative integrity
+		name = "EVTOPTBLIFESTYLE2000"
+		random_list = {
+			50 = { character_event = { id = lifestyle.2001 tooltip = "EVTTOOLTIPLIFESTYLE2001" days = 120 random = 30 } }
+			50 = { character_event = { id = lifestyle.2002 tooltip = "EVTTOOLTIPLIFESTYLE2002" days = 120 random = 30 } }
+		}
+		random = {
+			chance = 50
+			character_event = { id = lifestyle.2003 tooltip = "EVTTOOLTIPLIFESTYLE2003" days = 120 random = 30 }
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+# Your new work was a hit!
+character_event = {
+	id = lifestyle.2001
+	desc = "EVTDESCLIFESTYLE2001"
+	picture = GFX_evt_art
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2001"
+		wealth = 100
+		prestige = 100
+	}
+}
+# Your new work was a flop!
+character_event = {
+	id = lifestyle.2002
+	desc = "EVTDESCLIFESTYLE2002"
+	picture = GFX_evt_art
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2002"
+		wealth = 25
+		prestige = -100
+	}
+}
+# Well, at least the critics like it
+character_event = {
+	id = lifestyle.2003
+	desc = "EVTDESCLIFESTYLE2003"
+	picture = GFX_evt_art
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2003"
+		prestige = 25
+		piety = 100
+	}
+}
+# Your publisher is pushing you about deadlines
+character_event = {
+	id = lifestyle.2100
+	desc = "EVTDESCLIFESTYLE2100"
+	picture = GFX_evt_art
+	
+	min_age = 25
+	prisoner = no
+	only_capable = yes
+	
+	trigger = { trait = artist }
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.5
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = disciplined
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 100
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 200
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 300
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 400
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 500
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 600
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 700
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 800
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 900
+		}
+		modifier = {
+			factor = 1.25
+			prestige = 1000
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2100"
+		# Work harder to make the deadline
+		random = {
+			chance = 25
+			add_trait = stressed
+		}
+		random_list = {
+			75 = { character_event = { id = lifestyle.2101 tooltip = "EVTTOOLTIPLIFESTYLE2101" days = 50 random = 25 } }
+			25 = { character_event = { id = lifestyle.2102 tooltip = "EVTTOOLTIPLIFESTYLE2102" days = 50 random = 25 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = disciplined
+			}
+			modifier = {
+				factor = 0.5
+				trait = carefree
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLIFESTYLE2100"
+		# Oh, whatever
+		random_list = {
+			25 = { character_event = { id = lifestyle.2101 tooltip = "EVTTOOLTIPLIFESTYLE2101" days = 50 random = 25 } }
+			75 = { character_event = { id = lifestyle.2102 tooltip = "EVTTOOLTIPLIFESTYLE2102" days = 50 random = 25 } }
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+# You made the deadline!
+character_event = {
+	id = lifestyle.2101
+	desc = "EVTDESCLIFESTYLE2101"
+	picture = GFX_evt_art
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2101"
+		wealth = 50
+		prestige = 50
+	}
+}
+# You missed the deadline!
+character_event = {
+	id = lifestyle.2102
+	desc = "EVTDESCLIFESTYLE2102"
+	picture = GFX_evt_art
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2102"
+		wealth = -50
+		prestige = -50
+	}
+}
+# Uh-oh, you've developed Protection From Editors
+character_event = {
+	id = lifestyle.2200
+	desc = "EVTDESCLIFESTYLE2200"
+	picture = GFX_evt_art
+	
+	min_age = 30
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		trait = artist
+		prestige = 1000
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.2
+			trait = proud
+		}
+		modifier = {
+			factor = 5
+			trait = humble
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 1500
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 2000
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 2500
+		}
+		modifier = {
+			factor = 0.5
+			prestige = 3000
+		}
+		modifier = {
+			factor = 4
+			trait = genius
+		}
+		modifier = {
+			factor = 2
+			trait = quick
+		}
+		modifier = {
+			factor = 0.5
+			trait = slow
+		}
+		modifier = {
+			factor = 0.25
+			trait = imbecile
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE2200"
+		wealth = 25
+		prestige = -500
+		if = {
+			limit = { trait = humble }
+			remove_trait = humble
+		}
+		if = {
+			limit = { NOT = { trait = proud } }
+			add_trait = proud
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 5
+				trait = proud
+			}
+			modifier = {
+				factor = 0.2
+				trait = humble
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBLIFESTYLE2200"
+		wealth = 25
+		prestige = -250
+		if = {
+			limit = { trait = proud }
+			remove_trait = proud
+		}
+		if = {
+			limit = { NOT = { trait = humble } }
+			add_trait = humble
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+# # A cyborg claims to be an 'artist'
+# character_event = {
+	# id = lifestyle.2300
+	# desc = "EVTDESCLIFESTYLE2300"
+	# picture = GFX_evt_cybernetics
+	
+	# min_age = 25
+	# prisoner = no
+	# only_capable = yes
+	
+	# trigger = {
+		# NOT = { trait = dni }
+		# NOT = { trait = full_cybernetic_conversion }
+		# NOT = { religion = hiver }
+		# NOT = { religion = cyberneticist }
+		# NOT = { religion = machine_cultist }
+		# artist = {
+			# at_location = ROOT
+			# OR = {
+				# trait = dni
+				# trait = full_cybernetic_conversion
+			# }
+			# NOT = { any_rival = { character = ROOT } }
+			# NOT = { any_friend = { character = ROOT } }
+		# }
+	# }
+	# mean_time_to_happen = {
+		# months = 240
+		# modifier = {
+			# factor = 0.5
+			# trait = artist
+		# }
+	# }
+	# option = {
+		# # How can a machine feel real emotions?
+		# name = "EVTOPTALIFESTYLE2300"
+		# artist = {
+			# limit = {
+				# at_location = ROOT
+				# OR = {
+					# trait = dni
+					# trait = full_cybernetic_conversion
+				# }
+				# NOT = { any_rival = { character = ROOT } }
+			# }
+			# NOT = { any_friend = { character = ROOT } }
+		# }
+	# }
+# }
+
+# Gardener
+# Won a local gardening contest
+character_event = {
+	id = lifestyle.3000
+	desc = "EVTDESCLIFESTYLE3000"
+	picture = GFX_evt_garden
+	
+	min_age = 25
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		trait = gardener
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.5
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			trait = friendly
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+		modifier = {
+			factor = 2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.25
+			trait = genius
+		}
+		modifier = {
+			factor = 0.5
+			trait = quick
+		}
+		modifier = {
+			factor = 2
+			trait = slow
+		}
+		modifier = {
+			factor = 4
+			trait = imbecile
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE3000"
+		wealth = 25
+		prestige = 25
+	}
+}
+
+# Working in your garden is such a stress relief
+character_event = {
+	id = lifestyle.3100
+	desc = "EVTDESCLIFESTYLE3100"
+	picture = GFX_evt_garden
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = gardener
+		trait = stressed
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			trait = confident
+		}
+		modifier = {
+			factor = 2
+			trait = neurotic
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE3100"
+		remove_trait = stressed
+	}
+}
+
+# You've heard of a rare and exotic alien plant
+character_event = {
+	id = lifestyle.3200
+	desc = "EVTDESCLIFESTYLE3200"
+	picture = GFX_evt_garden
+	
+	min_age = 25
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		trait = gardener
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		# I MUST HAVE ONE!
+		name = "EVTOPTALIFESTYLE3200"
+		wealth = -50
+		random_list = {
+			50 = { character_event = { id = lifestyle.3201 tooltip = "EVTTOOLTIP3201" days = 30 random = 15 } }
+			50 = { character_event = { id = lifestyle.3202 tooltip = "EVTTOOLTIP3202" days = 30 random = 15 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = open_minded
+			}
+			modifier = {
+				factor = 0.5
+				trait = close_minded
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 50 }
+				NOT = { trait = carefree }
+			}
+		}
+	}
+	option = {
+		# I can do without
+		name = "EVTOPTBLIFESTYLE3200"
+	}
+}
+
+# Your exotic alien plant is a beautiful addition to your garden, everyone is very impressed
+character_event = {
+	id = lifestyle.3201
+	desc = "EVTDESCLIFESTYLE3201"
+	picture = GFX_evt_garden
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE3201"
+		prestige = 200
+	}
+}
+
+# Your exotic alien plant was carnivorous and ate everything else in your garden.
+character_event = {
+	id = lifestyle.3202
+	desc = "EVTDESCLIFESTYLE3202"
+	picture = GFX_evt_garden
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE3202"
+		add_trait = stressed
+	}
+}
+
+# Intellectual
+# You did some science
+character_event = {
+	id = lifestyle.4000
+	desc = "EVTDESCLIFESTYLE4000"
+	picture = GFX_evt_scholar
+	
+	min_age = 25
+	only_capable = yes
+	prisoner = no
+	only_rulers = yes
+	
+	trigger = {
+		trait = intellectual
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.25
+			trait = genius
+		}
+		modifier = {
+			factor = 0.5
+			trait = quick
+		}
+		modifier = {
+			factor = 2
+			trait = slow
+		}
+		modifier = {
+			factor = 4
+			trait = imbecile
+		}
+		modifier = {
+			factor = 0.5
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+	}
+	option = {
+		# Publisher a paper on it!
+		name = "EVTOPTALIFESTYLE4000"
+		random_list = {
+			33 = {
+				military_techpoints = 10
+				custom_tooltip = {
+					text = "EVTTOOLTIPLIFESTYLE4001"
+					hidden_tooltip = {
+						any_independent_ruler = {
+							limit = { NOT = { character = ROOT } }
+							character_event = { id = lifestyle.4001 days = 90 random = 30 }
+						}
+					}
+				}
+			}
+			33 = {
+				economy_techpoints = 10
+				custom_tooltip = {
+					text = "EVTTOOLTIPLIFESTYLE4002"
+					hidden_tooltip = {
+						any_independent_ruler = {
+							limit = { NOT = { character = ROOT } }
+							character_event = { id = lifestyle.4002 days = 90 random = 30 }
+						}
+					}
+				}
+			}
+			33 = {
+				culture_techpoints = 10
+				custom_tooltip = {
+					text = "EVTTOOLTIPLIFESTYLE4003"
+					hidden_tooltip = {
+						any_independent_ruler = {
+							limit = { NOT = { character = ROOT } }
+							character_event = { id = lifestyle.4003 days = 90 random = 30 }
+						}
+					}
+				}
+			}
+		}
+		piety = 100
+		prestige = 250
+		wealth = 100
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.25
+				war = yes
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2
+				trait = friendly
+			}
+			modifier = {
+				factor = 0.5
+				trait = cold
+			}
+		}
+	}
+	option = {
+		# This is a strategic advantage, we should keep it to ourselves
+		name = "EVTOPTBLIFESTYLE4000"
+		random_list = {
+			33 = { military_techpoints = 10 }
+			33 = { economy_techpoints = 10 }
+			33 = { culture_techpoints = 10 }
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+character_event = {
+	id = lifestyle.4001
+	desc = "EVTDESCLIFESTYLE4001"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	notification = yes
+	
+	immediate = { military_techpoints = 10 }
+	
+	option = { name = "EVTOPTCONFIRM" } # Escape option
+}
+character_event = {
+	id = lifestyle.4002
+	desc = "EVTDESCLIFESTYLE4002"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	notification = yes
+	
+	immediate = { economy_techpoints = 10 }
+	
+	option = { name = "EVTOPTCONFIRM" } # Escape option
+}
+character_event = {
+	id = lifestyle.4003
+	desc = "EVTDESCLIFESTYLE4003"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	notification = yes
+	
+	immediate = { culture_techpoints = 10 }
+	
+	option = { name = "EVTOPTCONFIRM" } # Escape option
+}
+
+# Technology with military and civilian applications
+character_event = {
+	id = lifestyle.4200
+	desc = "EVTDESCLIFESTYLE4200"
+	picture = GFX_evt_science
+	
+	min_age = 16
+	prisoner = no
+	only_capable = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_realm_character = {
+			liege = { character = ROOT }
+			NOT = { character = ROOT }
+			NOT = { trait = incapable }
+			prisoner = no
+			age = 25
+			trait = intellectual
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTALIFESTYLE4200"
+		# Focus on military applications
+		random_realm_character = {
+			limit = {
+				liege = { character = ROOT }
+				NOT = { character = ROOT }
+				NOT = { trait = incapable }
+				prisoner = no
+				age = 25
+				trait = intellectual
+			}
+			character_event = { id = lifestyle.4201 tooltip = "EVTTOOLTIPLIFESTYLE4201" }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				war = yes
+			}
+			modifier = {
+				factor = 4
+				trait = cold
+			}
+			modifier = {
+				factor = 0.25
+				trait = friendly
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBLIFESTYLE4200"
+		# Focus on civilian applications
+		random_realm_character = {
+			limit = {
+				liege = { character = ROOT }
+				NOT = { character = ROOT }
+				NOT = { trait = incapable }
+				prisoner = no
+				age = 25
+				trait = intellectual
+			}
+			character_event = { id = lifestyle.4202 tooltip = "EVTTOOLTIPLIFESTYLE4202" }
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Your liege wants you to focus on the military applications of your research
+character_event = {
+	id = lifestyle.4201
+	desc = "EVTDESCLIFESTYLE4201"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	
+	option = {
+		# I created the giant death ray for peace, not war!
+		name = "EVTOPTALIFESTYLE4201"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_disobeyed_research_orders months = 120 }
+			if = {
+				limit = { war = yes }
+				opinion = { who = ROOT modifier = opinion_criminal_insubordination months = 120 }
+			}
+			hidden_tooltip = { character_event = { id = lifestyle.4203 } }
+		}
+		piety = 100
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
+			modifier = {
+				factor = 0.25
+				opinion = { who = FROM value = 25 }
+			}
+		}
+	}
+	option = {
+		# So be it.
+		name = "EVTOPTBLIFESTYLE4201"
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_obeyed_research_orders months = 120 }
+			character_event = { id = lifestyle.4204 tooltip = "EVTTOOLTIPLIFESTYLE4204" }
+		}
+		piety = -100
+		ai_chance = { factor = 25 }
+	}
+}
+character_event = {
+	id = lifestyle.4202
+	desc = "EVTDESCLIFESTYLE4202"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTALIFESTYLE4202"
+		FROM = { character_event = { id = lifestyle.4205 tooltip = "EVTTOOLTIPLIFESTYLE4205" } }
+	}
+}
+character_event = {
+	id = lifestyle.4203
+	desc = "EVTDESCLIFESTYLE4203"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	
+	option = { name = "EVTOPTCONFIRM" }
+}
+character_event = {
+	id = lifestyle.4204
+	desc = "EVTDESCLIFESTYLE4204"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		military_techpoints = 25
+	}
+}
+character_event = {
+	id = lifestyle.4205
+	desc = "EVTDESCLIFESTYLE4205"
+	picture = GFX_evt_science
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTCONFIRM"
+		economy_techpoints = 10
+		culture_techpoints = 10
+	}
+}
+
+# They laughed at your theories at the institute! They said you were mad!
+character_event = {
+	id = lifestyle.4300
+	desc = "EVTDESCLIFESTYLE4300"
+	picture = GFX_evt_science
+	
+	min_age = 25
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		trait = intellectual
+		NOT = { trait = lunatic }
+		OR = {
+			trait = stressed
+			trait = neurotic
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.25
+			trait = neurotic
+		}
+		modifier = {
+			factor = 4
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+		modifier = {
+			factor = 2
+			trait = humble
+		}
+	}
+	
+	option = {
+		# Well, I'll show them! I'LL SHOW THEM ALL!
+		name = "EVOPTALIFESTYLE4300"
+		add_trait = lunatic
+		culture_techpoints = 100
+	}
+}
+
+# Mystic
+# Peaceful meditation has allowed you to recover from your stress
+character_event = {
+	id = lifestyle.5000
+	desc = "EVTDESCLIFESTYLE5000"
+	picture = GFX_evt_cabal
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+	
+	trigger = {
+		trait = mystic
+		trait = stressed
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			trait = confident
+		}
+		modifier = {
+			factor = 2
+			trait = neurotic
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = content
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = friendly
+		}
+		modifier = {
+			factor = 2
+			trait = cold
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+		modifier = {
+			factor = 2
+			is_councillor= yes
+		}
+		modifier = {
+			factor = 2
+			demesne_size = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA5000"
+		prestige = -100
+		remove_trait = stressed
+	}
+}

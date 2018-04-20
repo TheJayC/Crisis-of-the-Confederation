@@ -1,0 +1,27 @@
+title_consul;Consul;;;;;;;;x
+
+title_consul_desc;The Consul holds little weight, whilst still carrying prestige the Consul's powers now belongs to others.;;;;;;;;;x
+
+title_senatorrome;Senator;;;;;;;x
+
+title_senatorrome_desc;A Senator is chosen by the ruler from the landed lords, to help them in making decsions on how the realm should be run.;;;;;;;;;x
+
+title_praetor;Praetor;;;;;;;x
+
+title_praetor_desc;There are two Praetors, they are the second highest ranking magistrates, below only the Consul.;;;;;;;;x
+
+COUNCIL_VIEW_roman;Eastern Roman Senate;;;;;;;;x
+
+EVTDESCtractatushominis.28;The people of the Empire are unhappy with your rule. Your vassals have presented you with an ultimatium. Libellum Libertas will grant greater power to your subjects, restricting your power. If you do not agree to this you face an uprising from almost all your subjects.;;;;;;;;;;x
+
+EVTOPTAth.28;Reluctantly I must agree too this... for now.;;;;;;;;x
+
+EVTOPTBth.28;Never! I shall have their heads for this!;;;;;;;x
+
+tractatus_hominis;Tractatus De Libero Hominis;;;;;;;;x
+
+tractatus_hominis_desc;Tractatus De Libero Hominis declares that the subjects of the Emperor should have a greater say in how the realm is run.;;;;;;;;x
+
+denied_tractatus_hominis;Denied Tractatus De Libero Hominis;;;;;;;;x
+
+denied_tractatus_hominis_desc;You have denied your people the right to have a greater say in how your realm is run. At your own peril.;;;;;;;x

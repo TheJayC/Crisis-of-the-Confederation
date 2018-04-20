@@ -1,0 +1,22 @@
+technology = {
+	titles = {
+		d_avalon
+		d_victoria
+		d_nelson
+		d_caliburn
+		d_galahad
+		d_lancelot
+		d_alfred
+	}
+	769 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+		
+	1337 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+}

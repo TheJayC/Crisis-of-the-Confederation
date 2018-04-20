@@ -1,0 +1,43 @@
+# Periphery cybernetics
+technology = {
+	titles = {
+		d_tarka
+		d_talon
+		d_yeni_istanbul
+		d_qoqnoos
+		d_mandela
+		d_new_lusaka
+		d_dhartvir
+		d_nae_bangladesa
+		d_miltia
+	}
+	769 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+		
+	1337 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+}
+# Core worlds cybernetics
+technology = {
+	titles = {
+		d_al_bawwaaba
+		d_al_hadd
+	}
+	769 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+		
+	1337 = {
+		military = 0
+		economy = 0
+		culture = 0
+	}
+}

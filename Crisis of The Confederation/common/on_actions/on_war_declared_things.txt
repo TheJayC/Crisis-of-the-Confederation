@@ -1,0 +1,5 @@
+on_siege_won_leader = {
+	events = {
+		Stuff.107 # Conquers the crusade target
+	}
+}

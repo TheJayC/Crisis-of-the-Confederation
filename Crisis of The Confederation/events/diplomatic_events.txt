@@ -1,0 +1,238 @@
+namespace = diplomatic
+
+#Vassal receives demand
+letter_event = {
+	id = diplomatic.200
+	desc = "EVTDESCdiplomatic.200"
+	
+	is_triggered_only = yes
+	show_from_from = yes
+
+	option = {
+		name = "EVTOPTAdiplomatic.200" #Yes
+		ai_chance = {
+			factor = 75
+			
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 20 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 40 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 60 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 80 }
+			}
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROMFROM value = 100 }
+			}	
+			modifier = {
+				factor = 1.5
+				NOT = { relative_power = { who = FROMFROM power = 0.5 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { relative_power = { who = FROMFROM power = 0.33 } }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { relative_power = { who = FROMFROM power = 0.1 } }
+			}
+			modifier = {
+				factor = 2
+				trait = content
+			}	
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}	
+			modifier = {
+				factor = 2
+				trait = patient
+			}	
+			modifier = {
+				factor = 4
+				trait = just
+			}			
+		}
+		any_courtier = {		
+			limit = {
+				prisoner = yes
+				host = { character = PREVPREV }
+				OR = {
+					AND = {
+						is_ruler = yes
+						war_with = ROOT
+					}
+					liege = {
+						is_close_relative = PREV
+						war_with = ROOT
+					}							
+				}
+				NOT = { has_character_flag = kidnapped_by_plot }
+			}
+			custom_tooltip = { text = EVTTOOLTIPprisreq }
+			hidden_tooltip = {
+				prisoner = no
+				imprison = FROMFROM
+			}
+		}	
+		hidden_tooltip = {
+			FROMFROM = {
+				letter_event = { id = diplomatic.201 }
+			}
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTCdiplomatic.200" #No
+		trigger = {
+			NAND = {
+				prisoner = yes
+				host = { character = FROMFROM }
+			}
+		}
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trait = honorable
+			}
+			modifier = {
+				factor = 0
+				opinion = { who = FROMFROM value = -39 }
+				NOT = { trait = lunatic }
+				NOT = { trait = greedy }
+				NOT = { trait = arbitrary }
+				NOT = { #want to keep foes
+					any_courtier = {
+						prisoner = yes
+						host = { character = PREVPREV }
+						is_foe = ROOT
+						OR = {
+							AND = {
+								is_ruler = yes
+								war_with = FROMFROM
+							}
+							liege = {
+								is_close_relative = PREV
+								war_with = FROMFROM
+							}							
+						}	
+						NOT = { has_character_flag = kidnapped_by_plot }
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -19 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -39 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -59 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -79 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}	
+			modifier = {
+				factor = 1.5
+				relative_power = { who = FROMFROM power = 0.8 }
+			}
+			modifier = {
+				factor = 2
+				relative_power = { who = FROMFROM power = 1 }
+			}
+			modifier = {
+				factor = 2
+				relative_power = { who = FROMFROM power = 1.5 }
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}	
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}	
+			modifier = {
+				factor = 2
+				trait = wroth
+			}	
+			modifier = {
+				factor = 4
+				trait = arbitrary
+			}	
+			modifier = {
+				factor = 4
+				trait = ruthless
+			}		
+		}		
+		FROMFROM = {
+			opinion = { who = ROOT modifier = opinion_refused_prisoner_transfer months = 60 }
+			hidden_tooltip = { letter_event = { id = diplomatic.202 } }
+		}
+	}
+}
+letter_event = { #Inform Accept
+	id = diplomatic.201
+	desc = "EVTDESCdiplomatic.201"
+	
+	is_triggered_only = yes
+	ai = no
+
+	option = {
+		name = OK
+	}
+}	
+letter_event = { #Inform Reject
+	id = diplomatic.202
+	desc = "EVTDESCdiplomatic.202"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAdiplomatic.202"
+		if = {
+			limit = { tier = EMPEROR }
+			prestige = -70
+		}
+		if = {
+			limit = { tier = KING }
+			prestige = -50
+		}
+		if = {
+			limit = { tier = DUKE }
+			prestige = -30
+		}
+		if = {
+			limit = { lower_tier_than = DUKE }
+			prestige = -10
+		}
+	}
+}	

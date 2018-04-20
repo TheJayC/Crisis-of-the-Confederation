@@ -1,0 +1,89 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allow: conditions for the character to hold the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+title_symbasileus = {
+	dignity = 50.0
+	grant_limit = 1
+	opinion_effect = 50
+	
+	monthly_salary = 0.0
+	monthly_prestige = 1.0
+	
+	counts_as_purple_born = yes
+    realm_in_name = yes
+    show_as_title = yes
+    ai_ambition = 25
+    
+    #is_unique = yes
+    
+    #is_high_prio = yes
+    #is_voter = yes
+    
+    allowed_to_grant = {
+		ai = no
+		is_feudal = yes
+		holy_order = no
+		mercenary = no
+		OR = {
+			government = military_monarchy
+			government = military_directorate
+			government = administrative_monarchy
+			government = administrative_directorate
+			government = corporate_monarchy
+			government = corporate_directorate
+		}
+		#NOT = { religion_group = muslim }
+		#NOT = { religion_group = zoroastrian_group }
+		has_law = succ_primogeniture
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		is_feudal = yes
+		holy_order = no
+		mercenary = no
+		OR = { 
+			is_female = no
+			liege = {
+				OR = {
+					primary_title = {
+						has_law = status_of_women_4
+					}
+					has_game_rule = {
+						name = gender
+						value = all
+					}
+				}
+			}
+		}
+		NOT = { trait = incapable }
+    }
+    
+	gain_effect = {
+		add_trait = symbasileus
+		recalc_succession = yes
+	}
+	lose_effect = {
+		remove_trait = symbasileus
+		recalc_succession = yes
+	}
+	retire_effect = {
+		remove_trait = symbasileus
+		recalc_succession = yes
+	}
+
+	message = yes
+}

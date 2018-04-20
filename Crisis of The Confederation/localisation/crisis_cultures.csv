@@ -1,0 +1,234 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTTOOLTIPCRISISCULTURE0;will become [Root.Culture.GetGroupName].;;;;;;;;;;;;;x
+EVTDESCCRISISCULTURE0;Due to the influence of [From.GetFullName], you have begun to adapt the customs and culture of the [From.Culture.GetGroupName] people.;;;;;;;;;;;;;x
+CB_NAME_CULTURAL_LIBERATION;Nationalist Liberation of the [Title.GetBaseName] Sector;;;;;;;;;;;;;x
+cultural_liberation_desc;§Y$CLAIMANT$§! can use this Casus Belli to liberate all of §Y$TARGET$§!'s provinces in the §Y$TITLE$§! that share their culture group.;;;;;;;;;;;;x
+WAR_NAME_CULTURAL_LIBERATION;$ORDER$[Actor.Culture.GetGroupName] Nationalist War for the $OTHER_TITLE$ Sector;;;;;;;;;;;;;x
+terran_group;Terran;Terriens;Terraner;;Terrícolas;;;;;;;;;x
+terran;Terran;Terrien;Terraner;;Terrícola;;;;;;;;;x
+terran;Arab;Terrien;Arabischer Terraner;;Terrícola;;;;;;;;;x
+east_afro_terran;East African;Terrien;Ostafrikanischer Terraner;;Terrícola;;;;;;;;;x
+terran;Ethiopian;Terrien;Ethiopischer Terraner;;Terrícola;;;;;;;;;x
+terran;Spanish-American;Terrien;Terraner;;Terrícola;;;;;;;;;x
+terran;Indian;Terrien;Terraner;;Terrícola;;;;;;;;;x
+iranian_terran;Iranian;Terrien;Iranischer Terraner;;Terrícola;;;;;;;;;x
+japanese_terran;Japanese;Terrien;Japanischer Terraner;;Terrícola;;;;;;;;;x
+terran;Mesoamerican;Terrien;Mesoamerikanischer Terraner;;Terrícola;;;;;;;;;x
+terran;Terrien;Russischer Terraner;;Terrícola;;;;;;;;;x
+terran;Terrien;Terraner;;Terrícola;;;;;;;;;x
+terran;Terrien;West Afrikanischer Terraner;;Terrícola;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+xingjie_group;Xingjie;Xingjie;Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Arabischer Xingjie;;Xingjie;;;;;;;;;x
+east_afro_xingjie;Xingjie;Xingjie;Ostafrikanischer Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Ethiopischer Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Xingjie;;Xingjie;;;;;;;;;x
+iranian_xingjie;Xingjie;Xingjie;Iranischer Xingjie;;Xingjie;;;;;;;;;x
+japanese_xingjie;Xingjie;Xingjie;Japanischer Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Mesoamerikanischer Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Russischer Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;Xingjie;;Xingjie;;;;;;;;;x
+xingjie;Xingjie;Xingjie;West Afrikanischer Xingjie;;Xingjie;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+celestean_group;Celestian;Celestian;Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Arabischer Celestian;;Celestian;;;;;;;;;x
+east_afro_celestean;Celestian;Celestian;Ostafrikanischer Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Ethiopischer Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Celestian;;Celestian;;;;;;;;;x
+iranian_celestean;Celestian;Celestian;Iranischer Celestian;;Celestian;;;;;;;;;x
+japanese_celestean;Celestian;Celestian;Japanischer Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Mesoamerikanischer Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Russischer Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;Celestian;;Celestian;;;;;;;;;x
+celestean;Celestian;Celestian;West Afrikanischer Celestian;;Celestian;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+sexto_solar_group;Sexto Solar;Sexto Solar;Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Arabischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+east_afro_sexto_solar;Sexto Solar;Sexto Solar;Ostafrikanischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Ethiopischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Sexto Solar;;Sexto Solar;;;;;;;;;x
+iranian_sexto_solar;Sexto Solar;Sexto Solar;Iranischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+japanese_sexto_solar;Sexto Solar;Sexto Solar;Japanischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Mesoamerikanischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Russischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;Sexto Solar;;Sexto Solar;;;;;;;;;x
+sexto_solar;Sexto Solar;Sexto Solar;West Afrikanischer Sexto Solar;;Sexto Solar;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+samawati_group;Samawati;Samawati;Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Arabischer Samawati;;Samawati;;;;;;;;;x
+east_afro_samawati;Samawati;Samawati;Ostafrikanischer Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Ethiopischer Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Samawati;;Samawati;;;;;;;;;x
+iranian_samawati;Samawati;Samawati;Iranischer Samawati;;Samawati;;;;;;;;;x
+japanese_samawati;Samawati;Samawati;Japanischer Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Mesoamerikanischer Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Russischer Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;Samawati;;Samawati;;;;;;;;;x
+samawati;Samawati;Samawati;West Afrikanischer Samawati;;Samawati;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+angani_group;Angani;Angani;Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Arabischer Angani;;Angani;;;;;;;;;x
+east_afro_angani;Angani;Angani;Ostafrikanischer Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Ethiopischer Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Angani;;Angani;;;;;;;;;x
+iranian_angani;Angani;Angani;Iranischer Angani;;Angani;;;;;;;;;x
+japanese_angani;Angani;Angani;Japanischer Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Mesoamerikanischer Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Russischer Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;Angani;;Angani;;;;;;;;;x
+angani;Angani;Angani;West Afrikanischer Angani;;Angani;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+frontiersman_group;Frontiersman;Frontiersman;Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Arabischer Frontiersman;;Frontiersman;;;;;;;;;x
+east_afro_frontiersman;Frontiersman;Frontiersman;Ostafrikanischer Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Ethiopischer Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Frontiersman;;Frontiersman;;;;;;;;;x
+iranian_frontiersman;Frontiersman;Frontiersman;Iranischer Frontiersman;;Frontiersman;;;;;;;;;x
+japanese_frontiersman;Frontiersman;Frontiersman;Japanischer Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Mesoamerikanischer Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Russischer Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;Frontiersman;;Frontiersman;;;;;;;;;x
+frontiersman;Frontiersman;Frontiersman;West Afrikanischer Frontiersman;;Frontiersman;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+imperial_group;Imperial;Centauri;Centauri;;Centauri;;;;;;;;;x
+imperial;Imperial;Centauri;Centauri;;Centauri;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+centauri_group;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Arabischer Centauri;;Centauri;;;;;;;;;x
+east_afro_centauri;Centauri;Centauri;Ostafrikanischer Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Ethiopischer Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+iranian_centauri;Centauri;Centauri;Iranischer Centauri;;Centauri;;;;;;;;;x
+japanese_centauri;Centauri;Centauri;Japanischer Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Mesoamerikanischer Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Russischer Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;Centauri;;Centauri;;;;;;;;;x
+centauri;Centauri;Centauri;West Afrikanischer Centauri;;Centauri;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+tengoku_group;Tengoku;Tengoku;Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Arabischer Tengoku;;Tengoku;;;;;;;;;x
+east_afro_tengoku;Tengoku;Tengoku;Ostafrikanischer Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Ethiopischer Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Tengoku;;Tengoku;;;;;;;;;x
+iranian_tengoku;Tengoku;Tengoku;Iranischer Tengoku;;Tengoku;;;;;;;;;x
+japanese_tengoku;Tengoku;Tengoku;Japanischer Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Mesoamerikanischer Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Russischer Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;Tengoku;;Tengoku;;;;;;;;;x
+tengoku;Tengoku;Tengoku;West Afrikanischer Tengoku;;Tengoku;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+bianjiangese_group;Bianjiangese;Bianjiangese;Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Arabischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+east_afro_bianjiangese;Bianjiangese;Bianjiangese;Ostafrikanischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Ethiopischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Bianjiangese;;Bianjiangese;;;;;;;;;x
+iranian_bianjiangese;Bianjiangese;Bianjiangese;Iranischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+japanese_bianjiangese;Bianjiangese;Bianjiangese;Japanischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Mesoamerikanischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Russischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;Bianjiangese;;Bianjiangese;;;;;;;;;x
+bianjiangese;Bianjiangese;Bianjiangese;West Afrikanischer Bianjiangese;;Bianjiangese;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+orion_group;Orion;Orion;Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Arabischer Orion;;Orion;;;;;;;;;x
+east_afro_orion;Orion;Orion;Ostafrikanischer Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Ethiopischer Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Orion;;Orion;;;;;;;;;x
+iranian_orion;Orion;Orion;Iranischer Orion;;Orion;;;;;;;;;x
+japanese_orion;Orion;Orion;Japanischer Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Mesoamerikanischer Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Russischer Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;Orion;;Orion;;;;;;;;;x
+orion;Orion;Orion;West Afrikanischer Orion;;Orion;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+mukta_group;Mukta;Mukta;Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Arabischer Mukta;;Mukta;;;;;;;;;x
+east_afro_mukta;Mukta;Mukta;Ostafrikanischer Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Ethiopischer Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Mukta;;Mukta;;;;;;;;;x
+iranian_mukta;Mukta;Mukta;Iranischer Mukta;;Mukta;;;;;;;;;x
+japanese_mukta;Mukta;Mukta;Japanischer Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Mesoamerikanischer Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Russischer Mukta;;Mukta;;;;;;;;;x
+mukta;Mukta;Mukta;Mukta;;Mukta;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+tarkan_group;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Arabischer Tarkan;;Tarkan;;;;;;;;;x
+east_afro_tarkan;Tarkan;Tarkan;Ostafrikanischer Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Ethiopischer Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+iranian_tarkan;Tarkan;Tarkan;Iranischer Tarkan;;Tarkan;;;;;;;;;x
+japanese_tarkan;Tarkan;Tarkan;Japanischer Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Mesoamerikanischer Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Russischer Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;Tarkan;;Tarkan;;;;;;;;;x
+tarkan;Tarkan;Tarkan;West Afrikanischer Tarkan;;Tarkan;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+avalonian_group;Avalonian;Avalonian;Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Arabischer Avalonian;;Avalonian;;;;;;;;;x
+east_afro_avalonian;Avalonian;Avalonian;Ostafrikanischer Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Ethiopischer Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Avalonian;;Avalonian;;;;;;;;;x
+iranian_avalonian;Avalonian;Avalonian;Iranischer Avalonian;;Avalonian;;;;;;;;;x
+japanese_avalonian;Avalonian;Avalonian;Japanischer Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Mesoamerikanischer Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Russischer Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;Avalonian;;Avalonian;;;;;;;;;x
+avalonian;Avalonian;Avalonian;West Afrikanischer Avalonian;;Avalonian;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+strugatskite_group;Strugatskite;Strugatskite;Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Arabischer Strugatskite;;Strugatskite;;;;;;;;;x
+east_afro_strugatskite;Strugatskite;Strugatskite;Ostafrikanischer Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Ethiopischer Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Strugatskite;;Strugatskite;;;;;;;;;x
+iranian_strugatskite;Strugatskite;Strugatskite;Iranischer Strugatskite;;Strugatskite;;;;;;;;;x
+japanese_strugatskite;Strugatskite;Strugatskite;Japanischer Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Mesoamerikanischer Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Russischer Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;Strugatskite;;Strugatskite;;;;;;;;;x
+strugatskite;Strugatskite;Strugatskite;West Afrikanischer Strugatskite;;Strugatskite;;;;;;;;;x
+###;#;#;#;;#;;;;;;;;;x
+edemite_group;Edemite;Edemite;Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Arabischer Edemit;;Edemite;;;;;;;;;x
+east_afro_edemite;Edemite;Edemite;Ostafrikanischer Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Ethiopischer Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Edemit;;Edemite;;;;;;;;;x
+iranian_edemite;Edemite;Edemite;Iranischer Edemit;;Edemite;;;;;;;;;x
+japanese_edemite;Edemite;Edemite;Japanischer Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Mesoamerikanischer Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Russischer Edemit;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;Edemite;;Edemite;;;;;;;;;x
+edemite;Edemite;Edemite;West Afrikanischer Edemit;;Edemite;;;;;;;;;x

@@ -1,0 +1,205 @@
+decisions = {
+	found_orthodoxy_decision = {
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			religion = pilgrim
+			NOT = { has_global_flag = flag_orthodoxy_founded }
+			# d_pilgrimage = {
+				# holder_scope = {
+					# OR = {
+						# character = ROOT
+						# is_liege_or_above = ROOT
+					# }
+				# }
+			# }
+			NOT = { has_character_flag = flag_founding_the_orthodoxy }
+		}
+		allow = {
+			prestige = 1000
+			piety = 1000
+			religion = pilgrim
+			has_regent = no
+			d_pilgrimage = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_liege_or_above = ROOT
+					}
+				}
+			}
+			b_earth = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_liege_or_above = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_founding_the_orthodoxy
+			narrative_event = { id = religion.1000 tooltip = "EVTTOOLTIPRELIGION1000" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					trait = content
+					trait = pragmatic
+				}
+			}
+		}
+	}
+	found_epidoxos_angeloi_decision = {
+		is_high_prio = yes
+		potential = {
+			religion = orthodox
+			NOT = { is_title_active = d_epidoxos_angeloi }
+			OR = {
+				tier = emperor
+				tier = king
+			}
+			NOT = { has_character_flag = flag_founding_epidoxos_angeloi }
+		}
+		allow = {
+			wealth = 500
+			prestige = 1000
+			trait = fighter_pilot
+		}
+		effect = {
+			set_character_flag = flag_founding_epidoxos_angeloi
+			narrative_event = { id = religion.1100 tooltip = "EVTTOOLTIPRELIGION1100" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { trait = radical }
+				NOT = { has_ambition = obj_become_paragon_of_virtue }
+			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+			}
+		}
+	}
+	found_stolos_gaias_decision = {
+		is_high_prio = yes
+		potential = {
+			religion = orthodox
+			NOT = { is_title_active = d_stolos_gaias }
+			OR = {
+				tier = emperor
+				tier = king
+			}
+			NOT = { has_character_flag = flag_founding_stolos_gaias }
+		}
+		allow = {
+			wealth = 500
+			prestige = 1000
+			trait = warship_captain
+		}
+		effect = {
+			set_character_flag = flag_founding_stolos_gaias
+			narrative_event = { id = religion.1200 tooltip = "EVTTOOLTIPRELIGION1200" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { trait = radical }
+				NOT = { has_ambition = obj_become_paragon_of_virtue }
+			}
+			modifier = {
+				factor = 0
+				trait = ambitious
+			}
+		}
+	}
+	found_phaethonate_decision = {
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			religion = solar_cultist
+			is_military_trigger = yes
+			NOT = { has_global_flag = flag_phaethonate_founded }
+			NOT = { has_character_flag = flag_founding_the_orthodoxy }
+		}
+		allow = {
+			prestige = 1000
+			piety = 1000
+			religion = solar_cultist
+			has_regent = no
+			c_sol = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_liege_or_above = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_founding_the_phaethonate
+			narrative_event = { id = religion.2000 tooltip = "EVTTOOLTIPRELIGION2000" }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					trait = content
+					trait = pragmatic
+				}
+			}
+		}
+	}
+	found_knights_palatine_decision = {
+		is_high_prio = yes
+		potential = {
+			religion = solarian
+			NOT = { is_title_active = d_knights_palatine }
+			OR = {
+				tier = emperor
+				tier = king
+			}
+			is_military_trigger = yes
+			NOT = { has_character_flag = flag_founding_knights_palatine }
+		}
+		allow = {
+			wealth = 500
+			prestige = 1000
+			trait = fighter_pilot
+		}
+		effect = {
+			set_character_flag = flag_founding_knights_palatine
+			narrative_event = { id = religion.1200 tooltip = "EVTTOOLTIPRELIGION1200" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	found_praenuntiatores_aurorae_verae_decision = {
+		is_high_prio = yes
+		potential = {
+			religion = orthodox
+			NOT = { is_title_active = d_praenuntiatores_aurorae_verae }
+			OR = {
+				tier = emperor
+				tier = king
+			}
+			is_military_trigger = yes
+			NOT = { has_character_flag = flag_founding_praenuntiatores_aurorae_verae }
+		}
+		allow = {
+			wealth = 500
+			prestige = 1000
+			trait = warship_captain
+		}
+		effect = {
+			set_character_flag = flag_founding_praenuntiatores_aurorae_verae
+			narrative_event = { id = religion.2200 tooltip = "EVTTOOLTIPRELIGION2200" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

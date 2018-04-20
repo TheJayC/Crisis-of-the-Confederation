@@ -1,0 +1,92 @@
+namespace = prisoners_claim_events
+character_event = {#Prisoner gets offer
+	id = prisoners_claim_events.0
+	picture = GFX_evt_council
+	desc = EVTDESCprisoners_claim_events.0
+	is_triggered_only = yes
+
+	option ={
+		name = EVTOPTAprisoners_claim_events.0
+		ai_chance = {
+			factor = 0.9
+		}
+		FROMFROM = {
+			character_event = {
+				id = prisoners_claim_events.1
+			}
+		}
+	}
+
+	option ={
+		name = EVTOPTBprisoners_claim_events.0
+		ai_chance = {
+			factor = 0.1
+		}
+		FROMFROM = {
+			character_event = {
+				id = prisoners_claim_events.2
+			}
+		}
+	}
+}
+character_event = {#From Accepted Offer
+	id = prisoners_claim_events.1
+	picture = GFX_evt_council
+	desc = EVTDESCprisoners_claim_events.1
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			any_claim = {
+				IF = {
+					limit = { holder_scope = { character = ROOT } }
+					remove_claim = FROM
+				}
+			}
+			any_child = {
+				any_claim = {
+					IF = {
+						limit = { holder_scope = { character = ROOT } }
+						remove_claim = PREV
+					}
+				}
+				prisoner = no
+				any_child = {
+					any_claim = {
+						IF = {
+							limit = { holder_scope = { character = ROOT } }
+							remove_claim = PREV
+						}
+					}
+					prisoner = no
+				}
+			}
+			prisoner = no
+			any_dynasty_member = {
+				IF = {
+					limit = {
+						prisoner = yes
+						host = { character = ROOT }
+					}
+					prisoner = no
+				}
+			}
+		}
+	}
+
+	option ={
+		name = EVTOPTAprisoners_claim_events.1
+		opinion = { modifier = opinion_grateful who = FROM years = 5 }
+	}
+}
+character_event = {#From Rejected offer
+	id = prisoners_claim_events.2
+	picture = GFX_evt_council
+	desc = EVTDESCprisoners_claim_events.2
+	is_triggered_only = yes
+
+	option ={
+		name = EVTOPTAprisoners_claim_events.2
+		opinion = { modifier = opinion_furious who = FROM years = 5 }
+	}
+}

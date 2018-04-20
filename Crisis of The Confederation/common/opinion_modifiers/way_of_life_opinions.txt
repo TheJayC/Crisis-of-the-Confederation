@@ -1,0 +1,206 @@
+opinion_favorite = {
+	opinion = 30
+}
+
+opinion_renounced_iconoclasm = {
+	opinion = 20
+}
+
+opinion_idolater = {
+	opinion = -20
+}
+
+opinion_seducing = {
+	opinion = 0
+}
+
+opinion_spying_on = {
+	opinion = 0
+}
+
+opinion_breaking_out = {
+	opinion = 0
+}
+
+opinion_seducing_concubine = {
+	opinion = 10
+}
+
+opinion_seduced_attracted = {
+	opinion = 25
+	months = 60
+}
+
+opinion_dominated = {
+	opinion = 25
+	months = 60
+}
+
+opinion_seduced_lustful_worship = {
+	opinion = 50
+	months = 60
+}
+
+opinion_seduced_repelled = {
+	opinion = -15
+	months = 24
+}
+
+opinion_seduced_yearning = {
+	opinion = 20
+	months = 36
+}
+
+opinion_unfaithful_wife = {
+	opinion = -100
+	months = 120
+	prison_reason = yes
+	revoke_reason = yes
+	execute_reason = yes
+	divorce_reason = yes
+}
+
+opinion_unfaithful_husband = {
+	opinion = -100
+	months = 120
+}
+
+opinion_cuckolded = {
+	opinion = -100
+	months = 120
+	prison_reason = yes
+	revoke_reason = yes
+	execute_reason = yes
+	divorce_reason = yes
+	crime = yes
+}
+
+opinion_suspected_adultery = {
+	opinion = -25
+	months = 60
+}
+
+opinion_regrets_accusation = {
+	opinion = 20
+	months = 36
+}
+
+opinion_chasing_friend = {
+	opinion = -5
+	months = 36
+}
+
+opinion_chasing_spouse = {
+	opinion = -25
+	months = 36
+}
+
+opinion_chasing_child = {
+	opinion = -25
+	months = 36
+}
+
+opinion_advance_rejected = {
+	opinion = -25
+	months = 36
+}
+
+opinion_killed_lover = {
+	opinion = -50
+	months = 60
+}
+
+opinion_declined_romance = {
+	opinion = -10
+	months = 24
+}
+
+opinion_whorespawn = {
+	opinion = -50
+	months = 1200
+}
+
+opinion_seduced_once = {
+	opinion = 1
+	months = 2400
+}
+opinion_nice_dog = {
+	opinion = 10
+}
+opinion_nice_dog_children = {
+	opinion = 20
+}
+opinion_declined_duel = {
+	opinion = -10
+	months = 60
+}
+
+opinion_lost_duel = {
+	opinion = -10
+	months = 60
+}
+opinion_declined_party = {
+	opinion = -10
+}
+opinion_carousing = {
+	opinion = 10
+}
+opinion_condemned_decadence = {
+	opinion = -20
+}
+opinion_charge_heresiarch = {
+	opinion = -50
+	prison_reason = yes
+	months = 24
+}
+opinion_charge_infidel = {
+	opinion = -50
+	prison_reason = yes
+	months = 24
+}
+opinion_charge_deviant = {
+	opinion = -50
+	prison_reason = yes
+	months = 24
+}
+opinion_charge_illegitimate = {
+	opinion = -50
+	prison_reason = yes
+	revoke_reason = yes
+	months = 24
+}
+opinion_charge_traitor = {
+	opinion = -50
+	prison_reason = yes
+	revoke_reason = yes
+	months = 24
+}
+opinion_charge_slanderer = {
+	opinion = -50
+	prison_reason = yes
+	months = 12
+}
+opinion_slandered = {
+	opinion = -50
+	months = 24
+}
+
+opinion_spy_blackmailed = {
+	opinion = 0
+	months = 600
+}
+
+# Family Focus events
+opinion_marital_love = {
+	opinion = 25
+	months = 240
+}
+opinion_family_love = {
+	opinion = 25
+	months = 240
+}
+grievously_offended = {
+	opinion = -30
+	months = 60
+	crime = yes
+}

@@ -1,0 +1,74 @@
+# Unique bonuses for holding certain planets.
+
+castle = {
+	ca_olympus_shipyards = { # The Confederate Space Command's primary shipyards
+		desc = ca_olympus_shipyards_desc
+		trigger = { always = yes }
+		potential = { FROMFROM = { title = b_mars } } # Unique to Mars
+		
+		# Reubuilding the Olympus Shipyards would take a long time
+		build_cost = 1000
+		build_time = 3000
+		
+		retinuesize = 100
+		
+		ai_creation_factor = 200
+	}
+	
+	ca_megafauna = { # The wildlife on these worlds is Cthulhu-levels of deadly
+		desc = ca_megafauna_desc
+		trigger = { always = yes }
+		potential = {
+			FROMFROM = {
+				title = b_yaila_i
+			}
+		}
+		
+		levy_size = -0.1
+		tax_income = -1
+		archers_offensive = 0.3
+		archers_defensive = 0.3
+		archers_morale = 0.5
+		fort_level = 1
+		
+		# Can't be destroyed for now so these don't really matter
+		build_cost = 100
+		build_time = 350
+		ai_creation_factor = 100
+	}
+}
+
+city = {
+	ct_homeworld = { # Earth-That-Was
+		desc = ct_earth_that_was_desc
+		trigger = { always = yes }
+		potential = { FROMFROM = { title = b_earth } } # unique to earth
+		
+		# This isn't really something that should be possible to destroy
+		build_cost = 1
+		build_time = 1
+		
+		# This penalty will actually be compensated for by the next building up
+		# If you can see THIS building, it means that something really bad has happened!
+		tax_income = -5
+		
+		liege_prestige = 0.1
+	}
+	ct_homeworld_1 = { # The Homeworld (can be lost in an orbital bombardment)
+		desc = ct_homeworld_desc
+		trigger = { always = yes }
+		potential = { FROMFROM = { title = b_earth } } # unique to earth
+		
+		upgrades_from = ct_homeworld
+		
+		# Rebuilding Earth would be very, very hard
+		build_cost = 1000
+		build_time = 2000
+		
+		ai_creation_factor = 200
+
+		garrison_size = 0.2
+		tax_income = 8
+		liege_prestige = 0.9
+	}
+}

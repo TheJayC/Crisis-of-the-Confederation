@@ -1,0 +1,7 @@
+birth_control = {
+	fertility = -2.0
+	monthly_character_piety = 0.75
+	sex_appeal_opinion = -5
+	church_opinion = 5
+	icon = 40
+}

@@ -1,0 +1,24 @@
+# 440 - Diyu
+
+# County Title
+title = c_diyu
+
+# Settlements
+max_settlements = 4
+
+b_diyu_abbey = temple
+
+# Misc
+culture = imperial # Initial culture
+religion = neo_feudal
+
+# History
+1.1.1 = {
+}
+
+2998.1.1 = {
+	# Space Station
+	b_diyu_abbey = tp_environment_0
+	b_diyu_abbey = tp_energy_0
+	b_diyu_abbey = tp_materials_0
+}

@@ -1,0 +1,11 @@
+Liberated = {
+	opinion = 50
+	non_aggression_pact = yes
+}
+religious_ally = {
+	opinion = 20
+	non_aggression_pact = yes
+}
+Abdicated = {
+	opinion = -20
+}

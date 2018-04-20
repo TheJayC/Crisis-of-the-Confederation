@@ -1,0 +1,91 @@
+##############MARTIAL IMPORTANCE CHANGES ###########
+# Martial1
+martial_very_low = {
+	icon = 13
+	
+	castle_vassal_max_levy = -0.12
+	city_vassal_max_levy = -0.12
+	temple_vassal_max_levy = -0.12
+	castle_vassal_min_levy = -0.04
+	city_vassal_min_levy = -0.04
+	temple_vassal_min_levy = -0.04
+	levy_reinforce_rate = -0.6
+}
+
+# Martial2
+martial_low = {
+	icon = 13
+	
+	castle_vassal_max_levy = -0.09
+	city_vassal_max_levy = -0.09
+	temple_vassal_max_levy = -0.09
+	castle_vassal_min_levy = -0.03
+	city_vassal_min_levy = -0.03
+	temple_vassal_min_levy = -0.03
+	levy_reinforce_rate = -0.3
+}
+
+# Martial3
+martial_low_medium = {
+	icon = 13
+	
+	castle_vassal_max_levy = -0.06
+	city_vassal_max_levy = -0.06
+	temple_vassal_max_levy = -0.06
+	castle_vassal_min_levy = -0.02
+	city_vassal_min_levy = -0.02
+	temple_vassal_min_levy = -0.02
+	levy_reinforce_rate = -0.15
+}
+
+# Martial4
+martial_medium = {
+	icon = 13
+	
+	castle_vassal_max_levy = 0
+	city_vassal_max_levy = 0
+	temple_vassal_max_levy = 0
+	castle_vassal_min_levy = 0
+	city_vassal_min_levy = 0
+	temple_vassal_min_levy = 0
+	levy_reinforce_rate = 0
+}
+
+# Martial5
+martial_medium_high = {
+	icon = 13
+	
+	castle_vassal_max_levy = 0.06
+	city_vassal_max_levy = 0.06
+	temple_vassal_max_levy = 0.06
+	castle_vassal_min_levy = 0.02
+	city_vassal_min_levy = 0.02
+	temple_vassal_min_levy = 0.02
+	levy_reinforce_rate = 0.15
+}
+
+# Martial6
+martial_high = {
+	icon = 13
+	
+	castle_vassal_max_levy = 0.09
+	city_vassal_max_levy = 0.09
+	temple_vassal_max_levy = 0.09
+	castle_vassal_min_levy = 0.03
+	city_vassal_min_levy = 0.03
+	temple_vassal_min_levy = 0.03
+	levy_reinforce_rate = 0.3
+}
+
+# Martial7
+martial_very_high = {
+	icon = 13
+	
+	castle_vassal_max_levy = 0.12
+	city_vassal_max_levy = 0.12
+	temple_vassal_max_levy = 0.12
+	castle_vassal_min_levy = 0.04
+	city_vassal_min_levy = 0.04
+	temple_vassal_min_levy = 0.04
+	levy_reinforce_rate = 0.6
+}

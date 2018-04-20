@@ -1,0 +1,7 @@
+sin_loaner = {
+	icon = 8
+	church_opinion = -25
+}
+sin_loan_taker = {
+	icon = 8
+}

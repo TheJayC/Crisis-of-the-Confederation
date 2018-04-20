@@ -1,0 +1,33 @@
+title_justice_of_king = {
+	dignity = 0.2
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 4
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.1
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		age = 30
+		NOT = { trait = dragon }
+		is_female = no	
+		is_ruler = no
+		NOT = { trait = kind }
+		NOT = { trait = craven }
+		NOT = { trait = incapable }
+		NOT = { culture = northman }
+		NOT = { trait = archmaester }
+		NOT = { trait = maester }
+		NOT = { has_landed_title = d_kingsguard }
+		NOT = { has_character_flag = guru }		
+		NOT = { has_job_title = job_castellan }	
+		NOT = { has_job_title = job_chancellor }	
+		NOT = { has_job_title = job_marshal }	
+		NOT = { has_job_title = job_treasurer }	
+		NOT = { has_job_title = job_spymaster }	
+	}
+	allowed_to_grant = {
+	}
+}

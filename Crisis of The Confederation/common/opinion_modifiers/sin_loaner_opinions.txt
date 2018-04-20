@@ -1,0 +1,14 @@
+opinion_sin_loan_taken = {
+	opinion = 5
+}
+opinion_sin_loan_given = {
+	opinion = 5
+}
+opinion_sin_loan_rejected = {
+	opinion = -5
+}
+opinion_sin_loan_defaulted = {
+	opinion = -50
+	prison_reason = yes
+	crime = yes
+}

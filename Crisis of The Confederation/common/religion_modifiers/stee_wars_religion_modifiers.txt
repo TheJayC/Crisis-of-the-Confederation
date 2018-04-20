@@ -1,0 +1,12 @@
+#########################################################################
+# RELIGIOUS AUTHORITY MODIFIERS - fully scriptable
+##########################################################################
+
+won_alexander = {
+	authority = 25
+	years = 5
+}
+lost_alexander = {
+	authority = -25
+	years = 5
+}

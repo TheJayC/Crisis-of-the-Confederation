@@ -1,0 +1,211 @@
+# New diplomatic options, replacing or extending vanilla ones
+	lovers_peace_decision = {
+		filter = all
+		ai_target_filter = all
+		
+		from_potential = {
+			is_ruler = yes
+			is_primary_war_defender = yes
+			has_lover = yes
+		}
+		potential = {
+			is_ruler = yes
+			any_lover = { character = FROM }
+		}
+		allow = {
+			any_war = {
+				NOT = { using_cb = cb_military_campaign }
+				attacker = { character = ROOT }
+				defender = { character = FROM }
+			}
+			FROM = { NOT = { has_character_flag = flag_making_lovers_peace } }
+		}
+		effect = {
+			hidden_tooltip = {
+				add_trait = target
+				opinion = { who = FROM modifier = opinion_lovers_peace_target }
+			}
+			FROM = {
+				set_character_flag = flag_making_lovers_peace
+				character_event = { id = lovers.80 tooltip = "EVTTOOLTIPLOVERS80" }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { trait = neurotic }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = proud }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_war = {
+						NOT = { using_cb = cb_military_campaign }
+						attacker = { character = ROOT }
+						defender = { character = FROM }
+						war_score = 1
+					}
+				}
+				FROM = {
+					NOT = { trait = friendly }
+					NOT = { trait = content }
+					NOT = { trait = humble }
+				}
+			}
+		}
+	}
+	swear_fealty_decision = {
+		filter = all
+		ai_target_filter = all
+		
+		from_potential = {
+			is_landed = yes
+			independent = yes
+			higher_tier_than = baron
+			NOT = { liege_before_war = { war_with = PREV } }
+		}
+		potential = {
+			is_landed = yes
+			independent = yes
+			higher_tier_than = FROM
+			NOT = { liege_before_war = { war_with = PREV } }
+		}
+		allow = {
+			is_within_diplo_range = FROM
+			FROM = {
+				NOT = { has_character_flag = flag_diplomatic_interaction }
+				custom_tooltip = {
+					text = "ONEYEARCOOLDOWN"
+					NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_rejected_swear_fealty } }
+				}
+			}
+			NOT = { war_with = FROM }
+			OR = {
+				is_merchant_republic = no
+				FROM = { is_merchant_republic = no }
+			}
+		}
+		effect = {
+			opinion = { who = FROM modifier = opinion_offered_swear_fealty }
+			custom_tooltip = {
+				text = "SWEARFEALTYTO"
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = flag_diplomatic_interaction
+						opinion = { who = ROOT modifier = opinion_swear_fealty_target }
+						character_event = { id = diplomacy.100 }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			# Needs a positive reason to do this
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						OR = {
+							any_realm_province = { province_id = 202 }
+							primary_title = { title = e_terran_confederation }
+							primary_title = { title = k_terran_commonwealth }
+						}
+						FROM = {
+							OR = {
+								religion = terran_federalist
+								religion = terran_republican
+								religion = terran_imperial
+								religion = pilgrim
+								religion = orthodox
+								religion = solar_cultist
+								religion = solarian
+							}
+							NOT = { trait = pragmatic }
+						}
+					}
+				}
+				FROM = {
+					OR = {
+						higher_tier_than = duke
+						religion = space_pirate
+						any_realm_province = {
+							any_neighbor_province = {
+								is_land = yes
+								NOT = {
+									owner = {
+										top_liege = {
+											OR = {
+												character = ROOT
+												character = FROM
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				NOT = {
+					FROM = {
+						any_war = {
+							defender = { character = FROM }
+							attacker = { ROOT = { relative_power = { who = PREV power = 2.0 } } }
+							war_score = 50
+						}
+					}
+				}
+			}
+			# Pretty borders rule - never swear fealty to a liege who isn't adjacent or a dejure liege
+			modifier = {
+				factor = 0
+				NOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { character = FROM } } } } }
+				NOT = {
+					FROM = {
+						primary_title = {
+							OR = {
+								duchy = { holder_scope = { character = ROOT } }
+								kingdom = { holder_scope = { character = ROOT } }
+								empire = { holder_scope = { character = ROOT } }
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { religion = ROOT }
+					trait = radical
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = xenoterran
+						religion = space_pirate
+						trait = proud
+						NOT = { opinion = { who = ROOT value = 0 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						religion = colonial_separatist
+						religion = neo_feudal
+						religion = xenoterran
+					}
+					trait = radical
+				}
+			}
+		}
+	}
+}

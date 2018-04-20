@@ -1,0 +1,36 @@
+decisions = {
+	stand_down_decision = {
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			age = 60
+			independent = no
+			higher_tier_than = count
+		}
+		allow = {
+			has_regent = no
+			top_liege = { war = no } 
+			war = no
+		    OR = {
+			    trait = content
+				trait = depressed
+				trait = infirm
+			}
+			NOT = {
+			     trait = lunatic
+				 trait = possessed
+				 trait = ambitious
+		    }
+		}
+		effect = {
+			character_event = { id = nepotism.1 }
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				num_of_children = 1
+			}
+		}
+	}
+}

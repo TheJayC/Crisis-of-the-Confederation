@@ -1,0 +1,51 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+assimilation_campaign;Assimilation Campaign;;;;;;;;;;;;;x
+assimilation_campaign_desc;This system has become a bloodbath, as its ruling power attempts to force Hiver implants on its citizens. Those who resist are hunted down. The lucky ones are killed.;;;;;;;;;;;;;x
+hiver_resistance;Hiver Resistance;;;;;;;;;;;;;x
+hiver_resistance_desc;Most of this system's population have received the Hiver implant. While perfectly loyal under a fellow hiver, they will refuse to obey orders from the unaugmented.;;;;;;;;;;;;;x
+hiver_loyalty;Hiver Loyalty;;;;;;;;;;;;;x
+hiver_loyalty_desc;The majority of this system's population has been assimilated into the Hive. They will obey its mad dictates without question.;;;;;;;;;;;;;x
+implant_prisoner;Assimilate;;;;;;;;;;;;;x
+implant_prisoner_desc;[This.GetFullName] is at your mercy. Have your surgeons implant [This.GetHerHim] with a hiver implant.;;;;;;;;;;;;;x
+EVTDESCHIVER0;You let yourself drift into a gentle sleep as the sedatives take hold. Through a hazy veil of consciousness, you hear the clacking of the surgeon's claws. Then you begin to hear the voices. Thousands of them. Millions. All screaming desperate to be heard. They didn't say it would be like this!;;;;;;;;;;;;;x
+EVTOPTAHIVER0;Who's there? What's going on?;;;;;;;;;;;;;x
+EVTDESCHIVER1;You scream when you realize what the surgeon is holding in its claw. You shriek and struggle against your bonds. You will not be taken! Not like this! In the end, your resistance is futile. As you begin to come to, you hear a thousand voices singing in a mockery of harmony.;;;;;;;;;;;;;x
+EVTOPTAHIVER1;Make them stop. MAKE THEM STOP!;;;;;;;;;;;;;x
+EVTDESCHIVER2;Your spies bring word that the worst has happened. Your [GetFromRelation] [From.GetFullName] has been assimilated into the Hive.;;;;;;;;;;;;;x
+EVTDESCHIVER100;The thousand voices of the Hive are ever with you. They are your constant companion, day and night. No matter where you hide, you cannot escape the voices. Sometimes, every so often, you manage to make out something useful.;;;;;;;;;;;;;x
+EVTDESCHIVER200;The voices of the Hive never cease. Sometimes, you forget which one is yours.;;;;;;;;;;;;;x
+EVTDESCHIVER400;The people of the [Root.GetName] System have not yet heard the voices. It is time to address this most grievous error.;;;;;;;;;;;;;
+EVTDESCHIVER401;One of your subordinates, [From.Owner.GetFullName], has begun carrying out a campaign of assimilation in the [From.GetName] System, forcibly implanting hiver implants and executing those who resist.;;;;;;;;;;;;;x
+EVTOPTAHIVER401;This crime is unforgivable!;;;;;;;;;;;;;x
+EVTOPTBHIVER401;Good, good.;;;;;;;;;;;;;x
+EVTDESCHIVER402;The people of the [Root.GetName] System have now heard the voices.;;;;;;;;;;;;;x
+EVTOPTAHIVER402;Resistance is futile.;;;;;;;;;;;;;x
+EVTDESCHIVER403;The situation in the [Root.GetName] System was horrible. The government had mandated Hiver implants, and were rounding up those who dissented. Those who were executed were the lucky ones. You have put a stop to these atrocities.;;;;;;;;;;;;;x
+EVTDESCHIVER410;Hivers might hold absolute loyalty to the Hive, but they see no particular point in following a merely ordinary leader. The Hivers who populate the [Root.GetName] System refuse to obey your commands.;;;;;;;;;;;;;x
+EVTDESCHIVER411;The Hivers in the [Root.GetName] System have been either eliminated or pacified.;;;;;;;;;;;;;x
+EVTDESCHIVER420;You and the people of the [Root.GetName] System sing together in a twisted parody of harmony.;;;;;;;;;;;;;x
+EVTDESCHIVER421;Whatever madness previously drove the people of the [Root.GetName] System to their acts of extreme loyalty has passed.;;;;;;;;;;;;;x
+EVTTOOLTIPHIVER10;'s hiver implant will be surgically removed.;;;;;;;;;;;;;x
+EVTDESCHIVER10;You were barely even aware when the doctors came to take you from your cell, so frantic and despearate were the voices. You were in danger, you knew this, but no matter how you fought you could not escape. The voices shouted, louder and louder, drowned out only by the horrible shriek of a drill.\n\nAnd then there was silence.;;;;;;;;;;;;;x
+EVTOPTAHIVER10;...is anyone there?;;;;;;;;;;;;;x
+EVTDESCHIVER1000;After years of hard work, your effort has finally paid off. You've developed an implant that will allow individuals to share thoughts, allowing skills to be pooled. Its possible it will allow individuals to think of others as part of themselves, obliviating much of the conflict that comes between people. All that is left to do is to install the new implant into peoples head and set up the network...;;;;;;;;;;;;;x
+EVTOPTAHIVER1000;Do it, what could possibly go wrong?;;;;;;;;;;;;;x
+EVTOPTBHIVER1000;This sounds like a bad idea.;;;;;;;;;;;;;x
+EVTDESCHIVER1001;After centuries of incremental improvements a breakthrough been developed by the cyberneticists. A new implant is available that will allow individuals to share thoughts. Its mostly untested but early results show a remarkable ability of individuals to share skills. What should we do?;;;;;;;;;;;;;x
+EVTOPTAHIVER1001;And one day all will join.;;;;;;;;;;;;;x
+EVTOPTBHIVER1001;This is the revolutionary discovery we've been waiting for.;;;;;;;;;;;;;x
+EVTOPTCHIVER1001;This is madness and I will have no part in it.;;;;;;;;;;;;;x
+EVTOPTDHIVER1001;Bah! Another transhumanist promising salvation?;;;;;;;;;;;;;x
+EVTDESCHIVER2000;It's quiet now, inside your head. Your old companions are gone. Sometimes you appreciate the calm, but still, you can no longer hear their wisdom. Your old skills are fading. Is this who you were before? You can't remember. You're not sure it matters.;;;;;;;;;;;;;x
+EVTDESCHIVER2300;You've spent so long in silence. You can no longer hear the old voices, but there is still one, loud and clear. In a way, it's better then it was. There is only one voice, but you can hear it with shocking clarity.;;;;;;;;;;;;;x
+EVTOPTAHIVER2300;What's happened to me?;;;;;;;;;;;;;x
+EVTDESCHIVER2301;Your ex-Hiver, [From.GetFullName], appears to be slowly recovering. Today [From.GetSheHe] was even able to carry out a conversation with you without gibbering about the voices in [From.GetHerHis] head, or lack thereof. It seems the worst of the madness has passed.;;;;;;;;;;;;;x
+EVTDESCHIVER2400;It was terrifying at first, the silence, but as time passes, you begin to recover. You are lonely, yes, but you are also calm, calmer than you remember being in a very long time indeed.;;;;;;;;;;;;;x
+EVTOPTAHIVER2400;So this is what peace feels like.;;;;;;;;;;;;;x
+EVTDESCHIVER2401;Your resident ex-Hiver, [From.GetFullName], appears to be slowly recovering. [From.GetSheHeCap] might have a long way to go yet, but at least the screaming has stopped.;;;;;;;;;;;;;x
+EVTDESCHIVER2500;It's all coming back to you now, the way things were before. What they did to you. How the voices drove you mad. You've come a long way, but you feel like you're becoming whole again. You're not sure if you're the person you were before. You're not sure it matters.;;;;;;;;;;;;;x
+EVTOPTAHIVER2500;Because at last, I am free.;;;;;;;;;;;;;x
+EVTDESCHIVER2501;Your resident ex-Hiver, [From.GetFullName], has finally made a full recovery from [From.GetHerHis] experience with the hiver implant. [From.GetSheHeCap] seems far more stable now, and has no more wish to have another implant injected.;;;;;;;;;;;;;x
+EVTTITLEHIVER3000;A Curious Transmission;;;;;;;;;;;;;x
+EVTDESCHIVER3000;All of your ships have just received a strange transmission. It was sent to millions of ansibles across the [Root.PrimaryTitle.GetFullName] simultaneously, saying the same thing in over a hundred different languages.\n\n"We are the Hive. We are the future of humanity. You will become one of us. Disable your weapons and prepare to be boarded."\n\n"Resistance is futile.";;;;;;;;;;;;;x
+EVTOPTAHIVER3000;May [Root.Religion.GetRandomGodName] have mercy on us all...;;;;;;;;;;;;;x

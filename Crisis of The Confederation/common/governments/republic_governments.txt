@@ -1,0 +1,512 @@
+republic_governments = {
+
+	merchant_republic_government = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			FAMILY_PALACE
+			FORT
+		}
+		accepts_liege_governments = {
+			corporate_republic
+			corporate_monarchy
+			corporate_directorate
+			military_republic
+			administrative_republic
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		frame_suffix = "_merchantrepublic"
+		potential = {
+			NOT = { trait = hiver_implant }
+			NOT = { religion_group = outlaw_group }
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 0 0 192 }
+		
+		merchant_republic = yes
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		#can_usurp_kingdoms_and_empires = no
+		#have_gender_laws = no
+		#allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+
+	republic_government = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			FAMILY_PALACE
+			FORT
+		}
+		accepts_liege_governments = {
+			corporate_republic
+			corporate_monarchy
+			corporate_directorate
+			military_republic
+			administrative_republic
+		}
+		free_revoke_on_governments = {
+			hivemind_government
+			pirate_kingdom
+			pirate_republic
+			colonial_government
+		}
+		frame_suffix = "_merchantrepublic"
+		potential = {
+			NOT = { trait = hiver_implant }
+			NOT = { religion_group = outlaw_group }
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 0 0 192 }
+		
+		merchant_republic = yes
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		#can_usurp_kingdoms_and_empires = no
+		#have_gender_laws = no
+		#allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			colonial_government
+		}
+	}
+
+
+	corporate_republic = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			CASTLE
+			FAMILY_PALACE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Accepts other republics
+			republic_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			#tribal_government
+		}
+		frame_suffix = "_merchantrepublic"
+		title_prefix = "city_"
+		potential = {
+			NAND = {
+				controls_religion = yes
+				#NOT = { religion_group = muslim }
+				#NOT = { religion = norse_pagan_reformed }
+			}
+			is_female = no
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							is_merchant_republic = yes
+						}
+						capital_scope = { port = yes }
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 250 0 0 }
+		vassal_call_to_arms = {
+			tribal_government
+		}
+		
+		merchant_republic = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_usurp_kingdoms_and_empires = no
+		have_gender_laws = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		landed_inheritance = no
+		
+		capital_move_delay = 600
+	}
+
+	military_republic = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			CASTLE
+			FAMILY_PALACE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Accepts other republics
+			republic_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			#tribal_government
+		}
+		frame_suffix = "_merchantrepublic"
+		title_prefix = "city_"
+		potential = {
+			NAND = {
+				controls_religion = yes
+				#NOT = { religion_group = muslim }
+				#NOT = { religion = norse_pagan_reformed }
+			}
+			is_female = no
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							is_merchant_republic = yes
+						}
+						capital_scope = { port = yes }
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 250 0 0 }
+		vassal_call_to_arms = {
+			tribal_government
+		}
+		
+		merchant_republic = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_usurp_kingdoms_and_empires = no
+		have_gender_laws = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		landed_inheritance = no
+		
+		capital_move_delay = 600
+	}
+
+	administrative_republic = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			CASTLE
+			FAMILY_PALACE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Accepts other republics
+			republic_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			#tribal_government
+		}
+		frame_suffix = "_merchantrepublic"
+		title_prefix = "city_"
+		potential = {
+			NAND = {
+				controls_religion = yes
+				#NOT = { religion_group = muslim }
+				#NOT = { religion = norse_pagan_reformed }
+			}
+			is_female = no
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							is_merchant_republic = yes
+						}
+						capital_scope = { port = yes }
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 250 0 0 }
+		vassal_call_to_arms = {
+			tribal_government
+		}
+		
+		merchant_republic = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_usurp_kingdoms_and_empires = no
+		have_gender_laws = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		landed_inheritance = no
+		
+		capital_move_delay = 600
+	}
+
+	pirate_republic  = {
+		preferred_holdings = { CITY }
+		allowed_holdings = { 
+			TRADE_POST
+			CITY
+			CASTLE
+			FAMILY_PALACE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Accepts other republics
+			republic_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			#tribal_government
+		}
+		frame_suffix = "_merchantrepublic"
+		title_prefix = "city_"
+		potential = {
+			NAND = {
+				controls_religion = yes
+				#NOT = { religion_group = muslim }
+				#NOT = { religion = norse_pagan_reformed }
+			}
+			is_female = no
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							is_merchant_republic = yes
+						}
+						capital_scope = { port = yes }
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+		}
+		
+		color = { 250 0 0 }
+		vassal_call_to_arms = {
+			tribal_government
+		}
+		
+		merchant_republic = yes
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_usurp_kingdoms_and_empires = no
+		have_gender_laws = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		allows_matrilineal_marriage = no
+
+		can_build_tribal = no
+		
+		landed_inheritance = no
+		
+		capital_move_delay = 600
+		}
+	}
+}

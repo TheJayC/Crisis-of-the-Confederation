@@ -1,0 +1,150 @@
+1105723 = {
+	# Governor, Chui
+	name = "Valeria"
+	dynasty = 5723 # Rana
+	female = yes
+	
+	culture = imperial
+	religion = neo_feudal
+	trait = is_republic
+	
+	2948.1.1 = { birth = "2948.1.1" }
+}
+11011034 = {
+	# Governor, Shihai
+	name = "Liang"
+	dynasty = 11034 # Kazakov
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	trait = is_republic
+	
+	trait = bisexual
+	
+	2954.1.1 = { birth = "2954.1.1" }
+}
+11010138 = {
+	# Governor, FN-071
+	name = "Hao"
+	dynasty = 10138 # Sokolov
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	trait = is_republic
+	
+	2963.1.1 = { birth = "2963.1.1" }
+}
+1106523 = {
+	# Pirate King of Hades
+	name = "Diego"
+	dynasty = 6523 # Najafi
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	trait = brilliant_strategist
+	trait = fighter_pilot
+	trait = ambitious
+	trait = proud
+	trait = brave
+	trait = carefree
+	trait = open_minded
+	trait = extraverted
+	trait = dni
+	trait = pluto_mk_i
+	
+	2971.1.1 = { birth = "2971.1.1" }
+	2998.1.1 = { effect = { c_fn_1237 = { holder_scope = { add_lover = ROOT } } } } # Amanda Alvarado
+}
+1104763 = {
+	# Pirate Lady of FN-940
+	name = "Paula"
+	dynasty = 4763 # Escobar
+	female = yes
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	2952.1.1 = { birth = "2952.1.1" }
+}
+1104827 = {
+	# Pirate Lady of FN-1237
+	name = "Amanda"
+	dynasty = 4827 # Alvarado
+	female = yes
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	trait = bisexual
+	trait = brilliant_strategist
+	trait = warship_captain
+	trait = confident
+	trait = extraverted
+	trait = carefree
+	trait = open_minded
+	trait = dni
+	trait = odin_mk_i
+	
+	2969.1.1 = { birth = "2969.1.1" }
+}
+11012682 = {
+	# Pirate Lord of FN-379
+	name = "Kang"
+	dynasty = 12682 # Zhou
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	2968.1.1 = { birth = "2968.1.1" }
+}
+11012698 = {
+	# Abbot of Diyu
+	name = "Jie"
+	dynasty = 12698 # Xu
+	female = no
+	
+	culture = imperial
+	religion = xenoterran
+	
+	2955.1.1 = { birth = "2955.1.1" }
+}
+11012906 = {
+	# Pirate Lord of FN-122
+	name = "Ning"
+	dynasty = 12906 # Song
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	trait = homosexual
+	
+	2962.1.1 = { birth = "2962.1.1" }
+}
+11013050 = {
+	# Pirate Lord of FN-664
+	name = "Cheng"
+	dynasty = 13050 # Tian
+	female = no
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	2953.1.1 = { birth = "2953.1.1" }
+}
+1104651 = {
+	# Pirate Lady of Infierno
+	name = "Ximena"
+	dynasty = 4651 # Herrera
+	female = yes
+	
+	culture = imperial
+	religion = neo_feudal
+	
+	2951.1.1 = { birth = "2951.1.1" }
+}

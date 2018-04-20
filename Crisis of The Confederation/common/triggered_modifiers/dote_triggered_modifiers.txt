@@ -1,0 +1,15 @@
+imperial_administration_modifier = {
+	potential = { always = yes }
+	
+	trigger = {
+	    or = {
+			has_law = dote_imperial_administration
+			top_liege = { has_law = dote_imperial_administration }
+		}
+	}
+	
+	retinue_maintenence_cost = -0.50
+	
+	icon = 11
+}
+

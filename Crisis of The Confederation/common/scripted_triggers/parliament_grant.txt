@@ -1,0 +1,10 @@
+gm_can_distribute_title_senator_trigger = {
+	NOT = {
+		  any_realm_character = {
+			    count = 25
+			    liege = { character = ROOT }
+			    OR = { has_minor_title = title_senatorrome
+				has_character_flag = flag_senatorrome }
+			  }
+		}
+	}

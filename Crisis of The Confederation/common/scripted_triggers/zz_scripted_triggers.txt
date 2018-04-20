@@ -1,0 +1,594 @@
+#	Example:
+# 
+#	example_trigger = {
+#		year = 2998
+#		num_of_spouses = 2
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+# Naming convention:  xxxx_trigger
+#
+
+# Test triggers
+is_feudal_trigger = {
+	religion = neo_feudal
+}
+is_flagged_republic_trigger = {
+	has_character_flag = flag_military_republic
+}
+
+# Ideology Class Checks
+is_democratic_trigger = {
+	OR = {
+		religion = terran_federalist
+		religion = terran_republican
+		religion = colonial_separatist
+	}
+}
+is_autocratic_trigger = {
+	OR = {
+		religion = terran_imperial
+		religion = neo_feudal
+		religion = astrist
+		religion = bio_directionist
+		religion = imperial_cult
+	}
+}
+is_theocratic_trigger = {
+	OR = {
+		religion = neo_socialist
+		religion = orthodox
+		religion = solarian
+		religion = xenoterran
+		religion = cyberneticist
+		religion = machine_cultist
+	}
+}
+
+# Government Class Checks
+is_military_trigger = {
+	custom_tooltip = {
+		text = "ISMILITARY"
+		hidden_tooltip = {
+			OR = {
+				government = military_monarchy
+				government = military_republic
+				government = military_directorate
+				government = military_command
+			}
+		}
+	}
+}
+is_corporate_trigger = {
+	custom_tooltip = {
+		text = "ISCORPORATE"
+		hidden_tooltip = {
+			OR = {
+				government = corporate_monarchy
+				government = corporate_republic
+				government = corporate_directorate
+				government = merchant_republic_government
+			}
+		}
+	}
+}
+is_administrative_trigger = {
+	custom_tooltip = {
+		text = "ISADMINISTRATIVE"
+		hidden_tooltip = {
+			OR = {
+				government = administrative_monarchy
+				government = administrative_republic
+				government = administrative_directorate
+			}
+		}
+	}
+}
+is_hereditary_trigger = {
+	custom_tooltip = {
+		text = "ISHEREDITARY"
+		hidden_tooltip = {
+			OR = {
+				government = military_monarchy
+				government = corporate_monarchy
+				government = administrative_monarchy
+				government = pirate_kingdom
+			}
+		}
+	}
+}
+is_elective_trigger = {
+	custom_tooltip = {
+		text = "ISELECTIVE"
+		hidden_tooltip = {
+			OR = {
+				government = military_republic
+				government = corporate_republic
+				government = administrative_republic
+				government = merchant_republic_government
+				government = pirate_republic
+			}
+		}
+	}
+}
+is_appointed_trigger = {
+	custom_tooltip = {
+		text = "ISAPPOINTED"
+		hidden_tooltip = {
+			OR = {
+				government = military_directorate
+				government = corporate_directorate
+				government = administrative_directorate
+				government = military_command
+				government = colonial_government
+			}
+		}
+	}
+}
+is_eligible_merchant_trigger = {
+	OR = {
+		AND = {
+			is_patrician = yes
+			OR = {
+				liege_before_war = {
+					NOT = { character = PREV }
+					is_merchant_republic = yes
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+				has_game_started = no
+			}
+		}
+		AND = {
+			higher_real_tier_than = count
+			any_demesne_province = {
+				always = yes
+			}
+			NOT = {
+				liege_before_war = {
+					NOT = { character = PREV }
+					is_merchant_republic = yes
+				}
+			}
+		}
+	}
+}
+military_monarchy_is_legal_trigger = {
+	custom_tooltip = {
+		text = "MILITARYMONARCHYLEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = military_vassal_legitimacy_1
+							has_law = military_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV = { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV = { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+military_republic_is_legal_trigger = {
+	custom_tooltip = {
+		text = "MILITARYREPUBLICLEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = military_vassal_legitimacy_0
+							has_law = military_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+military_directorate_is_legal_trigger = {
+	custom_tooltip = {
+		text = "MILITARYDIRECTORATELEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = military_vassal_legitimacy_1
+							has_law = military_vassal_legitimacy_0
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+corporate_monarchy_is_legal_trigger = {
+	custom_tooltip = {
+		text = "CORPORATEMONARCHYLEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = republic_vassal_legitimacy_1
+							has_law = republic_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+corporate_republic_is_legal_trigger = {
+	custom_tooltip = {
+		text = "CORPORATEREPUBLICLEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = republic_vassal_legitimacy_0
+							has_law = republic_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+corporate_directorate_is_legal_trigger = {
+	custom_tooltip = {
+		text = "CORPORATEDIRECTORATELEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = republic_vassal_legitimacy_1
+							has_law = republic_vassal_legitimacy_0
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+administrative_monarchy_is_legal_trigger = {
+	custom_tooltip = {
+		text = "ADMINISTRATIVEMONARCHYLEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = theocracy_vassal_legitimacy_1
+							has_law = theocracy_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+administrative_republic_is_legal_trigger = {
+	custom_tooltip = {
+		text = "ADMINISTRATIVEREPUBLICLEGAL"
+		custom_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = theocracy_vassal_legitimacy_0
+							has_law = theocracy_vassal_legitimacy_2
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+administrative_directorate_is_legal_trigger = {
+	custom_tooltip = {
+		text = "ADMINISTRATIVEDIRECTORATELEGAL"
+		hidden_tooltip = {
+			OR = {
+				independent = yes
+				NOT = {
+					crownlaw_title = {
+						OR = {
+							has_law = theocracy_vassal_legitimacy_1
+							has_law = theocracy_vassal_legitimacy_0
+						}
+						OR = {
+							has_law = centralization_4
+							AND = {
+								has_law = centralization_3
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+							}
+							AND = {
+								has_law = centralization_2
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = {
+									tier = emperor
+									any_vassal = { character = PREVPREVPREV }
+								}
+								PREV =  { NOT = { higher_tier_than = duke } }
+							}
+							AND = {
+								holder_scope = { any_vassal = { character = PREVPREVPREV } }
+								PREV =  { NOT = { higher_tier_than = count } }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+monarchy_is_legal_trigger = {
+	OR = {
+		AND = {
+			is_military_trigger = yes
+			military_monarchy_is_legal_trigger = yes
+		}
+		AND = {
+			is_corporate_trigger = yes
+			corporate_monarchy_is_legal_trigger = yes
+		}
+		AND = {
+			is_administrative_trigger = yes
+			administrative_monarchy_is_legal_trigger = yes
+		}
+	}
+}
+republic_is_legal_trigger = {
+	OR = {
+		AND = {
+			is_military_trigger = yes
+			military_republic_is_legal_trigger = yes
+		}
+		AND = {
+			is_corporate_trigger = yes
+			corporate_republic_is_legal_trigger = yes
+		}
+		AND = {
+			is_administrative_trigger = yes
+			administrative_republic_is_legal_trigger = yes
+		}
+	}
+}
+directorate_is_legal_trigger = {
+	OR = {
+		AND = {
+			is_military_trigger = yes
+			military_directorate_is_legal_trigger = yes
+		}
+		AND = {
+			is_corporate_trigger = yes
+			corporate_directorate_is_legal_trigger = yes
+		}
+		AND = {
+			is_administrative_trigger = yes
+			administrative_directorate_is_legal_trigger = yes
+		}
+	}
+}
+# Other triggers
+is_military_officer_trigger = {
+	is_adult = yes
+	OR = {
+		has_job_title = job_marshal
+		has_minor_title = title_commander
+		AND = {
+			is_ruler = yes
+			is_military_trigger = yes
+		}
+	}
+}

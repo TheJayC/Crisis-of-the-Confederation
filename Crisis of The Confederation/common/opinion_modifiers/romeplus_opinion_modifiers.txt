@@ -1,0 +1,9 @@
+opinion_duchy_appointment = {
+	opinion = 10
+	months = 60 # Half as long too
+}
+
+opinion_heirs_not_paid_off = {
+	opinion = -30
+	months = 360
+}
