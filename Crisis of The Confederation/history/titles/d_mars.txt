@@ -1,5 +1,6 @@
 2489.1.1 = {
 	liege = "k_terran_navy"
+	law = succ_appointment
 }
 
 # Modern era
