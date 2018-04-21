@@ -96,8 +96,15 @@ character_event = {
 			limit = {
 				NOT = {
 					any_demesne_title = {
-						is_appointed_title_trigger = no
-						higher_tier_than = baron
+						NOT = {
+							AND = {
+								has_law = succ_appointment
+								OR = {
+									higher_tier_than = baron
+									is_capital = no
+								}
+							}
+						}
 					}
 				}
 			}
@@ -115,8 +122,15 @@ character_event = {
 		if = {
 			limit = {
 				any_demesne_title = {
-					is_appointed_title_trigger = no
-					higher_tier_than = baron
+					NOT = {
+						AND = {
+							has_law = succ_appointment
+							OR = {
+								higher_tier_than = baron
+								is_capital = no
+							}
+						}
+					}
 				}
 			}
 			liege = {
@@ -128,7 +142,13 @@ character_event = {
 					set_character_flag = flag_not_a_usurper
 					ROOT = {
 						any_demesne_title = {
-							limit = { is_appointed_title_trigger = yes }
+							limit = {
+								has_law = succ_appointment
+								OR = {
+									higher_tier_than = baron
+									is_capital = no
+								}
+							}
 							usurp_title_plus_barony_if_unlanded = PREVPREV
 						}
 					}

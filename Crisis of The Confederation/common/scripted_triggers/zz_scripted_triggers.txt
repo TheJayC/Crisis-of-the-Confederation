@@ -592,18 +592,3 @@ is_military_officer_trigger = {
 		}
 	}
 }
-is_appointed_title_trigger = {
-	NOT = { has_law = succ_gavelkind }
-	NOT = { has_law = succ_elective_gavelkind }
-	NOT = { has_law = succ_seniority }
-	NOT = { has_law = succ_primogeniture }
-	NOT = { has_law = succ_ultimogeniture }
-	NOT = { has_law = succ_feudal_elective }
-	NOT = { has_law = succ_open_elective }
-	NOT = { has_law = succ_patrician_elective }
-	NOT = { has_law = succ_tanistry }
-	NOT = { has_law = succ_turkish_succession }
-	NOT = { has_law = succ_papal_succession }
-	NOT = { has_law = succ_nomadic_succession }
-	NOT = { has_law = succ_catholic_bishopric }
-}
