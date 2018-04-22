@@ -2,10 +2,16 @@
 
 # Western
 
-angloavalongfx = {
+avaloniangfx = {
+	skin_tone = 0
+}
+imperialgfx = {
 	skin_tone = 0
 }
 englishgfx = {
+	skin_tone = 0
+}
+tierracelestegfx = {
 	skin_tone = 0
 }
 germangfx = {
@@ -17,7 +23,13 @@ occitangfx = {
 southerngfx = {
 	skin_tone = 1
 }
+centaurigfx = {
+	skin_tone = 1
+}
 spanishgfx = {
+	skin_tone = 1
+}
+frontiergfx = {
 	skin_tone = 1
 }
 celticgfx = {
@@ -94,6 +106,9 @@ buddhistgfx = {
 arabicgfx = {
 	skin_tone = 2
 }
+alsamawatgfx = {
+	skin_tone = 2
+}
 copticgfx = {
 	skin_tone = 2
 }
@@ -106,8 +121,14 @@ cumangfx = {
 mongolgfx = {
 	skin_tone = 1
 }
-asiangfx = {
+jiongfx = {
 	skin_tone = 1
+}
+xingjigfx = {
+	skin_tone = 1
+}
+anganigfx = {
+	skin_tone = 3
 }
 africangfx = {
 	skin_tone = 3
@@ -153,6 +174,11 @@ westafricanholygfx = {
 southindiangfx = {
 	skin_tone = 3
 }
+
+muktaduniyagfx = {
+	skin_tone = 3
+}
+
 
 # No portraits, just for "Culturally Different Cities Remix" - doesn't work correctly without 
 bulgargfx = {
