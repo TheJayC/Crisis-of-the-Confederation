@@ -64,7 +64,7 @@ xingjie_group = {
 	second_graphical_culture = mideastxingjiegfx		
 			
 	xingjie = {		
-		graphical_culture = bodpagfx	
+		graphical_culture = xingjigfx	
 		color = { 0.95 0.5 0.5 }	
 			
 		male_names = {	
@@ -235,7 +235,7 @@ samawati_group = {
 	graphical_culture = mideastsamawatigfx		
 			
 	samawati = {		
-		graphical_culture = southerngfx	
+		graphical_culture = alsamawatgfx	
 		color = { 0 1.0 0 }	
 			
 		male_names = {	
@@ -288,7 +288,7 @@ angani_group = {
 	second_graphical_culture = mideastanganigfx		
 			
 	angani = {		
-		graphical_culture =  africangfx 
+		graphical_culture =  anganigfx 
 		color = { 0.9 0.9 0.9 }	
 			
 		male_names = {	
@@ -470,7 +470,7 @@ imperial_group = {
 	second_graphical_culture = angloimperialgfx		
 			
 	imperial = {		
-		graphical_culture = spanishgfx	
+		graphical_culture = imperialgfx	
 		color = { 0.95 1.1 0.65 }	
 			
 		male_names = {	
@@ -533,7 +533,7 @@ tengoku_group = {
 	second_graphical_culture = mideastjiongfx		
 			
 	tengoku = {		
-		graphical_cultures = { asiangfx }
+		graphical_cultures = { jiongfx }
 		color = { 0 0.25 0 }	
 			
 		male_names = {	
@@ -591,7 +591,7 @@ bianjiangese_group = {
 	second_graphical_culture = mideastxingjiegfx		
 			
 	bianjiangese = {		
-		graphical_cultures = { mongolgfx asiangfx }	
+		graphical_cultures = { xingjigfx }	
 		color = { 0.5 0 0.5 }	
 			
 		male_names = {	
@@ -649,7 +649,7 @@ orion_group = {
 	second_graphical_culture = anglocelesteangfx		
 			
 	orion = {		
-		graphical_culture = celticgfx	
+		graphical_culture = frontiergfx	
 		color = { 0.75 0.75 0.75 }	
 			
 		male_names = {	
@@ -709,7 +709,7 @@ mukta_group = {
 	second_graphical_culture = mideastmuktagfx		
 			
 	mukta = {		
-		graphical_culture = muktagfx	
+		graphical_culture = muktaduniyagfx	
 		color = { 0.95 0.5 0.1 }	
 		male_names = {	
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -772,7 +772,7 @@ tarkan_group = {
 	second_graphical_culture = mideastmuktagfx		
 			
 	tarkan = {		
-		graphical_culture = southindiangfx	
+		graphical_culture = muktaduniyagfx	
 		color = { 0.5 0.5 0.5 }	
 		male_names = {	
 			Aarav Aadi Aditya Abhishek Alok Ajay Akshat Amit Arvind
@@ -825,7 +825,7 @@ tarkan_group = {
 	}		
 }			
 avalonian_group = {			
-	graphical_culture = germangfx		
+	graphical_culture = angloconfederategfx		
 			
 	avalonian = {		
 		graphical_culture = avaloniangfx	
@@ -872,7 +872,7 @@ strugatskite_group = {
 	second_graphical_culture = anglocentaurigfx		
 			
 	strugatskite = {		
-		graphical_culture = easternslavicgfx	
+		graphical_culture = tierracelestegfx	
 		color = { 1.0 0 0 }	
 			
 		male_names = {	
@@ -938,7 +938,7 @@ edemite_group = {
 	second_graphical_culture = anglocentaurigfx		
 			
 	edemite = {		
-		graphical_culture = edemitegfx	
+		graphical_culture = tierracelestegfx	
 		color = { 0 0.5 0 }	
 			
 		male_names = {	
