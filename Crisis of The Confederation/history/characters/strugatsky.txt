@@ -288,7 +288,7 @@
 11013407 = {
 	# Defense Zone Commander, Saula
 	name = "Sergei"
-	dynasty = # Shi
+	dynasty = 13407 # Shi
 	female = no
 	
 	religion = neo_socialist

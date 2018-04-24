@@ -1,0 +1,10 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+GetCOTCName_FullName;[This.GetFullName];;;;;;;;;;;;;x
+GetCOTCName_FirstName;[This.GetFirstName];;;;;;;;;;;;;x
+GetCOTCName_LastName;[This.GetOnlyDynastyName];;;;;;;;;;;;;x
+GetCOTCName_BestName;[This.GetBestName];;;;;;;;;;;;;x
+GetCOTCName_TitledFullName;[This.GetTitle] [This.GetFullName];;;;;;;;;;;;;x
+GetCOTCName_TitledFirstName;[This.GetTitledFirstName];;;;;;;;;;;;;x
+GetCOTCName_TitledLastName;[This.GetTitle] [This.GetOnlyDynastyName];;;;;;;;;;;;;x
+String_offering_a_favor; Do this for me, and I'll be sure to repay you in the future.;;;;;;;;;;;;;x
+String_calling_in_favor; Do this for me, and I'll consider your debt repaid.;;;;;;;;;;;;;x
