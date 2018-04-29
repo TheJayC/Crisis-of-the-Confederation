@@ -13,12 +13,12 @@ succession_laws = {
 				is_nomadic = no
 				is_merchant_republic = no
 				is_patrician = no
+				in_revolt = no
 				OR = {
 					government = military_monarchy
 					government = corporate_monarchy
 					government = administrative_monarchy
 				}
-				in_revolt = no
 			}
 			OR = {
 				is_landless_type_title = no
@@ -236,19 +236,16 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
+				OR = {
+					government = military_republic
+					government = corporate_republic
+					government = administrative_republic
+				}
 			}
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
-			}
-			holder_scope = {
-				OR = {
-					government = military_republic
-					government = corporate_republic
-					government = administrative_republic
-					independent = yes
-				}
 			}
 			NOT = { tier = baron }
 		}
