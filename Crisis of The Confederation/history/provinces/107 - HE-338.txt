@@ -9,7 +9,7 @@ max_settlements = 4
 b_he_338_station_alpha = castle
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = pilgrim
 
 # History

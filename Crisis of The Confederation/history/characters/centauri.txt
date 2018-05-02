@@ -4,7 +4,7 @@
 	dynasty = 10888 # Zhukov
 	female = yes
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	trait = is_republic
 	
@@ -20,7 +20,7 @@
 	dynasty = 10312 # Semyonov
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	add_trait = tough_soldier
@@ -39,7 +39,7 @@
 	dynasty = 8008 # Watanabe
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	
@@ -55,7 +55,7 @@
 	dynasty = 11624 # Preobrazhensky
 	female = yes
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	
@@ -71,7 +71,7 @@
 	dynasty = 10792 # Yozhikov
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	
@@ -88,7 +88,7 @@
 	dynasty = 1992 # McCabe
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	add_trait = tough_soldier

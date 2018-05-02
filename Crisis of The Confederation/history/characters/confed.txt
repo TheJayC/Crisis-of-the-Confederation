@@ -716,7 +716,7 @@
 	female = yes
 	
 	religion = terran_republican
-	culture = centauri
+	culture = terran
 	
 	add_trait = elusive_shadow
 	
@@ -1461,7 +1461,7 @@
 
 }
 1101953 = {
-	# Commissioner for Alpha Centauri, 2998
+	# Commissioner for Alpha terran, 2998
 	name = "Albert"
 	dynasty = 1953 # MacLeod
 	female = no
@@ -1477,7 +1477,7 @@
 
 }
 1105025 = {
-	# Governor of Alpha Centauri III
+	# Governor of Alpha terran III
 	name = "Rishika"
 	dynasty = 5025 # Ali
 	female = yes
@@ -1493,7 +1493,7 @@
 
 }
 1105057 = {
-	# Commandant of Alpha Centauri III-B
+	# Commandant of Alpha terran III-B
 	name = "Khushi"
 	dynasty = 5057 # Banerjee
 	female = yes

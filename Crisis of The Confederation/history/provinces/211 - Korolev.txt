@@ -10,7 +10,7 @@ b_korolev_iv = castle
 b_korolev_v = temple
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = terran_federalist
 
 1.1.1 = {
