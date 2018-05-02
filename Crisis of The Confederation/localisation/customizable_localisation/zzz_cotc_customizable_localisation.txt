@@ -1,0 +1,196 @@
+defined_text = {
+	name = GetCOTCName
+	
+	text = {
+		localisation_key = GetCOTCName_FullName
+		trigger = {
+			is_ruler = no
+			has_minor_title = no
+		}
+	}
+	text = {
+		localisation_key = GetCOTCName_BestName
+		trigger = {
+			OR = {
+				AND = {
+					is_ruler = yes
+					primary_title = {
+						OR = {
+							government = military_monarchy
+							government = administrative_monarchy
+							government = corporate_monarchy
+							government = pirate_kingdom
+						}
+					}
+				}
+				AND = {
+					has_minor_title = yes
+					liege = {
+						primary_title = {
+							OR = {
+								government = military_monarchy
+								government = administrative_monarchy
+								government = corporate_monarchy
+								government = pirate_kingdom
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = GetCOTCName_TitledFullName
+		trigger = {
+			OR = {
+				AND = {
+					is_ruler = yes
+					primary_title = {
+						NOT = { government = military_monarchy }
+						NOT = { government = administrative_monarchy }
+						NOT = { government = corporate_monarchy }
+						NOT = { government = pirate_kingdom }
+					}
+				}
+				AND = {
+					has_minor_title = yes
+					liege = {
+						primary_title = {
+							NOT = { government = military_monarchy }
+							NOT = { government = administrative_monarchy }
+							NOT = { government = corporate_monarchy }
+							NOT = { government = pirate_kingdom }
+						}
+					}
+				}
+			}
+		}
+	}
+	fallback_text = { localisation_key = GetCOTCName_FullName }
+}
+defined_text = {
+	name = GetCOTCShortName
+	
+	text = {
+		localisation_key = GetCOTCName_LastName
+		trigger = {
+			is_ruler = no
+			has_minor_title = no
+		}
+	}
+	text = {
+		localisation_key = GetCOTCName_TitledFirstName
+		trigger = {
+			OR = {
+				AND = {
+					is_ruler = yes
+					primary_title = {
+						OR = {
+							government = military_monarchy
+							government = administrative_monarchy
+							government = corporate_monarchy
+							government = pirate_kingdom
+						}
+					}
+				}
+				AND = {
+					has_minor_title = yes
+					liege = {
+						primary_title = {
+							OR = {
+								government = military_monarchy
+								government = administrative_monarchy
+								government = corporate_monarchy
+								government = pirate_kingdom
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = GetCOTCName_TitledLastName
+		trigger = {
+			OR = {
+				AND = {
+					is_ruler = yes
+					primary_title = {
+						NOT = { government = military_monarchy }
+						NOT = { government = administrative_monarchy }
+						NOT = { government = corporate_monarchy }
+						NOT = { government = pirate_kingdom }
+					}
+				}
+				AND = {
+					has_minor_title = yes
+					liege = {
+						primary_title = {
+							NOT = { government = military_monarchy }
+							NOT = { government = administrative_monarchy }
+							NOT = { government = corporate_monarchy }
+							NOT = { government = pirate_kingdom }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	fallback_text = { localisation_key = GetCOTCName_LastName }
+}
+defined_text = {
+	name = GetCOTCVeryShortName
+	
+	text = {
+		localisation_key = GetCOTCName_FirstName
+		OR = {
+			same_dynasty = ROOT
+			is_close_relation = ROOT
+			is_married = ROOT
+			is_friend = ROOT
+			is_lover = ROOT
+			AND = {
+				is_ruler = yes
+				primary_title = {
+					OR = {
+						government = military_monarchy
+						government = administrative_monarchy
+						government = corporate_monarchy
+						government = pirate_kingdom
+					}
+				}
+			}
+			AND = {
+				has_minor_title = yes
+				liege = {
+					primary_title = {
+						OR = {
+							government = military_monarchy
+							government = administrative_monarchy
+							government = corporate_monarchy
+							government = pirate_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	fallback_text = { localisation_key = GetCOTCName_LastName }
+}
+defined_text = {
+	name = GetFavorStatus
+	
+	text = {
+		localisation_key = String_offering_a_favor
+		has_character_flag = flag_offering_a_favor
+	}
+	
+	text = {
+		localisation_key = String_calling_in_a_favor
+		has_character_flag = flag_calling_in_favor
+	}
+	
+	fallback_text = { localisation_key = "" }
+}

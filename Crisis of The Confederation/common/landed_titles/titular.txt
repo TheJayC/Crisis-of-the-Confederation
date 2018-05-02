@@ -1972,4 +1972,3 @@ e_paraiso = {
 			capital = 202
 			tribe = yes
 		}
-	}

@@ -1,0 +1,706 @@
+targetted_decisions = {
+
+	nominate_self_for_appointment = {
+		filter = self
+		ai_target_filter = self
+		potential = {
+			character = FROM
+			NOT = { has_character_flag = flag_making_appointment_nomination }
+			liege = {
+				independent = no
+				any_demesne_title = { is_appointed_title_trigger = yes }
+			}
+		}
+		allow = {
+			NOT = { has_minor_title = title_expected_successor }
+			is_adult = yes
+			is_incapable = no
+			OR = {
+				is_ruler = yes
+				has_ambition = obj_wants_landed_title
+			}
+			custom_tooltip = {
+				text = "ONEYEARCOOLDOWN"
+				OR = {
+					NOT = { has_character_flag = flag_appointment_nomination_cooldown }
+					had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 }
+				}
+			}
+		}
+		effect = {
+			set_character_flag = flag_making_appointment_nomination
+			character_event = { id = nepotism.100 tooltip = "EVTTOOLTIPNEPOTISM100" }
+		}
+		ai_will_do = {
+			factor = 1
+			
+			# Must have a positive reason to do this
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { trait = ambitious }
+					NOT = { has_ambition = obj_wants_landed_title }
+					NOT = { has_ambition = obj_become_heir }
+					NOT = { has_ambition = obj_become_king }
+					NOT = {
+						any_rival = {
+							same_liege = FROM
+							has_minor_title = title_expected_successor
+						}
+					}
+					NOT = {
+						liege = { primary_title = { is_military_trigger = yes } }
+						martial = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_corporate_trigger = yes } }
+						stewardship = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_administrative_trigger = yes } }
+						learning = 15
+					}
+				}
+			}
+			
+			# Miscellaneous personality effects
+			modifier = {
+				factor = 0
+				FROM = { trait = content }
+			}
+			
+			# Don't do this if there's a very low chance of success
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = yes
+							regent = {
+								NOT = { opinion = { who = FROM value = 0 } }
+								NOT = { owes_favor_to = FROM }
+							}
+						}
+					}
+					NOT = {
+						liege = { primary_title = { is_military_trigger = yes } }
+						martial = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_corporate_trigger = yes } }
+						stewardship = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_administrative_trigger = yes } }
+						learning = 15
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = no
+							any_realm_character = {
+								same_liege = FROM
+								has_minor_title = title_expected_successor
+								FROM = { opinion_diff = { first = PREVPREV second = PREV value = 100 } }
+							}
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = no
+							any_realm_character = {
+								same_liege = FROM
+								has_minor_title = title_expected_successor
+								FROM = { opinion_diff = { first = PREVPREV second = PREV value = 50 } }
+							}
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+					NOT = { trait = confident }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = no
+							any_realm_character = {
+								same_liege = FROM
+								has_minor_title = title_expected_successor
+								FROM = { opinion_diff = { first = PREVPREV second = PREV value = 1 } }
+							}
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+					trait = neurotic
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = yes
+							regent = {
+								any_realm_character = {
+									same_liege = FROM
+									has_minor_title = title_expected_successor
+									FROM = { opinion_diff = { first = PREVPREV second = PREV value = 100 } }
+								}
+								NOT = { owes_favor_to = FROM }
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = yes
+							regent = {
+								any_realm_character = {
+									same_liege = FROM
+									has_minor_title = title_expected_successor
+									FROM = { opinion_diff = { first = PREVPREV second = PREV value = 50 } }
+								}
+								NOT = { owes_favor_to = FROM }
+							}
+						}
+					}
+					NOT = { trait = confident }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = yes
+							regent = {
+								any_realm_character = {
+									same_liege = FROM
+									has_minor_title = title_expected_successor
+									FROM = { opinion_diff = { first = PREVPREV second = PREV value = 1 } }
+								}
+								NOT = { owes_favor_to = FROM }
+							}
+						}
+					}
+					trait = neurotic
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_military_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = martial value = 10 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_military_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = martial value = 5 }
+					}
+					NOT = { trait = proud }
+					NOT = { trait = confident }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_military_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = martial value = 1 }
+					}
+					OR = {
+						trait = humble
+						trait = neurotic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_corporate_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = stewardship value = 10 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_corporate_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = stewardship value = 5 }
+					}
+					NOT = { trait = proud }
+					NOT = { trait = confident }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_corporate_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = stewardship value = 1 }
+					}
+					OR = {
+						trait = humble
+						trait = neurotic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_administrative_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = learning value = 10 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_administrative_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = learning value = 5 }
+					}
+					NOT = { trait = proud }
+					NOT = { trait = confident }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = { primary_title = { is_administrative_trigger = yes } }
+					any_realm_character = {
+						same_liege = FROM
+						has_minor_title = title_expected_successor
+						attribute_diff = { character = FROM attribute = learning value = 1 }
+					}
+					OR = {
+						trait = humble
+						trait = neurotic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					liege = {
+						liege = {
+							has_regent = no
+							NOT = { opinion = { who = FROM value = 0 } }
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+					NOT = {
+						liege = { primary_title = { is_military_trigger = yes } }
+						martial = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_corporate_trigger = yes } }
+						stewardship = 15
+					}
+					NOT = {
+						liege = { primary_title = { is_administrative_trigger = yes } }
+						learning = 15
+					}
+				}
+			}
+			# Don't spam the appointer
+			modifier = {
+				factor = 0
+				has_character_flag = flag_appointment_nomination_cooldown
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 } }
+			}
+			modifier = {
+				factor = 0
+				random = 1
+				had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 }
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 730 } }
+			}
+			modifier = {
+				factor = 0
+				random = 10
+				had_character_flag = { flag = flag_appointment_nomination_cooldown days = 730 }
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 1460 } }
+			}
+			modifier = {
+				factor = 0
+				random = 20
+				OR = {
+					NOT = { has_character_flag = flag_appointment_nomination_cooldown }
+					had_character_flag = { flag = flag_appointment_nomination_cooldown days = 1460 }
+				}
+			}
+		}
+	}
+
+	nominate_relative_for_appointment = {
+		filter = dynasty
+		ai_target_filter = dynasty
+		potential = {
+			liege = {
+				independent = no
+				any_demesne_title = { is_appointed_title_trigger = yes }
+			}
+		}
+		allow = {
+			FROM = {
+				is_adult = yes
+				is_incapable = no
+				NOT = { has_character_flag = flag_making_appointment_nomination }
+			}
+			NOT = { has_minor_title = title_expected_successor }
+			is_adult = yes
+			is_incapable = no
+			custom_tooltip = {
+				text = "ONEYEARCOOLDOWN"
+				hidden_tooltip = {
+					OR = {
+						NOT = { has_character_flag = flag_appointment_nomination_cooldown }
+						had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 }
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = { opinion = { who = FROM modifier = opinion_appointment_nominee } }
+			FROM = {
+				set_character_flag = flag_making_appointment_nomination
+				character_event = { id = nepotism.200 tooltip = "EVTTOOLTIPNEPOTISM200" }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			
+			# Must have a positive reason to do this
+			modifier = {
+				factor = 0
+				NOT = { liege = { character = FROM } }
+				NOT = { liege = { same_dynasty = FROM } }
+				NOT = { FROM = { trait = ambitious } }
+				NOT = {
+					OR = {
+						trait = ambitious
+						has_ambition = obj_become_heir
+						has_ambition = obj_become_king
+						has_ambition = obj_wants_landed_title
+					}
+					FROM = {
+						OR = {
+							opinion = { who = ROOT value = 75 }
+							AND = {
+								opinion = { who = ROOT value = 50 }
+								NOT = { trait = cold }
+							}
+							AND = {
+								opinion = { who = ROOT value = 25 }
+								trait = friendly
+							}
+						}
+					}
+				}
+			}
+			
+			# Don't suggest someone else over yourself!
+			modifier = {
+				factor = 0
+				same_liege = FROM
+				FROM = {
+					has_minor_title = title_expected_successor
+					NOT = {
+						AND = {
+							opinion = { who = ROOT value = 75 }
+							trait = friendly
+						}
+					}
+					NOT = { trait = content }
+				}
+			}
+			# And don't switch family members around without a compelling reason
+			modifier = {
+				factor = 0
+				any_dynasty_member = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					ROOT = {
+						NOT = { opinion_diff = { first = FROM second = PREV value = 50 } }
+						NOT = {
+							AND = {
+								liege = { primary_title = { is_military_trigger = yes } }
+								attribute_diff = { character = PREV attribute = martial value = 5 }
+							}
+						}
+						NOT = {
+							AND = {
+								liege = { primary_title = { is_corporate_trigger = yes } }
+								attribute_diff = { character = PREV attribute = stewardship value = 5 }
+							}
+						}
+						NOT = {
+							AND = {
+								liege = { primary_title = { is_administrative_trigger = yes } }
+								attribute_diff = { character = PREV attribute = learning value = 5 }
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				any_dynasty_member = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					OR = {
+						opinion_diff = { first = FROM second = ROOT value = 50 }
+						AND = {
+							liege = { primary_title = { is_military_trigger = yes } }
+							attribute_diff = { character = ROOT attribute = martial value = 5 }
+						}
+						AND = {
+							liege = { primary_title = { is_corporate_trigger = yes } }
+							attribute_diff = { character = ROOT attribute = stewardship value = 5 }
+						}
+						AND = {
+							liege = { primary_title = { is_administrative_trigger = yes } }
+							attribute_diff = { character = ROOT attribute = learning value = 5 }
+						}
+					}
+				}
+			}
+			
+			# Don't do this if there's a very low chance of success
+			modifier = {
+				factor = 0
+				liege = {
+					liege = {
+						has_regent = no
+						NOT = { opinion = { who = ROOT value = 0 } }
+						NOT = { opinion = { who = FROM value = 0 } }
+						NOT = { owes_favor_to = FROM }
+					}
+				}
+				NOT = {
+					liege = { primary_title = { is_military_trigger = yes } }
+					martial = 15
+				}
+				NOT = {
+					liege = { primary_title = { is_corporate_trigger = yes } }
+					stewardship = 15
+				}
+				NOT = {
+					liege = { primary_title = { is_administrative_trigger = yes } }
+					learning = 15
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					liege = {
+						has_regent = yes
+						regent = {
+							NOT = { opinion = { who = ROOT value = 0 } }
+							NOT = { opinion = { who = FROM value = 0 } }
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+				}
+				NOT = {
+					liege = { primary_title = { is_military_trigger = yes } }
+					martial = 15
+				}
+				NOT = {
+					liege = { primary_title = { is_corporate_trigger = yes } }
+					stewardship = 15
+				}
+				NOT = {
+					liege = { primary_title = { is_administrative_trigger = yes } }
+					learning = 15
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					liege = {
+						has_regent = no
+						any_realm_character = {
+							same_liege = ROOT
+							has_minor_title = title_expected_successor
+							ROOT = { opinion_diff = { first = PREVPREV second = PREV value = 100 } }
+						}
+						NOT = { owes_favor_to = FROM }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					liege = {
+						has_regent = yes
+						regent = {
+							any_realm_character = {
+								same_liege = ROOT
+								has_minor_title = title_expected_successor
+								ROOT = { opinion_diff = { first = PREVPREV second = PREV value = 100 } }
+							}
+							NOT = { owes_favor_to = FROM }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_military_trigger = yes }
+					liege = {
+						has_regent = no
+						NOT = { owes_favor_to = FROM }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = martial value = 10 }
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_corporate_trigger = yes }
+					liege = {
+						has_regent = no
+						NOT = { owes_favor_to = FROM }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = stewardship value = 10 }
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_administrative_trigger = yes }
+					liege = {
+						has_regent = no
+						NOT = { owes_favor_to = FROM }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = learning value = 10 }
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_military_trigger = yes }
+					liege = {
+						has_regent = yes
+						regent = { NOT = { owes_favor_to = FROM } }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = martial value = 10 }
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_corporate_trigger = yes }
+					liege = {
+						has_regent = yes
+						regent = { NOT = { owes_favor_to = FROM } }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = stewardship value = 10 }
+				}
+			}
+			modifier = {
+				factor = 0
+				liege = {
+					primary_title = { is_administrative_trigger = yes }
+					liege = {
+						has_regent = yes
+						regent = { NOT = { owes_favor_to = FROM } }
+					}
+				}
+				any_realm_character = {
+					same_liege = ROOT
+					has_minor_title = title_expected_successor
+					attribute_diff = { character = ROOT attribute = learning value = 10 }
+				}
+			}
+			# Don't spam the appointer
+			modifier = {
+				factor = 0
+				has_character_flag = flag_appointment_nomination_cooldown
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 } }
+			}
+			modifier = {
+				factor = 0
+				random = 1
+				had_character_flag = { flag = flag_appointment_nomination_cooldown days = 365 }
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 730 } }
+			}
+			modifier = {
+				factor = 0
+				random = 10
+				had_character_flag = { flag = flag_appointment_nomination_cooldown days = 730 }
+				NOT = { had_character_flag = { flag = flag_appointment_nomination_cooldown days = 1460 } }
+			}
+			modifier = {
+				factor = 0
+				random = 20
+				OR = {
+					NOT = { has_character_flag = flag_appointment_nomination_cooldown }
+					had_character_flag = { flag = flag_appointment_nomination_cooldown days = 1460 }
+				}
+			}
+		}
+	}
+}
