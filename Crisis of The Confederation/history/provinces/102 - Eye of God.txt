@@ -10,7 +10,7 @@ b_eye_of_god = temple
 b_eye_of_god_waystation = castle
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = pilgrim
 
 # History

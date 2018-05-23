@@ -10,7 +10,7 @@ b_novyy_arkhangelsk_iii_b = temple
 b_novyy_arkhangelsk_iv = castle
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = terran_federalist
 
 1.1.1 = {

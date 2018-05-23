@@ -10,7 +10,7 @@ b_gagarin_prime_b = temple
 b_gagarin_vi_c = castle
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = terran_federalist
 
 1.1.1 = {

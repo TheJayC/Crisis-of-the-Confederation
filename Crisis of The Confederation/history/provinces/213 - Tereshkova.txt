@@ -10,7 +10,7 @@ b_tereshkova_iv = temple
 b_tereshkova_iv_b = castle
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = terran_federalist
 
 1.1.1 = {

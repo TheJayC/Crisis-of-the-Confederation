@@ -10,7 +10,7 @@ b_tannhauser_vii_b = city
 b_tannhauser_vii_c = temple
 
 # Misc
-culture = centauri # Initial culture
+culture = terran # Initial culture
 religion = terran_federalist
 
 1.1.1 = {

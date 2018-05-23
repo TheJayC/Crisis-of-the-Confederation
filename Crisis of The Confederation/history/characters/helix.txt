@@ -7,7 +7,7 @@
 	properties = dd00ya000000
 
 	
-	culture = centauri
+	culture = terran
 	religion = pilgrim
 	
 	
@@ -20,7 +20,7 @@
 	dynasty = 14392 # Obi
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = pilgrim
 	
 	add_trait = tough_soldier
@@ -37,7 +37,7 @@
 	dynasty = 13816 # Qian
 	female = yes
 	
-	culture = centauri
+	culture = terran
 	religion = pilgrim
 	
 	add_trait = brilliant_strategist
@@ -59,7 +59,7 @@
 	dynasty = 20018 # Teruworq
 	female = no
 	
-	culture = centauri
+	culture = terran
 	religion = pilgrim
 	
 	add_trait = homosexual
@@ -74,7 +74,7 @@
 	dynasty = 8152 # Yamaguchi
 	female = yes
 	
-	culture = centauri
+	culture = terran
 	religion = pilgrim
 	
 	
@@ -147,7 +147,7 @@
 	dynasty = 1464 # Carrington
 	female = yes
 	
-	culture = centauri
+	culture = terran
 	religion = terran_federalist
 	
 	add_trait = midas_touched
