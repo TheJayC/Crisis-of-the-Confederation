@@ -43,7 +43,7 @@ foiled_coup = {
 	years = 30
 }
 
-# These are awared to ideologies whose rulers pursue reforms compatible with them
+# These are awarded to ideologies whose rulers pursue reforms compatible with them
 major_compatible_reform = {
 	authority = 3
 	years = 25
@@ -82,47 +82,23 @@ minor_hypocritical_local_reform = {
 # Apply once for each rebelling kingdom
 allowed_major_rebellion = {
 	authority = -5
-	years = 60
+	years = 50
 }
 successful_major_rebellion = {
 	authority = 5
-	years = 60
+	years = 50
 }
-failed_major_rebellion = {
-	authority = -1
-	years = 60
-}
-successful_major_rebellion = {
+crushed_major_rebellion = {
 	authority = 5
-	years = 60
+	years = 50
 }
 failed_major_rebellion = {
 	authority = -5
-	years = 60
+	years = 50
 }
 fell_to_major_rebellion = {
 	authority = -5
-	years = 60
-}
-allowed_minor_rebellion = {
-	authority = -5
-	years = 10
-}
-successful_minor_rebellion = {
-	authority = 5
-	years = 10
-}
-failed_minor_rebellion = {
-	authority = -5
-	years = 10
-}
-crushed_minor_rebellion = {
-	authority = 5
-	years = 10
-}
-fell_to_minor_rebellion = {
-	authority = -5
-	years = 10
+	years = 50
 }
 opposed_system_revolt = {
 	authority = 1

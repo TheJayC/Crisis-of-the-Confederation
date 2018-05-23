@@ -50,6 +50,46 @@ is_theocratic_trigger = {
 		religion = machine_cultist
 	}
 }
+supports_centralization_trigger = {
+	OR = {
+		religion = terran_republican
+		religion = terran_imperial
+		religion = imperial_cult
+		religion = pilgrim
+		religion = orthodox
+		religion = astrist
+	}
+}
+supports_secession_trigger = {
+	OR = {
+		religion = colonial_separatist
+		religion = neo_feudal
+	}
+}
+supports_earth_trigger = {
+	OR = {
+		religion = terran_federalist
+		religion = terran_imperial
+		religion = terran_republican
+		religion = pilgrim
+		religion = orthodox
+	}
+}
+opposes_earth_trigger = {
+	OR = {
+		religion = colonial_separatist
+		religion = xenoterran
+		religion = astrist
+	}
+}
+is_religious_trigger = {
+	OR = {
+		religion_group = religious_group
+		religion = machine_cultist
+		trait = spiritual
+	}
+	NOT = { trait = skeptical }
+}
 
 # Government Class Checks
 is_military_trigger = {
@@ -581,6 +621,17 @@ directorate_is_legal_trigger = {
 	}
 }
 # Other triggers
+controls_earth_trigger = {
+	any_demesne_title = {
+		OR = {
+			title = e_terran_confederation
+			title = k_terran_commonwealth
+			title = d_sol
+			title = c_sol
+			title = b_earth
+		}
+	}
+}
 is_military_officer_trigger = {
 	is_adult = yes
 	OR = {

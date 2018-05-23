@@ -291,6 +291,10 @@ character_event = {
 		ai_chance = {
 			factor = 100
 			modifier = {
+				factor = 10
+				event_target:appointer = { has_character_modifier = untrustworthy }
+			}
+			modifier = {
 				factor = 2
 				trait = confident
 			}
@@ -826,7 +830,7 @@ letter_event = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 20
 				FROM = { has_character_flag = flag_calling_in_favor }
 			}
 			modifier = {
@@ -840,7 +844,7 @@ letter_event = {
 				trait = disciplined
 			}
 			modifier = {
-				factor = 0.2
+				factor = 0.05
 				OR = {
 					event_target:current_successor = { has_opinion_modifier = { who = ROOT modifier = opinion_favor_ongoing_appointment } }
 					event_target:current_patron = { has_opinion_modifier = { who = ROOT modifier = opinion_favor_ongoing_appointment } }
@@ -872,10 +876,24 @@ letter_event = {
 				factor = 0.1
 				event_target:current_patron = { character = event_target:current_holder }
 			}
+			modifier = {
+				factor = 0.25
+				event_target:current_holder = {
+					NOT = { character = event_target:current_patron }
+					any_dynasty_member = { liege = { character = PREVPREV } }
+				}
+			}
 			# Show deference to your liege's preferences
 			modifier = {
 				factor = 0.2
 				liege = { character = event_target:current_patron }
+			}
+			modifier = {
+				factor = 0.5
+				liege = {
+					NOT = { character = event_target:current_patron }
+					any_dynasty_member = { liege = { character = event_target:current_holder } }
+				}
 			}
 			# Show deference to powerful vassals
 			modifier = {
@@ -1605,6 +1623,10 @@ character_event = {
 		ai_chance = {
 			factor = 100
 			modifier = {
+				factor = 10
+				event_target:appointer = { has_character_modifier = untrustworthy }
+			}
+			modifier = {
 				factor = 2
 				trait = confident
 			}
@@ -1831,6 +1853,7 @@ letter_event = {
 		
 		# Inform the current patron, if any
 		event_target:current_patron = {
+			limit = { NOT = { character = event_target:patron } }
 			remove_opinion = { who = ROOT modifier = opinion_promised_relative_appointment }
 			opinion = { who = ROOT modifier = opinion_retracted_relative_appointment }
 			hidden_tooltip = { character_event = { id = nepotism.210 } }
@@ -2302,7 +2325,7 @@ letter_event = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 20
 				FROM = { has_character_flag = flag_calling_in_favor }
 			}
 			modifier = {
@@ -2316,7 +2339,7 @@ letter_event = {
 				trait = disciplined
 			}
 			modifier = {
-				factor = 0.2
+				factor = 0.05
 				OR = {
 					event_target:current_successor = { has_opinion_modifier = { who = ROOT modifier = opinion_favor_ongoing_appointment } }
 					event_target:current_patron = { has_opinion_modifier = { who = ROOT modifier = opinion_favor_ongoing_appointment } }
@@ -2352,6 +2375,13 @@ letter_event = {
 				factor = 0.1
 				event_target:current_patron = { character = event_target:current_holder }
 			}
+			modifier = {
+				factor = 0.25
+				event_target:current_holder = {
+					NOT = { character = event_target:current_patron }
+					any_dynasty_member = { liege = { character = PREVPREV } }
+				}
+			}
 			# Show deference to your liege's preferences
 			modifier = {
 				factor = 5
@@ -2360,6 +2390,13 @@ letter_event = {
 			modifier = {
 				factor = 0.2
 				liege = { character = event_target:current_patron }
+			}
+			modifier = {
+				factor = 0.5
+				liege = {
+					NOT = { character = event_target:current_patron }
+					any_dynasty_member = { liege = { character = event_target:current_holder } }
+				}
 			}
 			# Show deference to powerful vassals
 			modifier = {

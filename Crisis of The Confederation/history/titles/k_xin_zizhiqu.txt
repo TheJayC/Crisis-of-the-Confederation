@@ -5,9 +5,6 @@
 	law = succ_seniority
 	law = true_cognatic_succession
 }
-2997.1.1={
-	liege = "e_terran_confederation"
-}
 2998.1.1 = {
 	liege = 0
 	holder = 11012570 # Zhen Zhang
@@ -29,4 +26,7 @@
 }
 2998.1.1 = {
 	effect = { set_title_flag = flag_election_cycle }
+}
+3003.10.11 = {
+	liege = 0
 }

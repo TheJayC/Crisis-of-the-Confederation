@@ -44,10 +44,10 @@
 2996.2.19 = { holder = "11020020" } # "Arthur Pendragon"
 2998.1.1 = {
 	law = military_vassal_legitimacy_0
-	liege = 0 # Crisis of the Confederation begins
+	liege = 0
 	effect = { holder_scope = { set_government = military_monarchy } }
 }
 # Crisis of the Confederation Ends
-3003.1.1 = {
+3003.10.11 = {
 	liege = 0
 }

@@ -194,3 +194,1085 @@ defined_text = {
 	
 	fallback_text = { localisation_key = "" }
 }
+defined_text = {
+	name = GetShipName
+	
+	text = {
+		weight_multiplier = { factor = 4 }
+		localisation_key = GetShipName_OneWord
+	}
+	
+	text = {
+		weight_multiplier = { factor = 1 }
+		localisation_key = GetShipName_TwoWords
+	}
+	
+	fallback_text = { localisation_key = GetShipName_OneWord }
+}
+defined_text = {
+	name = GetOneWordShipName
+	
+	# Generic Names
+	text = { localisation_key = OP_ALACRITY }
+	text = { localisation_key = OP_CHAPTER }
+	text = { localisation_key = OP_CORKSCREW }
+	text = { localisation_key = OP_DEADLIGHT }
+	text = { localisation_key = OP_DERVISH }
+	text = { localisation_key = OP_DYNAMO }
+	text = { localisation_key = OP_MATADOR }
+	text = { localisation_key = OP_MERIDIAN }
+	text = { localisation_key = OP_OVERLORD }
+	text = { localisation_key = OP_SABRE }
+	text = { localisation_key = OP_VICTORY }
+	text = { localisation_key = OP_INTREPID }
+	text = { localisation_key = OP_ENDEAVOR }
+	text = { localisation_key = OP_VALIANT }
+	text = { localisation_key = OP_HEROIC }
+	text = { localisation_key = OP_TRIUMPHANT }
+	text = { localisation_key = OP_INVINCIBLE }
+	text = { localisation_key = OP_GLORIOUS }
+	text = { localisation_key = OP_DAUNTLESS }
+	text = { localisation_key = OP_FEARLESS }
+	text = { localisation_key = OP_CRIMSON }
+	text = { localisation_key = OP_SCARLET }
+	text = { localisation_key = OP_EMERALD }
+	text = { localisation_key = OP_JADE }
+	text = { localisation_key = OP_AZURE }
+	text = { localisation_key = OP_CERULEAN }
+	text = { localisation_key = OP_COURAGE }
+	text = { localisation_key = OP_WARRIOR }
+	text = { localisation_key = OP_LION }
+	text = { localisation_key = OP_WOLF }
+	text = { localisation_key = OP_ENTERPRISE }
+	text = { localisation_key = OP_DREADNOUGHT }
+	text = { localisation_key = OP_VENGEFUL }
+	text = { localisation_key = OP_TERROR }
+	text = { localisation_key = OP_WHIRLWIND }
+	text = { localisation_key = OP_STORM }
+	text = { localisation_key = OP_THUNDER }
+	text = { localisation_key = OP_SILVER }
+	text = { localisation_key = OP_GOLD }
+	text = { localisation_key = OP_BRILLIANT }
+	
+	# Mythological Names
+	text = {
+		localisation_key = OP_CERBERUS
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_CHIMERA
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_PEGASUS
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DRAGON
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_WYVERN
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_MINOTAUR
+		trigger = {
+			OR = {
+				NOT = { religion_group = religious_group }
+				religion = solarian
+				religion = solar_cultist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_SPHINX
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DJINN
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_EFREET
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_SCARAB
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_YOKAI
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEVA
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_AHURA
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_OSIRIS
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_GHOST
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_SPECTRE
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEMON
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEVIL
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	
+	# Culture Heroes
+	text = {
+		localisation_key = OP_HERACLES
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_GILGAMESH
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_BEOWULF
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_BELLEROPHON
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_AGAMEMNON
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_ODYSSEUS
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_ACHILLES
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_GUAN_YU
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_LU_BU
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_SUSANOO
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_ROSTAM
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_RAMA
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	text = {
+		localisation_key = OP_KRISHNA
+		trigger = { NOT = { religion_group = transhumanist_group } }
+	}
+	
+	# Solar System
+	text = {
+		localisation_key = OP_MERCURY
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_VENUS
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_ARES
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_CERES
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_JUPITER
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_GANYMEDE
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_CALLISTO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_EUROPA
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_IO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_SATURN
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_TITAN
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_NEPTUNE
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_URANUS
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_PLUTO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_CHARON
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				supports_earth_trigger = no
+			}
+		}
+		trigger = { opposes_earth_trigger = no }
+	}
+	
+	# Democratic
+	text = {
+		localisation_key = OP_LIBERTY
+		trigger = { is_democratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_FREEDOM
+		trigger = { is_democratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_REPUBLIC
+		trigger = {
+			OR = {
+				is_democratic_trigger = yes
+				religion = neo_socialist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_ATHENS
+		trigger = { is_democratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_SOLON
+		trigger = { is_democratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_BASTILLE
+		trigger = {
+			OR = {
+				is_democratic_trigger = yes
+				religion = neo_socialist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_PHRYGIA
+		trigger = {
+			OR = {
+				is_democratic_trigger = yes
+				religion = neo_socialist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_CINCINATUS
+		trigger = { is_democratic_trigger = yes }
+	}
+	
+	# Autocratic
+	text = {
+		localisation_key = OP_AUGUSTUS
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CAESAR
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_IMPERIAL
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_SHANG_YANG
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_SHI_HUANGDI
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_THRONE
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CROWN
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_GALLANT
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CAVALIER
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_STAR_KNIGHT
+		trigger = { is_autocratic_trigger = yes }
+	}
+	
+	# Constellations and Nebulae
+	text = {
+		localisation_key = OP_ARIES
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_TAURUS
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_GEMINI
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_CANCER
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_LEO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_VIRGO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_LIBRA
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_SCORPIO
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_SAGITTARIUS
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_CAPRICORN
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_AQUARIUS
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_PISCES
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_ORION
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_WITCHHEAD
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_HORSEHEAD
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_VEIL
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_FLAME
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_HELIX
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	
+	# Socialist
+	text = {
+		localisation_key = OP_MARAT
+		trigger = { religion = neo_socialist }
+	}
+	text = {
+		localisation_key = OP_GRACCHUS
+		trigger = { religion = neo_socialist }
+	}
+	text = {
+		localisation_key = OP_LIEBKNECHT
+		trigger = { religion = neo_socialist }
+	}
+	text = {
+		localisation_key = OP_LUXEMBURG
+		trigger = { religion = neo_socialist }
+	}
+	text = {
+		localisation_key = OP_PROMETHAIOS
+		trigger = {
+			OR = {
+				religion = neo_socialist
+				religion_group = transhumanist_group
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_HOUJI
+		trigger = {
+			OR = {
+				religion = neo_socialist
+				religion_group = transhumanist_group
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_SEPPO_ILMARINEN
+		trigger = {
+			OR = {
+				religion = neo_socialist
+				religion_group = transhumanist_group
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_WIELAND
+		trigger = {
+			OR = {
+				religion = neo_socialist
+				religion_group = transhumanist_group
+			}
+		}
+	}
+	
+	# Abrahamic
+	text = {
+		localisation_key = OP_ARCHANGEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_SERAPHIM
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_CHERUBIM
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_GOSPEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_TESTAMENT
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_FAITHFUL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_AZRAEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_MICHAEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_GABRIEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_PROPHECY
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_ABRAHAM
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_ISAAC
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_JACOB
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_JOSHUA
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_DAVID
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_SOLOMON
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_MOHAMMED
+		trigger = { religion_group = religious_group }
+	}
+	
+	# Mythraic
+	text = {
+		localisation_key = OP_MITHRAS
+		trigger = {
+			OR = {
+				religion = solarian
+				religion = solar_cultist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_TAURUS
+		trigger = {
+			OR = {
+				religion = solarian
+				religion = solar_cultist
+			}
+		}
+	}
+	text = {
+		localisation_key = OP_SOL_INVICTUS
+		trigger = {
+			OR = {
+				religion = solarian
+				religion = solar_cultist
+			}
+		}
+	}
+	
+	# Transhumanist
+	text = {
+		localisation_key = OP_ENLIGHTENMENT
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_TRANSCENDANCE
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_NIRVANA
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_ASCENSION
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_UTOPIA
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_SINGULARITY
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_HEPHESTOS
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_IMHOTEP
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_UTNAPISHTIM
+		trigger = { religion_group = transhumanist_group }
+	}
+	
+	# Religious
+	text = {
+		localisation_key = OP_SACRED
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_DIVINE
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_SPIRIT
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CRUSADE
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CRUSADER
+		trigger = { is_religious_trigger = yes }
+	}
+	
+	# Seriously, who names a spaceship this?
+	text = {
+		localisation_key = OP_ICARUS
+		weight_multiplier = {
+			factor = 5
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				trait = imbecile
+			}
+		}
+		trigger = {
+			OR = {
+				trait = slow
+				trait = imbecile
+			}
+		}
+	}
+	
+	fallback_text = { localisation_key = OP_ENTERPRISE }
+}
+defined_text = {
+	name = GetAdjectiveShipName
+	
+	# Generic Names
+	text = { localisation_key = OP_INTREPID }
+	text = { localisation_key = OP_VALIANT }
+	text = { localisation_key = OP_HEROIC }
+	text = { localisation_key = OP_TRIUMPHANT }
+	text = { localisation_key = OP_INVINCIBLE }
+	text = { localisation_key = OP_GLORIOUS }
+	text = { localisation_key = OP_DAUNTLESS }
+	text = { localisation_key = OP_FEARLESS }
+	text = { localisation_key = OP_CRIMSON }
+	text = { localisation_key = OP_SCARLET }
+	text = { localisation_key = OP_EMERALD }
+	text = { localisation_key = OP_JADE }
+	text = { localisation_key = OP_AZURE }
+	text = { localisation_key = OP_CERULEAN }
+	text = { localisation_key = OP_VENGEFUL }
+	text = { localisation_key = OP_SILVER }
+	text = { localisation_key = OP_GOLD }
+	text = { localisation_key = OP_BRILLIANT }
+	
+	# Autocratic
+	text = {
+		localisation_key = OP_IMPERIAL
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_GALLANT
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_FAITHFUL
+		trigger = { religion_group = religious_group }
+	}
+	# Religious
+	text = {
+		localisation_key = OP_SACRED
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_DIVINE
+		trigger = { is_religious_trigger = yes }
+	}
+	
+	fallback_text = { localisation_key = OP_INVINCIBLE }
+}
+defined_text = {
+	name = GetNounShipName
+	
+	# Generic Names
+	text = { localisation_key = OP_DERVISH }
+	text = { localisation_key = OP_MERIDIAN }
+	text = { localisation_key = OP_SABRE }
+	text = { localisation_key = OP_VICTORY }
+	text = { localisation_key = OP_ENDEAVOR }
+	text = { localisation_key = OP_COURAGE }
+	text = { localisation_key = OP_WARRIOR }
+	text = { localisation_key = OP_LION }
+	text = { localisation_key = OP_WOLF }
+	text = { localisation_key = OP_TERROR }
+	text = { localisation_key = OP_WHIRLWIND }
+	text = { localisation_key = OP_STORM }
+	text = { localisation_key = OP_THUNDER }
+	text = {
+		localisation_key = OP_DRAGON
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_SPHINX
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DJINN
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_SCARAB
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEVA
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_GHOST
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_SPECTRE
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEMON
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	text = {
+		localisation_key = OP_DEVIL
+		trigger = { NOT = { religion_group = religious_group } }
+	}
+	
+	# Democratic
+	text = {
+		localisation_key = OP_LIBERTY
+		trigger = { is_democratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_FREEDOM
+		trigger = { is_democratic_trigger = yes }
+	}
+	
+	# Autocratic
+	text = {
+		localisation_key = OP_THRONE
+		trigger = { is_autocratic_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CROWN
+		trigger = { is_autocratic_trigger = yes }
+	}
+	
+	# Constellations and Nebulae
+	text = {
+		localisation_key = OP_VEIL
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_FLAME
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	text = {
+		localisation_key = OP_HELIX
+		weight_multiplier = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				opposes_earth_trigger = no
+			}
+		}
+		trigger = { supports_earth_trigger = no }
+	}
+	
+	# Abrahamic
+	text = {
+		localisation_key = OP_GOSPEL
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_TESTAMENT
+		trigger = { religion_group = religious_group }
+	}
+	text = {
+		localisation_key = OP_PROPHECY
+		trigger = { religion_group = religious_group }
+	}
+	
+	# Transhumanist
+	text = {
+		localisation_key = OP_NIRVANA
+		trigger = { religion_group = transhumanist_group }
+	}
+	text = {
+		localisation_key = OP_ASCENSION
+		trigger = { religion_group = transhumanist_group }
+	}
+	
+	# Religious
+	text = {
+		localisation_key = OP_SPIRIT
+		trigger = { is_religious_trigger = yes }
+	}
+	text = {
+		localisation_key = OP_CRUSADE
+		trigger = { is_religious_trigger = yes }
+	}
+	
+	fallback_text = { localisation_key = OP_VICTORY }
+}

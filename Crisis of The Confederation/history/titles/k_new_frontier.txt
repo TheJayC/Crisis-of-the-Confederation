@@ -18,5 +18,9 @@
 	law = local_term_length_1
 }
 2998.1.1 = {
+	liege = 0
 	effect = { set_title_flag = flag_election_cycle }
+}
+3003.10.11 = {
+	liege = 0
 }

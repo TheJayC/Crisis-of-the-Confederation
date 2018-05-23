@@ -36,4 +36,7 @@
 		holder_scope = { set_government = military_republic }
 	}
 }
-2998.1.1 = { liege = 0 }
+2998.1.1 = {
+	liege = 0
+}
+3003.10.11 = { liege = 0 }

@@ -22,11 +22,41 @@ plot_decisions = {
 			# Not without sufficient strength
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 0.5 }
+				NOT = {
+					OR = {
+						is_powerful_vassal = yes
+						relative_power_to_liege = 2
+						is_councillor = yes
+						plot_power = 3
+						any_plot_backer = {
+							OR = {
+								is_powerful_vassal = yes
+								relative_power_to_liege = 2
+								is_councillor = yes
+							}
+						}
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1 }
+				NOT = {
+					AND = {
+						OR = {
+							is_powerful_vassal = yes
+							relative_power_to_liege = 2
+							is_councillor = yes
+							plot_power = 3
+						}
+						any_plot_backer = {
+							OR = {
+								is_powerful_vassal = yes
+								relative_power_to_liege = 2
+								is_councillor = yes
+							}
+						}
+					}
+				}
 				NOT = { trait = brave }
 			}
 			
@@ -45,7 +75,8 @@ plot_decisions = {
 						NOT = { opinion = { who = PREV value = -24 } }
 						opinion = { who = ROOT value = 25 }
 						OR = {
-							relative_power_to_liege = 0.1
+							is_powerful_vassal = yes
+							relative_power_to_liege = 2
 							is_councillor = yes
 						}
 						NOT = { has_plot = plot_coup }
@@ -98,6 +129,17 @@ plot_decisions = {
 				factor = 0
 				has_character_flag = flag_delayed_coup
 				NOT = { had_character_flag = { flag = flag_coup_delay days = 720 } }
+			}
+			
+			# Not if there's an active civil war already
+			modifier = {
+				factor = 0
+				plot_target_char = { any_war = { using_cb = civil_war } }
+			}
+			
+			modifier = {
+				factor = 0
+				random = 10
 			}
 		}
 	}

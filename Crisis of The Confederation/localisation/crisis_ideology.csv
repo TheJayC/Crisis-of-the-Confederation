@@ -90,7 +90,7 @@ OP_DRAGON;Dragon;;;;;;;;;;;;;x
 OP_WYVERN;Wyvern;;;;;;;;;;;;;x
 OP_MINOTAUR;Minotaur;;;;;;;;;;;;;x
 OP_SPHINX;Sphinx;;;;;;;;;;;;;x
-OP_DJINN;Djinn;;;;;;;;;;;;;x
+OP_DJINN;Djinni;;;;;;;;;;;;;x
 OP_EFREET;Efreet;;;;;;;;;;;;;x
 OP_SCARAB;Scarab;;;;;;;;;;;;;x
 OP_YOKAI;Yokai;;;;;;;;;;;;;x
@@ -132,7 +132,7 @@ OP_ATHENS;Athens;;;;;;;;;;;;;x
 OP_SOLON;Solon;;;;;;;;;;;;;x
 OP_BASTILLE;Bastille;;;;;;;;;;;;;x
 OP_CINCINATUS;Cincinatus;;;;;;;;;;;;;x
-OP_AUGUSUTS;Augustus;;;;;;;;;;;;;x
+OP_AUGUSTUS;Augustus;;;;;;;;;;;;;x
 OP_CAESAR;Caesar;;;;;;;;;;;;;x
 OP_IMPERATOR;Imperator;;;;;;;;;;;;;x
 OP_IMPERIAL;Imperial;;;;;;;;;;;;;x
@@ -198,6 +198,43 @@ OP_WIELAND;Wieland;;;;;;;;;;;;;x
 OP_HEPHESTUS;Hephestus;;;;;;;;;;;;;x
 OP_IMHOTEP;Imhotep;;;;;;;;;;;;;x
 OP_UTNAPISHTIM;Utnapishtim;;;;;;;;;;;;;x
+OP_INVINCIBLE;Invincible;;;;;;;;;;;;;x
+OP_GLORIOUS;Glorious;;;;;;;;;;;;;x
+OP_DAUNTLESS;Dauntless;;;;;;;;;;;;;x
+OP_FEARLESS;Fearless;;;;;;;;;;;;;x
+OP_CRIMSON;Crimson;;;;;;;;;;;;;x
+OP_SCARLET;Scarlet;;;;;;;;;;;;;x
+OP_EMERALD;Emerald;;;;;;;;;;;;;x
+OP_JADE;Jade;;;;;;;;;;;;;x
+OP_AZURE;Azure;;;;;;;;;;;;;x
+OP_CERULEAN;Cerulean;;;;;;;;;;;;;x
+OP_SACRED;Sacred;;;;;;;;;;;;;x
+OP_DIVINE;Divine;;;;;;;;;;;;;x
+OP_FREEDOM;Freedom;;;;;;;;;;;;;x
+OP_COURAGE;Courage;;;;;;;;;;;;;x
+OP_WARRIOR;Warrior;;;;;;;;;;;;;x
+OP_LION;Lion;;;;;;;;;;;;;x
+OP_WOLF;Wolf;;;;;;;;;;;;;x
+OP_SPIRIT;Spirit;;;;;;;;;;;;;x
+OP_CRUSADE;Crusade;;;;;;;;;;;;;x
+OP_GHOST;Ghost;;;;;;;;;;;;;x
+OP_SPECTRE;Spectre;;;;;;;;;;;;;x
+OP_DEMON;Demon;;;;;;;;;;;;;x
+OP_DEVIL;Devil;;;;;;;;;;;;;x
+OP_ENTERPRISE;Enterprise;;;;;;;;;;;;;x
+OP_DREADNOUGHT;Dreadnought;;;;;;;;;;;;;x
+OP_CRUSADER;Crusader;;;;;;;;;;;;;x
+OP_ICARUS;Icarus;;;;;;;;;;;;;x
+OP_VENGEFUL;Vengeful;;;;;;;;;;;;;x
+OP_TERROR;Terror;;;;;;;;;;;;;x
+OP_WHIRLWIND;Whirlwind;;;;;;;;;;;;;x
+OP_STORM;Storm;;;;;;;;;;;;;x
+OP_THUNDER;Thunder;;;;;;;;;;;;;x
+OP_SILVER;Silver;;;;;;;;;;;;;x
+OP_GOLD;Gold;;;;;;;;;;;;;x
+OP_BRILLIANT;Brilliant;;;;;;;;;;;;;x
+GetShipName_OneWord;[This.GetOneWordShipName];;;;;;;;;;;;;x
+GetShipName_TwoWords;[This.GetAdjectiveShipName] [This.GetNounShipName];;;;;;;;;;;;;x
 UNIFICATION;Unification War;;;;;;;;;;;;;x
 ASSIMILATION;Assimilation War;;;;;;;;;;;;;x
 title_ecumenical_councillor;Ecumenical Councillor;;;;;;;;;;;;;x

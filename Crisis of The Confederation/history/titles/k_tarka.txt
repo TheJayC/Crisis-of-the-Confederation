@@ -18,8 +18,8 @@
 }
 
 2998.1.1 = {
-	holder = "1105933" # Raja Sharma
 	liege = 0
+	holder = "1105933" # Raja Sharma
 }
 
 # Crisis of the Confederation Ends

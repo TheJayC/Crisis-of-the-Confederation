@@ -1,8 +1,7 @@
 plot_coup = {
 	type = liege_titles
+	vassal_intrigue_plot = yes
 	murder_plot = yes # Non-justified coups are immoral and characters with moral qualms won't back them
-	military_plot = yes
-	intrigue_plot = yes
 	
 	potential = {
 		age = 16
@@ -334,8 +333,7 @@ plot_coup = {
 
 plot_justified_coup = {
 	type = liege_titles
-	military_plot = yes
-	intrigue_plot = yes
+	vassal_intrigue_plot = yes
 	
 	potential = {
 		age = 16
