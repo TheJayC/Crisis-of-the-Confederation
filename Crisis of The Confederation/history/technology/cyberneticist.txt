@@ -12,15 +12,27 @@ technology = {
 		d_miltia
 	}
 	769 = {
-		military = 0
-		economy = 0
-		culture = 0
+		military = 0.1
+		economy = 0.1
+		culture = 0.1
 	}
 		
-	1337 = {
-		military = 0
-		economy = 0
-		culture = 0
+	2998 = {
+		military = 0.5
+		economy = 0.5
+		culture = 0.5
+		
+		TECH_POPULAR_CUSTOMS = 2.0
+		TECH_MAJESTY = 1.0
+	}
+	
+	3008 = {
+		military = 0.7
+		economy = 0.7
+		culture = 0.7
+		
+		TECH_POPULAR_CUSTOMS = 2.2
+		TECH_MAJESTY = 1.2
 	}
 }
 # Core worlds cybernetics
@@ -30,14 +42,26 @@ technology = {
 		d_al_hadd
 	}
 	769 = {
-		military = 0
-		economy = 0
-		culture = 0
+		military = 0.1
+		economy = 0.1
+		culture = 0.1
 	}
 		
-	1337 = {
-		military = 0
-		economy = 0
-		culture = 0
+	2998 = {
+		military = 1
+		economy = 1
+		culture = 1
+		
+		TECH_POPULAR_CUSTOMS = 2.0
+		TECH_MAJESTY = 1.0
+	}
+		
+	3009 = {
+		military = 1.1
+		economy = 1.1
+		culture = 1.1
+		
+		TECH_POPULAR_CUSTOMS = 2.2
+		TECH_MAJESTY = 1.2
 	}
 }

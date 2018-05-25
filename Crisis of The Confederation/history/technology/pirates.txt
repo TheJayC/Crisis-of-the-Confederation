@@ -21,14 +21,28 @@ technology = {
 		d_el_mar_del_crepusculo
 	}
 	769 = {
-		military = 0
-		economy = 0
-		culture = 0
+		military = 0.1
+		economy = 0.1
+		culture = 0.1
+		
+		TECH_TRADE_PRACTICES = 1.0
 	}
 		
-	1337 = {
-		military = 0
-		economy = 0
-		culture = 0
+	2998 = {
+		military = 0.1
+		economy = 0.1
+		culture = 0.1
+		
+		TECH_TRADE_PRACTICES = 1.0
+		TECH_CULTURE_FLEX = 2.0
+	}
+	
+	3008 = {
+		military = 0.2
+		economy = 0.15
+		culture = 0.15
+		
+		TECH_TRADE_PRACTICES = 1.1
+		TECH_CULTURE_FLEX = 2.1
 	}
 }
